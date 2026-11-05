@@ -62,6 +62,21 @@
       'alertsTitle': 'Warnungen',
       'alertsDesc': 'Grenzen für Mitteilungen, Servername',
       'auditDesc': 'Wer hat wann was gemacht',
+      'terminal': 'Terminal', 'terminalTile': 'Shell als root', 'files': 'Dateien', 'filesTile': 'Ansehen, bearbeiten, hochladen',
+      'unlockTitle': 'Freischalten', 'unlockMsg': 'Terminal und Dateien haben volle root-Rechte. Bitte gib einen frischen Code aus deiner Authenticator-App ein. Gilt 15 Minuten ab der letzten Nutzung.',
+      'unlockBtn': 'Freischalten', 'locked': 'Gesperrt', 'lockedMsg': 'Zum Schutz brauchst du einen frischen 2FA-Code.', 'lockNow': 'Sperren',
+      'upDir': 'Nach oben', 'newFolder': 'Neuer Ordner', 'upload': 'Hochladen', 'folderName': 'Name des Ordners', 'create': 'Anlegen',
+      'emptyDir': 'Dieser Ordner ist leer.', 'dirTruncated': 'Nur die ersten 5000 Einträge.', 'open': 'Öffnen', 'view': 'Ansehen', 'editFile': 'Bearbeiten',
+      'downloadFile': 'Herunterladen', 'rename': 'Umbenennen', 'newName': 'Neuer Name', 'size': 'Größe', 'changed': 'Geändert', 'owner': 'Besitzer', 'rights': 'Rechte', 'pathL': 'Pfad',
+      'linkTo': 'Verweist auf', 'deleteFileTitle': '„{name}“ löschen?', 'deleteFileMsg': 'Die Datei wird endgültig gelöscht. Das kann man nicht rückgängig machen.',
+      'deleteDirMsg': 'Der Ordner wird mit allem Inhalt endgültig gelöscht. Das kann man nicht rückgängig machen.', 'deleted': 'Gelöscht ✓',
+      'binaryFile': 'Das ist keine Textdatei – bitte herunterladen.', 'bigFile': 'Zu groß für die Vorschau (über 1 MB) – bitte herunterladen.',
+      'saveFileTitle': 'Änderungen speichern?', 'saveFileMsg': '„{name}“ wird mit deinem Text überschrieben.', 'unsaved': 'Nicht gespeicherte Änderungen verwerfen?',
+      'overwriteTitle': '„{name}“ ersetzen?', 'overwriteMsg': 'Im Ordner gibt es schon eine Datei mit diesem Namen. Sie wird überschrieben.', 'replace': 'Ersetzen',
+      'uploading': 'Lade hoch … {i}/{n}', 'uploaded': '{n} hochgeladen ✓', 'onlyMain': 'Nur auf dem Hauptserver – öffne dafür die App des anderen Servers.',
+      'act_unlock': 'Terminal/Dateien freigeschaltet', 'act_terminal-open': 'Terminal geöffnet', 'act_terminal-close': 'Terminal geschlossen',
+      'act_file-save': 'Datei gespeichert', 'act_file-mkdir': 'Ordner angelegt', 'act_file-rename': 'Umbenannt', 'act_file-delete': 'Gelöscht',
+      'act_file-download': 'Heruntergeladen', 'act_file-upload': 'Hochgeladen',
       'about': 'Über',
       'changePasswordSub': 'Zur Sicherheit brauchst du dein aktuelles Passwort und einen 2FA-Code.',
       'currentPassword': 'Aktuelles Passwort',
@@ -367,6 +382,21 @@
       'alertsTitle': 'Alerts',
       'alertsDesc': 'Notification limits, server name',
       'auditDesc': 'Who did what and when',
+      'terminal': 'Terminal', 'terminalTile': 'Root shell', 'files': 'Files', 'filesTile': 'View, edit, upload',
+      'unlockTitle': 'Unlock', 'unlockMsg': 'Terminal and files have full root access. Please enter a fresh code from your authenticator app. Valid for 15 minutes after last use.',
+      'unlockBtn': 'Unlock', 'locked': 'Locked', 'lockedMsg': 'For safety you need a fresh 2FA code.', 'lockNow': 'Lock',
+      'upDir': 'Up', 'newFolder': 'New folder', 'upload': 'Upload', 'folderName': 'Folder name', 'create': 'Create',
+      'emptyDir': 'This folder is empty.', 'dirTruncated': 'Only the first 5000 entries.', 'open': 'Open', 'view': 'View', 'editFile': 'Edit',
+      'downloadFile': 'Download', 'rename': 'Rename', 'newName': 'New name', 'size': 'Size', 'changed': 'Changed', 'owner': 'Owner', 'rights': 'Permissions', 'pathL': 'Path',
+      'linkTo': 'Points to', 'deleteFileTitle': 'Delete “{name}”?', 'deleteFileMsg': 'The file will be deleted permanently. This cannot be undone.',
+      'deleteDirMsg': 'The folder and everything in it will be deleted permanently. This cannot be undone.', 'deleted': 'Deleted ✓',
+      'binaryFile': 'Not a text file – please download it.', 'bigFile': 'Too big for preview (over 1 MB) – please download it.',
+      'saveFileTitle': 'Save changes?', 'saveFileMsg': '“{name}” will be overwritten with your text.', 'unsaved': 'Discard unsaved changes?',
+      'overwriteTitle': 'Replace “{name}”?', 'overwriteMsg': 'A file with this name already exists in the folder. It will be overwritten.', 'replace': 'Replace',
+      'uploading': 'Uploading … {i}/{n}', 'uploaded': '{n} uploaded ✓', 'onlyMain': 'Main server only – open the app of the other server for this.',
+      'act_unlock': 'terminal/files unlocked', 'act_terminal-open': 'terminal opened', 'act_terminal-close': 'terminal closed',
+      'act_file-save': 'file saved', 'act_file-mkdir': 'folder created', 'act_file-rename': 'renamed', 'act_file-delete': 'deleted',
+      'act_file-download': 'downloaded', 'act_file-upload': 'uploaded',
       'about': 'About',
       'changePasswordSub': 'For safety you need your current password and a 2FA code.',
       'currentPassword': 'Current password',
@@ -630,6 +660,9 @@
     share: 'M12 3v12 M8 7l4-4 4 4 M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7', close: 'M6 6l12 12 M18 6L6 18', list: 'M4 6h16 M4 12h16 M4 18h10', user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0',
     shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',
     download: 'M12 3v12 M7 10l5 5 5-5 M5 21h14', code: 'M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16', edit: 'M4 20h4L19 9l-4-4L4 16z M14 6l4 4',
+    terminal: 'M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z M7 10l3 2.5L7 15 M12.5 15H17', folder: 'M3 7.5A1.5 1.5 0 0 1 4.5 6H9l2 2h8.5A1.5 1.5 0 0 1 21 9.5v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z',
+    file: 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z M14 3v5h5', link: 'M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1 M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1',
+    upload: 'M12 21V9 M7 14l5-5 5 5 M5 3h14', up: 'M12 19V5 M5 12l7-7 7 7', folderPlus: 'M3 7.5A1.5 1.5 0 0 1 4.5 6H9l2 2h8.5A1.5 1.5 0 0 1 21 9.5v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z M12 11v5 M9.5 13.5h5', lock: 'M7 11V7a5 5 0 0 1 10 0v4 M5 11h14v10H5z M12 15v2',
     check2: 'M5 12.5l4.5 4.5L19 7', tool: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z', cpu: 'M7 7h10v10H7z M10 10h4v4h-4z M9 3v4 M15 3v4 M9 17v4 M15 17v4 M3 9h4 M3 15h4 M17 9h4 M17 15h4',
     star: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z', key: 'M15 7a4 4 0 1 1-3.8 5.2L4 19.4V21h3v-2h2v-2h2l1.2-1.2A4 4 0 0 1 15 7z M16 9h.01',
     phone: 'M8 2.5h8A1.5 1.5 0 0 1 17.5 4v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5z M11 18.5h2', users: 'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M22 21a7 7 0 0 0-4.5-6.5',
@@ -667,7 +700,7 @@
     } catch { throw new Error(t('offlineNet')); }
     const data = await res.json().catch(() => ({}));
     if (res.status === 401 && path !== '/api/login') { state.me = null; go('#/login'); throw new Error(data.error || '401'); }
-    if (!res.ok) throw new Error(data.error || `${t('error')} ${res.status}`);
+    if (!res.ok) throw Object.assign(new Error(data.error || `${t('error')} ${res.status}`), { status: res.status, unlock: !!data.unlock });
     return data;
   }
 
@@ -860,7 +893,7 @@
   async function renderServer(id, tab) {
     const seq = state.seq;
     const known = state.servers.find(s => s.id === id);
-    const SUB = ['updates', 'scripts', 'inventory', 'audit', 'tasks', 'processes'];
+    const SUB = ['updates', 'scripts', 'inventory', 'audit', 'tasks', 'processes', 'files'];
     const sub = SUB.includes(tab);
     const multi = state.servers.length > 1 || sub;
     const navTab = sub ? 'more' : tab;
@@ -881,7 +914,7 @@
     if (!state.servers.length) api('GET', '/api/servers').then(l => { state.servers = l; const s = l.find(x => x.id === id); if (s && !sub) $('.top .nm', app).textContent = s.name; if (l.length > 1 && !$('[data-a=back]', app)) route(); }).catch(() => {});
     const main = $('main', app);
     const refreshBtn = $('[data-a=refresh]', app);
-    const view = { status: viewStatus, services: viewServices, docker: viewDocker, checks: viewChecks, more: viewMore, updates: viewUpdates, scripts: viewScripts, inventory: viewInventory, audit: viewAudit, tasks: viewTasks, processes: viewProcesses }[tab] || viewStatus;
+    const view = { status: viewStatus, services: viewServices, docker: viewDocker, checks: viewChecks, more: viewMore, updates: viewUpdates, scripts: viewScripts, inventory: viewInventory, audit: viewAudit, tasks: viewTasks, processes: viewProcesses, files: viewFiles }[tab] || viewStatus;
     const load = async spin => {
       if (spin) refreshBtn.classList.add('spin');
       try { await view(id, main); } catch (e) { toast(e.message, true); } finally { refreshBtn.classList.remove('spin'); }
@@ -1044,6 +1077,7 @@
   // ---------- Blatt mit Aktionen ----------
   function openSheet(html) {
     const sh = $('#sheet'), bd = $('#sheet-backdrop');
+    sh.classList.remove('tall');
     sh.innerHTML = '<div class="grab"></div>' + html;
     sh.hidden = false; bd.hidden = false;
     bd.onclick = closeSheet;
@@ -1113,6 +1147,7 @@
         ${tile('tasks', 'clock', t('tasks'), t('tasksTile'))}
         ${tile('processes', 'cpu', t('processes'), t('processesTile'))}
         <button class="tile-btn" data-a="notes">${ic('edit')}<b>${t('notes')}</b><span>${t('notesTile')}</span></button>
+        ${admin && id === 'local' ? `<button class="tile-btn" data-a="term">${ic('terminal')}<b>${t('terminal')}</b><span>${t('terminalTile')}</span></button>${tile('files', 'folder', t('files'), t('filesTile'))}` : ''}
         ${admin ? tile('audit', 'list', t('audit'), t('auditDesc')) : ''}
       </div>
       <div class="list">
@@ -1121,6 +1156,7 @@
       ${admin ? `<div class="section-title"></div><button class="btn danger block" data-a="reboot">${ic('power')}${t('reboot')}</button>` : ''}`;
     for (const b of main.querySelectorAll('[data-go]')) b.addEventListener('click', () => go(`#/s/${enc}/${b.dataset.go}`));
     main.querySelector('[data-a=notes]').addEventListener('click', () => notesSheet(id));
+    main.querySelector('[data-a=term]')?.addEventListener('click', () => { location.href = '/term.html'; });
     paintMaint(id, main.querySelector('.maint'));
     $('[data-a=settings]', main).addEventListener('click', () => go('#/settings'));
     $('[data-a=reboot]', main)?.addEventListener('click', () => rebootSheet(id, name));
@@ -1129,6 +1165,158 @@
       const b = main.querySelector('[data-go=updates] .badge');
       if (b && u.list && u.list.length) { b.hidden = false; b.textContent = u.list.length; b.classList.toggle('sec', u.list.some(p => p.security)); }
     }).catch(() => {});
+  }
+
+
+  // ----- Freischalten (Terminal, Dateien) -----
+  function unlockSheet(after) {
+    formSheet({
+      title: t('unlockTitle'), sub: t('unlockMsg'), submit: t('unlockBtn'), fields: [codeField()],
+      onSubmit: async f => { await api('POST', '/api/unlock', { code: f.code.value }); closeSheet(); after && after(); },
+    });
+    const c = $('#sheet input.code');
+    c && c.addEventListener('input', () => { if (/^\d{6}$/.test(c.value)) c.form.requestSubmit(); });
+  }
+
+  // ----- Dateien -----
+  async function viewFiles(id, main) {
+    $('.top .nm', app).textContent = t('files');
+    if (id !== 'local') { main.innerHTML = `<div class="card empty-card">${ic('folder')}<p>${t('onlyMain')}</p></div>`; return; }
+    const at = state.fpath || sessionStorage.getItem('s3:fpath') || '';
+    let d;
+    try { d = await api('GET', '/api/files/list?path=' + encodeURIComponent(at)); }
+    catch (e) {
+      if (e.unlock) {
+        main.innerHTML = `<div class="card empty-card">${ic('lock')}<b>${t('locked')}</b><p>${t('lockedMsg')}</p><button class="btn primary" data-a="unlock">${ic('lock')}${t('unlockBtn')}</button></div>`;
+        main.querySelector('[data-a=unlock]').addEventListener('click', () => unlockSheet(() => viewFiles(id, main)));
+        unlockSheet(() => viewFiles(id, main));
+        return;
+      }
+      if (at && e.status === 404) { state.fpath = ''; sessionStorage.removeItem('s3:fpath'); return viewFiles(id, main); }
+      throw e;
+    }
+    state.fpath = d.path; sessionStorage.setItem('s3:fpath', d.path);
+    const go2 = p => { state.fpath = p; viewFiles(id, main).catch(e => toast(e.message, true)); };
+    const join = n => (d.path === '/' ? '' : d.path) + '/' + n;
+    const crumbs = d.path === '/' ? [''] : d.path.split('/');
+    main.innerHTML = `
+      <div class="fbar">
+        <button class="qbtn" data-a="up" aria-label="${t('upDir')}" ${d.parent ? '' : 'disabled'}>${ic('up')}</button>
+        <div class="crumbs">${crumbs.map((c, i) => `<button data-p="${esc(crumbs.slice(0, i + 1).join('/') || '/')}">${i === 0 ? '/' : esc(c)}</button>`).join('<span class="sep">›</span>')}</div>
+      </div>
+      <div class="fbtns">
+        <button class="btn small" data-a="mkdir">${ic('folderPlus')}${t('newFolder')}</button>
+        <button class="btn small" data-a="upload">${ic('upload')}${t('upload')}</button>
+        <input type="file" multiple hidden>
+      </div>
+      ${d.entries.length ? `<div class="list files">${d.entries.map((f, i) => `<div class="row" data-i="${i}">
+          <span class="ficon ${f.dir ? 'dir' : ''}">${ic(f.dir ? 'folder' : f.link ? 'link' : 'file')}</span>
+          <div class="r-main"><div class="r-title">${esc(f.name)}</div><div class="r-sub">${f.dir ? '' : bytes(f.size) + ' · '}${f.mtime ? esc(new Date(f.mtime).toLocaleString(LANG, { dateStyle: 'short', timeStyle: 'short' })) : ''} · ${esc(f.owner)}</div></div>
+          <button class="fmore" data-m="${i}" aria-label="…">${ic('dots')}</button></div>`).join('')}</div>`
+        : `<div class="card empty">${t('emptyDir')}</div>`}
+      ${d.truncated ? `<p class="muted small">${t('dirTruncated')}</p>` : ''}
+      <div class="flock"><button class="btn small" data-a="lock">${ic('lock')}${t('lockNow')}</button></div>`;
+    const crumbBox = main.querySelector('.crumbs'); crumbBox.scrollLeft = crumbBox.scrollWidth;
+    for (const b of main.querySelectorAll('.crumbs button')) b.addEventListener('click', () => go2(b.dataset.p));
+    main.querySelector('[data-a=up]').addEventListener('click', () => d.parent && go2(d.parent));
+    main.querySelector('[data-a=lock]').addEventListener('click', async () => { await api('POST', '/api/unlock/end').catch(() => {}); viewFiles(id, main); });
+    main.querySelector('[data-a=mkdir]').addEventListener('click', () => formSheet({
+      title: t('newFolder'), sub: d.path, submit: t('create'), fields: [{ label: t('folderName'), name: 'name', attrs: 'autocapitalize="none" autocorrect="off" spellcheck="false" required maxlength="255"' }],
+      onSubmit: async f => { const r = await api('POST', '/api/files/mkdir', { path: d.path, name: f.name.value.trim() }); closeSheet(); go2(r.path); },
+    }));
+    const picker = main.querySelector('input[type=file]');
+    main.querySelector('[data-a=upload]').addEventListener('click', () => picker.click());
+    picker.addEventListener('change', async () => {
+      const list = [...picker.files]; picker.value = '';
+      let n = 0;
+      for (const [i, file] of list.entries()) {
+        toast(t('uploading', { i: i + 1, n: list.length }));
+        try { await uploadFile(d.path, file, false); n++; }
+        catch (e) {
+          if (e.status !== 409) { toast(e.message, true); continue; }
+          const ok = await new Promise(res => { confirmSheet(t('overwriteTitle', { name: file.name }), t('overwriteMsg'), t('replace'), async () => { closeSheet(); res(true); }, true); $('#sheet [data-x=cancel]').addEventListener('click', () => res(false)); });
+          if (ok) { try { await uploadFile(d.path, file, true); n++; } catch (e2) { toast(e2.message, true); } }
+        }
+      }
+      if (n) toast(t('uploaded', { n }));
+      viewFiles(id, main);
+    });
+    const open = f => (f.dir ? go2(join(f.name)) : fileSheet(id, main, d, f));
+    for (const r of main.querySelectorAll('.files .row')) r.addEventListener('click', e => { if (e.target.closest('.fmore')) return; open(d.entries[r.dataset.i]); });
+    for (const b of main.querySelectorAll('.fmore')) b.addEventListener('click', () => fileSheet(id, main, d, d.entries[b.dataset.m]));
+  }
+
+  async function uploadFile(dir, file, overwrite) {
+    const res = await fetch(`/api/files/upload?path=${encodeURIComponent(dir)}&name=${encodeURIComponent(file.name)}${overwrite ? '&overwrite=1' : ''}`, { method: 'POST', credentials: 'same-origin', headers: { 'X-S3cure': '1', 'Content-Type': 'application/octet-stream' }, body: file });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw Object.assign(new Error(data.error || `${t('error')} ${res.status}`), { status: res.status, unlock: !!data.unlock });
+    return data;
+  }
+
+  function fileSheet(id, main, d, f) {
+    const p = (d.path === '/' ? '' : d.path) + '/' + f.name;
+    const reload = () => viewFiles(id, main).catch(e => toast(e.message, true));
+    const sh = openSheet(`<h2 class="fname">${ic(f.dir ? 'folder' : f.link ? 'link' : 'file')}<span>${esc(f.name)}</span></h2>
+      <div class="kv-card"><dl class="kv">
+        <dt>${t('pathL')}</dt><dd class="mono">${esc(p)}</dd>
+        ${f.dir ? '' : `<dt>${t('size')}</dt><dd>${bytes(f.size)}</dd>`}
+        <dt>${t('changed')}</dt><dd>${f.mtime ? esc(new Date(f.mtime).toLocaleString(LANG)) : '–'}</dd>
+        <dt>${t('owner')}</dt><dd>${esc(f.owner)}</dd><dt>${t('rights')}</dt><dd class="mono">${esc(f.mode)}</dd>
+        ${f.link ? `<dt>${t('linkTo')}</dt><dd class="mono">${esc(f.target || '?')}</dd>` : ''}
+      </dl></div>
+      <div class="btn-row">
+        ${f.dir ? `<button class="btn" data-x="open">${ic('folder')}${t('open')}</button>` : `<button class="btn" data-x="edit">${ic('edit')}${t('editFile')}</button><button class="btn" data-x="dl">${ic('download')}${t('downloadFile')}</button>`}
+        <button class="btn" data-x="ren">${ic('edit')}${t('rename')}</button>
+        <button class="btn danger" data-x="del">${ic('trash')}${t('delete')}</button>
+      </div>
+      <div class="s-btns"><button class="btn block" data-x="close">${t('close')}</button></div>`);
+    sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+    sh.querySelector('[data-x=open]')?.addEventListener('click', () => { closeSheet(); state.fpath = p; reload(); });
+    sh.querySelector('[data-x=dl]')?.addEventListener('click', () => {
+      const a = document.createElement('a'); a.href = '/api/files/download?path=' + encodeURIComponent(p); a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
+    });
+    sh.querySelector('[data-x=edit]')?.addEventListener('click', () => editFile(p, f.name).catch(e => (e.unlock ? unlockSheet() : toast(e.message, true))));
+    sh.querySelector('[data-x=ren]').addEventListener('click', () => {
+      formSheet({
+        title: t('rename'), sub: p, submit: t('save'), fields: [{ html: `<label>${t('newName')}<input name="name" value="${esc(f.name)}" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="255" required></label>` }],
+        onSubmit: async fm => { await api('POST', '/api/files/rename', { path: p, name: fm.name.value.trim() }); closeSheet(); toast(t('saved')); reload(); },
+      });
+    });
+    sh.querySelector('[data-x=del]').addEventListener('click', () => confirmSheet(t('deleteFileTitle', { name: f.name }), f.dir ? t('deleteDirMsg') : t('deleteFileMsg'), t('delete'), async () => {
+      await api('POST', '/api/files/delete', { path: p }); closeSheet(); toast(t('deleted')); reload();
+    }, true));
+  }
+
+  async function editFile(p, name) {
+    const r = await api('GET', '/api/files/read?path=' + encodeURIComponent(p));
+    if (r.binary || r.tooBig) { toast(r.binary ? t('binaryFile') : t('bigFile'), true); return; }
+    const sh = openSheet(`<h2 class="fname">${ic('file')}<span>${esc(name)}</span></h2><div class="s-sub mono">${esc(p)}</div>
+      <textarea class="editor" spellcheck="false" autocapitalize="none" autocorrect="off" wrap="off"></textarea>
+      <div class="err" hidden></div>
+      <div class="s-btns"><button class="btn primary block" data-x="save">${t('save')}</button><button class="btn block" data-x="cancel">${t('cancel')}</button></div>`);
+    sh.classList.add('tall');
+    const ta = sh.querySelector('.editor'); ta.value = r.text;
+    let mtime = r.mtime;
+    sh.querySelector('[data-x=cancel]').addEventListener('click', () => { if (ta.value !== r.text && !confirm(t('unsaved'))) return; closeSheet(); });
+    sh.querySelector('[data-x=save]').addEventListener('click', () => {
+      if (ta.value === r.text) { closeSheet(); return; }
+      // Nachfrage im Editor selbst – bei „Abbrechen“ bleibt der Text erhalten
+      if (!confirm(`${t('saveFileTitle')}\n${t('saveFileMsg', { name })}`)) return;
+      const btn = sh.querySelector('[data-x=save]'), err = sh.querySelector('.err');
+      btn.disabled = true; err.hidden = true;
+      const write = () => api('POST', '/api/files/write', { path: p, text: ta.value, mtime });
+      // Freischaltung abgelaufen (lange bearbeitet)? Code abfragen, ohne den Editor zu schließen
+      write().catch(async e => {
+        if (!e.unlock) throw e;
+        const code = (prompt(`${t('unlockTitle')}: ${t('code')}`) || '').trim();
+        if (!code) throw e;
+        await api('POST', '/api/unlock', { code });
+        return write();
+      })
+        .then(w => { mtime = w.mtime; closeSheet(); toast(t('saved')); })
+        .catch(e => { err.textContent = e.message; err.hidden = false; })
+        .finally(() => { btn.disabled = false; });
+    });
   }
 
   // Wartungsfenster: Karte oben in „Mehr“

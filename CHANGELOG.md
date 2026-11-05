@@ -1,5 +1,16 @@
 # Changelog – S3cure Agent
 
+## 1.4.0 – 2026-11-05
+
+### Neu
+- **Web-Terminal:** Eine echte Shell auf dem Server direkt in der App – mit Sondertasten-Leiste fürs iPhone (Esc, Tab, Ctrl, Pfeile, ^C, Einfügen). Beim Wechseln der App oder Neuladen läuft das Terminal weiter und zeigt den bisherigen Text wieder an.
+- **Dateien:** Ordner durchsuchen, Textdateien ansehen und bearbeiten, hoch- und herunterladen, Ordner anlegen, umbenennen und löschen (mit Rückfrage). Systemordner wie /etc oder /usr sind vor Löschen geschützt.
+- **Freischalten mit 2FA:** Terminal und Dateien brauchen einen frischen Code aus der Authenticator-App. Die Freischaltung gilt 15 Minuten ab der letzten Nutzung und lässt sich mit „Sperren“ sofort beenden. Nur für Admins.
+- Alles landet im Protokoll (Öffnen, Speichern, Hochladen, Löschen …). Was im Terminal getippt wird, wird nicht mitgeschrieben.
+
+### English
+- Web terminal (real shell, iPhone key bar, survives reloads) and file browser (view/edit text, upload/download, create folder, rename, delete with confirmation, protected system folders). Both admin-only and unlocked with a fresh 2FA code for 15 minutes. All actions are audited; terminal keystrokes are not logged.
+
 ## 1.3.0 – 2026-11-05
 
 ### Neu

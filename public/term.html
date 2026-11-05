@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <title>Terminal · S3cure</title>
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/vendor/xterm.css">
+  <link rel="stylesheet" href="/term.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="ib" href="/#/s/local/more" id="back" aria-label="Zurück"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></a>
+    <div class="title"><b id="title">Terminal</b><span id="state"><i class="dot"></i><span id="state-text"></span></span></div>
+    <button class="ib" id="close" aria-label="Beenden"><svg viewBox="0 0 24 24"><path d="M12 3v9 M6.3 6.3a8 8 0 1 0 11.4 0"/></svg></button>
+  </header>
+  <main id="wrap"><div id="term"></div></main>
+  <section id="unlock" hidden>
+    <form class="card" id="unlock-form" autocomplete="off">
+      <svg class="big" viewBox="0 0 24 24"><path d="M7 11V7a5 5 0 0 1 10 0v4 M5 11h14v10H5z M12 15v2"/></svg>
+      <b id="unlock-title"></b>
+      <p id="unlock-text"></p>
+      <input id="code" class="code" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" placeholder="000000">
+      <div class="err" id="unlock-err" hidden></div>
+      <button class="btn primary" type="submit" id="unlock-btn"></button>
+    </form>
+  </section>
+  <section id="ended" hidden>
+    <div class="card"><b id="ended-title"></b><p id="ended-text"></p><button class="btn primary" id="restart"></button></div>
+  </section>
+  <nav class="keys" id="keys">
+    <button data-k="esc">Esc</button><button data-k="tab">Tab</button><button data-k="ctrl" id="ctrl">Ctrl</button>
+    <button data-k="up" class="arr">↑</button><button data-k="down" class="arr">↓</button><button data-k="left" class="arr">←</button><button data-k="right" class="arr">→</button>
+    <button data-k="^c">^C</button><button data-k="|">|</button><button data-k="~">~</button><button data-k="/">/</button><button data-k="-">-</button>
+    <button data-k="paste" id="paste"></button>
+  </nav>
+  <script src="/vendor/xterm.js"></script>
+  <script src="/vendor/addon-fit.js"></script>
+  <script src="/term.js"></script>
+</body>
+</html>

@@ -17,6 +17,7 @@ Der S3cure Agent läuft auf deinem Server und bringt dir eine **App fürs iPhone
 - **Wartungsmodus:** Warnungen eines Servers zeitweise stummschalten
 - **Prozesse** ansehen und beenden (Systemprozesse geschützt), Dienst-Autostart an/aus, Lieblingsdienste **anheften**
 - **Kunden, Standorte, Tags, Notizen** und **Sammelaktionen** über mehrere Server
+- **Web-Terminal** und **Dateien** (ansehen, bearbeiten, hoch-/herunterladen) – nur Admins, mit frischem 2FA-Code
 - **Konto:** Passwort ändern, 2FA auf ein neues Handy umziehen, angemeldete Geräte abmelden
 - **Mehrere Server**, **mehrere Benutzer** (Admin oder „nur ansehen“) – direkt in der App verwalten, **Protokoll** aller Aktionen
 
