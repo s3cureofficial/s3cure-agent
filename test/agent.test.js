@@ -11,7 +11,7 @@ const totp = require('../lib/totp');
 const { createAuth } = require('../lib/auth');
 const system = require('../lib/system');
 const { evaluate } = require('../lib/alerts');
-const { createAgent } = require('../lib/server');
+const { createAgent, trustedProxy } = require('../lib/server');
 
 test('2FA: Testwerte aus RFC 6238 und Prüfung', () => {
   const secret = totp.base32Encode(Buffer.from('12345678901234567890'));
@@ -82,6 +82,11 @@ test('System: systemctl- und docker-Ausgabe lesen, Schutzliste', () => {
   assert.equal(mem.used, 750 * 1024);
 });
 
+test('Proxy: nur lokale bzw. Docker-Adressen dürfen die Besucher-IP mitteilen', () => {
+  for (const ip of ['127.0.0.1', '::1', '172.17.0.2', '172.18.0.5', '10.0.0.2', '192.168.1.9']) assert.ok(trustedProxy(ip), ip);
+  for (const ip of ['5.253.246.67', '8.8.8.8', '172.32.0.1', '2a01:4f8::1']) assert.ok(!trustedProxy(ip), ip);
+});
+
 test('Warnungen: Platte, RAM, Last, ausgefallene Dienste', () => {
   const m = { cpus: 2, load: [7, 1, 1], mem: { total: 100, used: 97 }, disk: { total: 100, free: 5 } };
   const list = evaluate(m, [{ name: 'a.service', active: 'failed' }, { name: 'b.service', active: 'active' }], { disk: 90, mem: 95, loadPerCpu: 3, serviceFailed: true });
@@ -130,6 +135,12 @@ test('API: Anmeldung, Rechte, Aktionen, Schutz', async () => {
   const page = await fetch(base + '/');
   assert.match(page.headers.get('content-security-policy'), /script-src 'self'/);
   assert.match(await page.text(), /<title>S3cure<\/title>/);
+  // Hinter dem Proxy (Anfragen von 127.0.0.1): Fehlversuche einer Besucher-IP sperren nicht die anderen
+  for (let i = 0; i < 5; i++) await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '203.0.113.9' }, body: JSON.stringify({ user: 'x', password: 'y', code: '1' }) });
+  const blocked = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '203.0.113.9' }, body: JSON.stringify({ user: 'gast', password: 'gast-passwort-123', code: totp.hotp(viewer.secret, totp.step()) }) });
+  assert.equal(blocked.status, 429);
+  const other = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '198.51.100.7' }, body: JSON.stringify({ user: 'gast', password: 'gast-passwort-123', code: totp.hotp(viewer.secret, totp.step() + 1) }) });
+  assert.equal(other.status, 200, 'andere IP darf sich anmelden');
   const sneaky = await fetch(base + '/..%2fpackage.json');
   assert.ok(!(await sneaky.text()).includes('"dependencies"'));
 });

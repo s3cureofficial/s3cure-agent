@@ -1,5 +1,17 @@
 # Changelog – S3cure Agent
 
+## 1.0.1 – 2026-11-05
+
+### Verbessert
+- **Nginx Proxy Manager (Docker):** install.sh erkennt ihn, lässt den Agenten zusätzlich auf der Docker-Adresse des Servers hören (nur vom Server und seinen Containern erreichbar), gibt Port 7777 bei aktiver Firewall nur für Docker-Netze frei und zeigt die Werte für den Proxy Host an.
+- **Echte Besucher-IP hinter einem Proxy:** Sperre nach Fehlversuchen und Protokoll gelten für die IP des Besuchers – nicht für den Proxy. Gefälschte X-Forwarded-For-Einträge zählen nicht.
+
+### Behoben
+- Benutzer, die man mit `s3cure-agent user add` anlegt (oder löscht), gelten im laufenden Agenten sofort – ohne Neustart.
+
+### English
+- Detects Nginx Proxy Manager in Docker and binds to the Docker gateway; real client IP behind proxies for lockout and log; users added via the CLI work immediately.
+
 ## 1.0.0 – 2026-11-05
 
 ### Neu

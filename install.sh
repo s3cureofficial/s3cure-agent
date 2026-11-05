@@ -62,7 +62,7 @@ NODE_BIN="$(command -v node)"
 cat > /etc/systemd/system/s3cure-agent.service <<'UNIT'
 [Unit]
 Description=S3cure Agent (Server-Status und Steuerung fürs Handy)
-After=network-online.target
+After=network-online.target docker.service
 Wants=network-online.target
 
 [Service]
@@ -86,7 +86,44 @@ systemctl enable s3cure-agent >/dev/null 2>&1
 systemctl restart s3cure-agent
 sleep 1
 systemctl is-active --quiet s3cure-agent || { journalctl -u s3cure-agent -n 20 --no-pager; die "Der Agent startet nicht (siehe oben)."; }
-ok "Dienst s3cure-agent läuft (nur lokal auf 127.0.0.1:7777)"
+ok "Dienst s3cure-agent läuft (nur lokal auf $(node -e 'try{const c=require("/var/lib/s3cure-agent/config.json");console.log((c.bind||"127.0.0.1")+":"+(c.port||7777))}catch{console.log("127.0.0.1:7777")}'))"
+
+# ---------- Nginx Proxy Manager (Docker)? ----------
+# Läuft der Proxy in einem Container, ist 127.0.0.1 für ihn der Container selbst. Der Agent hört dann
+# zusätzlich auf der Docker-Adresse des Servers (nur vom Server und seinen Containern aus erreichbar).
+NPM_NAME=""
+if command -v docker >/dev/null 2>&1; then
+  NPM_NAME="$(docker ps --format '{{.Names}} {{.Image}}' 2>/dev/null | grep -i 'nginx-proxy-manager' | head -n 1 | cut -d' ' -f1 || true)"
+fi
+if [ -n "$NPM_NAME" ]; then
+  GW="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.Gateway}} {{end}}' "$NPM_NAME" 2>/dev/null | awk '{print $1}')"
+  if printf '%s' "$GW" | grep -Eq '^[0-9]+(\.[0-9]+){3}$'; then
+    s3cure-agent set bind "$GW" >/dev/null
+    systemctl restart s3cure-agent
+    sleep 1
+    systemctl is-active --quiet s3cure-agent || { journalctl -u s3cure-agent -n 20 --no-pager; die "Der Agent startet auf $GW nicht."; }
+    # Firewall an? Dann Port 7777 nur für Docker-Netze freigeben (nicht fürs Internet)
+    if command -v ufw >/dev/null 2>&1 && ufw status 2>/dev/null | grep -q '^Status: active'; then
+      ufw allow from 172.16.0.0/12 to any port 7777 proto tcp comment 's3cure-agent (Docker)' >/dev/null
+      ok "Firewall: Port 7777 nur für Docker-Netze freigegeben"
+    fi
+    ok "Nginx Proxy Manager erkannt ($NPM_NAME) – Agent hört auf $GW:7777"
+    echo
+    say "Im Nginx Proxy Manager (Weboberfläche, meist Port 81) → Hosts → Proxy Hosts → „Add Proxy Host“:"
+    echo "    Domain Names:            ${DOMAIN:-ops.deine-domain.de}"
+    echo "    Scheme:                  http"
+    echo "    Forward Hostname / IP:   $GW"
+    echo "    Forward Port:            7777"
+    echo "    Block Common Exploits:   an      Websockets Support: an"
+    echo "    Reiter SSL:              „Request a new SSL Certificate“, Force SSL an, HTTP/2 an"
+    echo
+    [ -n "$DOMAIN" ] && s3cure-agent set publicUrl "https://$DOMAIN" >/dev/null && systemctl restart s3cure-agent
+    DOMAIN=""   # nginx/Caddy unten nicht anfassen – das macht der Proxy Manager
+  else
+    say "Nginx Proxy Manager gefunden, aber seine Docker-Adresse nicht – bitte Proxy Host von Hand anlegen."
+    DOMAIN=""
+  fi
+fi
 
 # ---------- Optional: HTTPS über nginx oder Caddy ----------
 if [ -n "$DOMAIN" ]; then
@@ -143,7 +180,9 @@ if [ ! -s /var/lib/s3cure-agent/users.json ] || [ "$(cat /var/lib/s3cure-agent/u
   say "Jetzt deinen Benutzer anlegen (zeigt den QR-Code für die Authenticator-App):"
   echo "    s3cure-agent user add <dein-name> --admin"
 fi
-if [ -n "$DOMAIN" ]; then
+if [ -n "$NPM_NAME" ]; then
+  say "Danach auf dem iPhone in Safari deine Adresse öffnen (die du im Proxy Manager eingetragen hast)."
+elif [ -n "$DOMAIN" ]; then
   say "Danach auf dem iPhone in Safari öffnen: https://$DOMAIN"
 else
   say "Von außen erreichbar machen (HTTPS):  sudo ./install.sh --domain ops.deine-domain.de"
