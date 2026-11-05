@@ -1,6 +1,9 @@
 # Changelog – S3cure Agent
 
-## Unveröffentlicht
+## 1.4.5 – 2026-11-05
+
+### Verbessert
+- **2FA-Code als 6 Kästchen:** Überall, wo ein Code nötig ist (Anmelden, Neustart, Skripte, Freischalten, Terminal …), gibt es jetzt sechs einzelne Kästchen statt eines langen Felds. Einfügen und „Code aus Nachricht“ am iPhone funktionieren weiter.
 
 ### Sicherheit
 - Checks vom Typ „Skript“ (laufen als root) brauchen jetzt wie das Speichern eines Skripts einen frischen 2FA-Code.
@@ -10,6 +13,7 @@
 - Installation: Paket in eigenem temporären Ordner entpacken, SHA-256-Prüfsumme wird mit jedem Release veröffentlicht. nodemailer auf 10.x aktualisiert.
 
 ### English
+- 2FA codes are now entered in six separate boxes everywhere.
 - Script checks (run as root) now require a fresh 2FA code; moving 2FA to a new phone requires password and a current code; second-factor codes are rate-limited; client-IP handling hardened; install package checksum.
 
 ## 1.4.1 – 2026-11-05

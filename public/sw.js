@@ -1,7 +1,7 @@
 // Service Worker: App-Gerüst offline verfügbar (startet sofort), Mitteilungen anzeigen und öffnen.
 // API-Aufrufe werden nie zwischengespeichert.
-const CACHE = 's3cure-v4';
-const SHELL = ['/', '/app.css', '/app.js', '/manifest.webmanifest', '/icons/icon-180.png', '/icons/icon-192.png', '/icons/badge-96.png'];
+const CACHE = 's3cure-v5';
+const SHELL = ['/', '/app.css', '/app.js', '/otp.css', '/otp.js', '/manifest.webmanifest', '/icons/icon-180.png', '/icons/icon-192.png', '/icons/badge-96.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -17,7 +17,7 @@ self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET' || url.origin !== location.origin || url.pathname.startsWith('/api/')) return;
   e.respondWith(
     fetch(e.request).then(res => {
-      if (res.ok && (SHELL.includes(url.pathname) || /^\/app\.(js|css)$/.test(url.pathname))) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
+      if (res.ok && (SHELL.includes(url.pathname) || /^\/(app|otp)\.(js|css)$/.test(url.pathname))) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
       return res;
     }).catch(() => caches.match(e.request).then(r => r || caches.match('/'))),
   );

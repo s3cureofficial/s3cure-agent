@@ -1,0 +1,20 @@
+/* 2FA-Code: 6 Kästchen (siehe otp.js). Farben aus app.css bzw. term.css */
+.otp { position: relative; width: 100%; max-width: 360px; margin: 2px auto 8px; }
+.otp-boxes { display: flex; gap: 8px; }
+.otp-boxes span {
+  flex: 1; min-width: 0; height: 56px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--well, var(--bg)); border: 1.5px solid var(--border-strong, #33333a); color: var(--text);
+  font: 600 24px/1 ui-monospace, "SF Mono", Menlo, monospace; transition: border-color .12s, box-shadow .12s, transform .12s;
+}
+.otp-boxes span.filled { border-color: var(--border-strong, var(--border)); }
+.otp-boxes span.active { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-ring, rgba(240, 53, 63, .3)); }
+.otp-boxes span.active:empty::after { content: ''; width: 2px; height: 26px; border-radius: 2px; background: var(--accent); animation: otp-blink 1s steps(1) infinite; }
+.otp.full .otp-boxes span { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); }
+@keyframes otp-blink { 50% { opacity: 0; } }
+/* Echtes Feld unsichtbar obendrauf: fängt Tippen, Einfügen und Autofill */
+.otp > input.otp-in.code {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; outline: none; box-shadow: none;
+  background: transparent; color: transparent; caret-color: transparent; -webkit-text-fill-color: transparent;
+  font-size: 16px; letter-spacing: 0; opacity: .01; z-index: 1; cursor: text;
+}
+@media (max-width: 360px) { .otp-boxes { gap: 6px; } .otp-boxes span { height: 50px; font-size: 21px; } }
