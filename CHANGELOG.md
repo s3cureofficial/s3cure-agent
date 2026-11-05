@@ -1,5 +1,22 @@
 # Changelog – S3cure Agent
 
+## 1.3.0 – 2026-11-05
+
+### Neu
+- **Geplante Aufgaben:** Skripte automatisch ausführen – täglich, wöchentlich, stündlich oder alle X Minuten, auf einem oder mehreren Servern. Mit Status des letzten Laufs und „Jetzt ausführen“.
+- **Wartungsmodus:** Für 30 Minuten bis 24 Stunden alle Warnungen eines Servers stummschalten (mit Grund). Danach geht es automatisch weiter.
+- **Prozesse:** Die größten Prozesse nach CPU oder RAM, mit Suche. Beenden oder sofort beenden – Systemprozesse wie sshd und systemd sind geschützt.
+- **Dienste:** Autostart beim Hochfahren an- oder ausschalten.
+- **Kunden, Standorte, Tags und Notizen** pro Server. Die Startseite gruppiert nach Kunde und Standort.
+- **Sammelaktionen:** Auf der Startseite mehrere Server auswählen und auf allen ein Skript ausführen, Updates installieren oder neu starten (mit 2FA-Code).
+
+### Behoben
+- Die Startseite hat eine Auswahl manchmal von selbst zurückgesetzt.
+- Fehlendes Symbol beim Tab „Checks“.
+
+### English
+- Scheduled tasks, maintenance mode, process manager (with protected system processes), service autostart on/off, clients/sites/tags/notes with grouped home screen, bulk actions (script, updates, reboot). Fixed selection reset on the home screen and a missing Checks icon.
+
 ## 1.2.0 – 2026-11-05
 
 ### Neu

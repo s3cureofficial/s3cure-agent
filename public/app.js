@@ -238,6 +238,79 @@
       'act_script-delete': 'Skript gelöscht',
       'act_script-run': 'Skript ausgeführt',
       'act_notify-save': 'Warnungs-Wege geändert',
+      'select': 'Auswählen',
+      'selectedN': '{n} ausgewählt',
+      'maintenance': 'Wartung',
+      'runOnN': 'Skript auf {n} Servern',
+      'bulkUpdatesTitle': 'Updates auf {n} Servern installieren?',
+      'bulkStarted': 'Gestartet auf {ok} von {n} Servern',
+      'bulkRebootTitle': '{n} Server neu starten?',
+      'maintenanceOn': 'Wartung läuft',
+      'maintUntil': 'bis {time} – keine Warnungen',
+      'bootOn': 'Autostart aus',
+      'bootOff': 'Autostart an',
+      'tasks': 'Aufgaben',
+      'tasksTile': 'Skripte nach Zeitplan',
+      'processesTile': 'Ansehen und beenden',
+      'notes': 'Notizen',
+      'notesTile': 'Kunde, Standort, Tags',
+      'end': 'Beenden',
+      'maintHint': 'Warnungen vorübergehend stummschalten',
+      'maintStartTitle': 'Wartung starten',
+      'maintStartSub': 'Solange die Wartung läuft, schickt dieser Server keine Warnungen. Danach geht es automatisch weiter.',
+      'duration': 'Dauer',
+      'reason': 'Grund',
+      'maintStarted': 'Wartung läuft ✓',
+      'client': 'Kunde',
+      'site': 'Standort',
+      'tags': 'Tags',
+      'notesSub': 'Kunde und Standort gruppieren die Server auf der Startseite.',
+      'tagsHint': 'Tags (mit Komma trennen)',
+      'notesPh': 'Zugänge, Besonderheiten, Ansprechpartner …',
+      'schedDaily': 'täglich {time}',
+      'schedWeekly': '{day} {time}',
+      'schedHourly': 'stündlich, Minute {m}',
+      'schedEvery': 'alle {n} min',
+      'tasksHint': 'Skripte automatisch ausführen.',
+      'newTask': 'Neu',
+      'newTaskTitle': 'Neue Aufgabe',
+      'scriptOne': 'Skript',
+      'paused': 'pausiert',
+      'noTasks': 'Noch keine Aufgaben',
+      'noTasksHint': 'Lass Skripte automatisch laufen – z. B. jede Nacht aufräumen oder jeden Montag Backups prüfen.',
+      'runNow': 'Jetzt ausführen',
+      'deleteTaskTitle': '„{name}“ löschen?',
+      'deleteTaskMsg': 'Die Aufgabe läuft danach nicht mehr. Das Skript bleibt.',
+      'editTask': 'Aufgabe bearbeiten',
+      'taskFormSub': 'Das Ergebnis jedes Laufs steht unter Skripte → Letzte Ausführungen.',
+      'schedule': 'Zeitplan',
+      'minuteLabel': 'Minute',
+      'everyMin': 'Alle … Minuten',
+      'taskActive': 'Aktiv',
+      'st_daily': 'Täglich',
+      'st_weekly': 'Wöchentlich',
+      'st_hourly': 'Stündlich',
+      'st_interval': 'Alle X Minuten',
+      'killTerm': 'Beenden',
+      'killNow': 'Sofort beenden',
+      'killTitle': '{name} (PID {pid}) beenden?',
+      'killNowMsg': 'Der Prozess wird sofort abgewürgt – ungespeicherte Daten gehen verloren.',
+      'killTermMsg': 'Der Prozess wird gebeten, sich zu beenden.',
+      'bootEnableTitle': '{name} beim Start einschalten?',
+      'bootDisableTitle': '{name} beim Start ausschalten?',
+      'bootEnableMsg': 'Der Dienst startet dann automatisch, wenn der Server hochfährt.',
+      'bootDisableMsg': 'Der Dienst startet beim nächsten Hochfahren nicht mehr von selbst. Gerade läuft er weiter.',
+      'bootEnable': 'Einschalten',
+      'bootDisable': 'Ausschalten',
+      'act_task-save': 'Aufgabe gespeichert',
+      'act_task-delete': 'Aufgabe gelöscht',
+      'act_task-run': 'Aufgabe ausgeführt',
+      'act_maintenance-start': 'Wartung gestartet',
+      'act_maintenance-end': 'Wartung beendet',
+      'act_process-kill': 'Prozess beendet',
+      'act_meta-save': 'Notizen geändert',
+      'act_service-enable': 'Dienst beim Start an',
+      'act_service-disable': 'Dienst beim Start aus',
     },
     en: {
       tagline: 'Your servers – always with you', user: 'User', password: 'Password', code: '2FA code', login: 'Sign in', loggingIn: 'Signing in…',
@@ -470,6 +543,79 @@
       'act_script-delete': 'script deleted',
       'act_script-run': 'script run',
       'act_notify-save': 'alert channels changed',
+      'select': 'Select',
+      'selectedN': '{n} selected',
+      'maintenance': 'Maintenance',
+      'runOnN': 'Script on {n} servers',
+      'bulkUpdatesTitle': 'Install updates on {n} servers?',
+      'bulkStarted': 'Started on {ok} of {n} servers',
+      'bulkRebootTitle': 'Restart {n} servers?',
+      'maintenanceOn': 'Maintenance running',
+      'maintUntil': 'until {time} – no alerts',
+      'bootOn': 'Autostart off',
+      'bootOff': 'Autostart on',
+      'tasks': 'Tasks',
+      'tasksTile': 'Scripts on a schedule',
+      'processesTile': 'View and end',
+      'notes': 'Notes',
+      'notesTile': 'Client, site, tags',
+      'end': 'End',
+      'maintHint': 'Temporarily mute alerts',
+      'maintStartTitle': 'Start maintenance',
+      'maintStartSub': 'While maintenance runs, this server sends no alerts. Afterwards it continues automatically.',
+      'duration': 'Duration',
+      'reason': 'Reason',
+      'maintStarted': 'Maintenance running ✓',
+      'client': 'Client',
+      'site': 'Site',
+      'tags': 'Tags',
+      'notesSub': 'Client and site group the servers on the home screen.',
+      'tagsHint': 'Tags (comma separated)',
+      'notesPh': 'Access, special notes, contacts …',
+      'schedDaily': 'daily {time}',
+      'schedWeekly': '{day} {time}',
+      'schedHourly': 'hourly, minute {m}',
+      'schedEvery': 'every {n} min',
+      'tasksHint': 'Run scripts automatically.',
+      'newTask': 'New',
+      'newTaskTitle': 'New task',
+      'scriptOne': 'Script',
+      'paused': 'paused',
+      'noTasks': 'No tasks yet',
+      'noTasksHint': 'Let scripts run automatically – e.g. clean up every night or check backups every Monday.',
+      'runNow': 'Run now',
+      'deleteTaskTitle': 'Delete “{name}”?',
+      'deleteTaskMsg': 'The task will no longer run. The script stays.',
+      'editTask': 'Edit task',
+      'taskFormSub': 'The result of each run is under Scripts → Recent runs.',
+      'schedule': 'Schedule',
+      'minuteLabel': 'Minute',
+      'everyMin': 'Every … minutes',
+      'taskActive': 'Active',
+      'st_daily': 'Daily',
+      'st_weekly': 'Weekly',
+      'st_hourly': 'Hourly',
+      'st_interval': 'Every X minutes',
+      'killTerm': 'End',
+      'killNow': 'Kill now',
+      'killTitle': 'End {name} (PID {pid})?',
+      'killNowMsg': 'The process is killed immediately – unsaved data is lost.',
+      'killTermMsg': 'The process is asked to exit.',
+      'bootEnableTitle': 'Start {name} at boot?',
+      'bootDisableTitle': 'Stop starting {name} at boot?',
+      'bootEnableMsg': 'The service then starts automatically when the server boots.',
+      'bootDisableMsg': 'The service no longer starts by itself on the next boot. It keeps running for now.',
+      'bootEnable': 'Turn on',
+      'bootDisable': 'Turn off',
+      'act_task-save': 'task saved',
+      'act_task-delete': 'task deleted',
+      'act_task-run': 'task run',
+      'act_maintenance-start': 'maintenance started',
+      'act_maintenance-end': 'maintenance ended',
+      'act_process-kill': 'process ended',
+      'act_meta-save': 'notes changed',
+      'act_service-enable': 'service on at boot',
+      'act_service-disable': 'service off at boot',
     },
   };
   const t = (k, p = {}) => String(DICT[LANG][k] ?? DICT.de[k] ?? k).replace(/\{(\w+)\}/g, (_, x) => (p[x] ?? ''));
@@ -477,13 +623,14 @@
   // ---------- Symbole ----------
   const PATHS = {
     back: 'M15 18l-6-6 6-6', chev: 'M9 18l6-6-6-6', refresh: 'M20 12a8 8 0 1 1-2.34-5.66 M20 4v5h-5', gear: 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z',
-    gauge: 'M12 14l4-4 M3.3 15a9 9 0 1 1 17.4 0', clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 2', server: 'M5.5 4h13A2.5 2.5 0 0 1 21 6.5v2A2.5 2.5 0 0 1 18.5 11h-13A2.5 2.5 0 0 1 3 8.5v-2A2.5 2.5 0 0 1 5.5 4z M5.5 13h13a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-2A2.5 2.5 0 0 1 5.5 13z M7 7.5h.01 M7 16.5h.01',
+    gauge: 'M12 14l4-4 M3.3 15a9 9 0 1 1 17.4 0', pulse: 'M3 12h4l3-8 4 16 3-8h4', clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 2', server: 'M5.5 4h13A2.5 2.5 0 0 1 21 6.5v2A2.5 2.5 0 0 1 18.5 11h-13A2.5 2.5 0 0 1 3 8.5v-2A2.5 2.5 0 0 1 5.5 4z M5.5 13h13a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-2A2.5 2.5 0 0 1 5.5 13z M7 7.5h.01 M7 16.5h.01',
     box: 'M21 8l-9-5-9 5v8l9 5 9-5z M3 8l9 5 9-5 M12 13v8', dots: 'M5 12h.01 M12 12h.01 M19 12h.01', alert: 'M10.3 4.3L2.8 17.5a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0z M12 9.5v4 M12 17h.01',
     restart: 'M3 12a9 9 0 1 0 3-6.7 M3 4v5h5', play: 'M7 4.5v15l12-7.5z', stop: 'M7 7h10v10H7z', logs: 'M8 6h13 M8 12h13 M8 18h13 M3 6h.01 M3 12h.01 M3 18h.01',
     power: 'M18.4 6.6a9 9 0 1 1-12.8 0 M12 2v10', bell: 'M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z M10 20.5a2 2 0 0 0 4 0', search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z M20 20l-3.5-3.5',
     share: 'M12 3v12 M8 7l4-4 4 4 M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7', close: 'M6 6l12 12 M18 6L6 18', list: 'M4 6h16 M4 12h16 M4 18h10', user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0',
     shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',
     download: 'M12 3v12 M7 10l5 5 5-5 M5 21h14', code: 'M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16', edit: 'M4 20h4L19 9l-4-4L4 16z M14 6l4 4',
+    check2: 'M5 12.5l4.5 4.5L19 7', tool: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z', cpu: 'M7 7h10v10H7z M10 10h4v4h-4z M9 3v4 M15 3v4 M9 17v4 M15 17v4 M3 9h4 M3 15h4 M17 9h4 M17 15h4',
     star: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z', key: 'M15 7a4 4 0 1 1-3.8 5.2L4 19.4V21h3v-2h2v-2h2l1.2-1.2A4 4 0 0 1 15 7z M16 9h.01',
     phone: 'M8 2.5h8A1.5 1.5 0 0 1 17.5 4v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5z M11 18.5h2', users: 'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M22 21a7 7 0 0 0-4.5-6.5',
     sliders: 'M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M16 4v4 M10 10v4 M18 16v4', copy: 'M9 9h10v12H9z M5 15V3h10', info: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z M12 16v-5 M12 8h.01', plus: 'M12 5v14 M5 12h14', trash: 'M4 7h16 M10 11v6 M14 11v6 M6 7l1 13h10l1-13 M9 7V4h6v3', logout: 'M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3 M10 17l5-5-5-5 M15 12H3',
@@ -525,16 +672,17 @@
   }
 
   // ---------- Zustand und Navigation ----------
-  const state = { me: null, servers: [], timers: [], es: null, filter: { q: '', chip: 'all' }, range: 24, psort: 'cpu' };
+  const state = { seq: 0, me: null, servers: [], timers: [], es: null, filter: { q: '', chip: 'all' }, range: 24, psort: 'cpu' };
   const clearTimers = () => { state.timers.forEach(clearInterval); state.timers = []; if (state.es) { state.es.close(); state.es = null; } };
-  const every = (ms, fn) => state.timers.push(setInterval(() => { if (!document.hidden) fn(); }, ms));
+  // seq: Seitenaufbau, zu dem der Timer gehört – eine überholte Seite startet keinen mehr
+  const every = (ms, fn, seq = state.seq) => seq === state.seq && state.timers.push(setInterval(() => { if (!document.hidden) fn(); }, ms));
   const go = h => { if (location.hash !== h) location.hash = h; else route(); };
 
   window.addEventListener('hashchange', route);
   window.addEventListener('scroll', () => $('.top')?.classList.toggle('scrolled', window.scrollY > 4), { passive: true });
 
   async function route() {
-    clearTimers(); closeSheet();
+    clearTimers(); closeSheet(); state.seq++;
     const h = location.hash || '#/';
     if (!state.me && h !== '#/login') {
       try { state.me = await api('GET', '/api/me'); } catch { return; }
@@ -617,31 +765,83 @@
   }
 
   async function renderHome() {
+    const seq = state.seq;
+    const admin = state.me.role === 'admin';
+    const sel = new Set();
+    let selecting = false;
     app.innerHTML = `
       <header class="top"><img class="logo" src="/icons/icon-180.png" alt=""><h1>S3cure<span class="sub"></span></h1>
+        ${admin ? `<button class="icon-btn" data-a="select" aria-label="${t('select')}">${ic('check2')}</button>` : ''}
         <button class="icon-btn" data-a="refresh" aria-label="${t('refresh')}">${ic('refresh')}</button>
         <button class="icon-btn" data-a="settings" aria-label="${t('settings')}">${ic('gear')}</button></header>
-      <main><div class="banners"></div><div class="list-srv"><div class="skeleton"></div><div class="skeleton"></div></div></main>`;
+      <main><div class="banners"></div><div class="list-srv"><div class="skeleton"></div><div class="skeleton"></div></div></main>
+      <div class="bulkbar" hidden><span class="bulk-n"></span><span class="spacer"></span>
+        <button class="btn small" data-b="script">${ic('code')}${t('scripts')}</button>
+        <button class="btn small" data-b="updates">${ic('download')}${t('updates')}</button>
+        <button class="btn small danger" data-b="reboot">${ic('power')}</button></div>`;
     $('[data-a=settings]', app).addEventListener('click', () => go('#/settings'));
     $('[data-a=refresh]', app).addEventListener('click', () => load(true));
+    const bar = $('.bulkbar', app);
+    const paintBar = () => { bar.hidden = !selecting; $('.bulk-n', bar).textContent = t('selectedN', { n: sel.size }); for (const b of bar.querySelectorAll('button')) b.disabled = !sel.size; };
+    $('[data-a=select]', app)?.addEventListener('click', e => { selecting = !selecting; sel.clear(); e.currentTarget.classList.toggle('on', selecting); paintBar(); paint(); });
     renderBanners($('.banners', app));
+
+    const card = s => {
+      const [cls, txt] = srvState(s);
+      const m = s.maintenance && s.maintenance.until > Date.now();
+      const tags = (s.meta && s.meta.tags) || [];
+      return `<a class="card srv ${selecting ? 'selecting' : ''} ${sel.has(s.id) ? 'picked' : ''}" href="#/s/${encodeURIComponent(s.id)}/status" data-id="${esc(s.id)}">
+        <div class="srv-head">${selecting ? `<span class="pickbox">${sel.has(s.id) ? ic('check2') : ''}</span>` : ''}<span class="srv-name">${esc(s.name)}</span>${m ? `<span class="pill">${ic('tool')}${t('maintenance')}</span>` : `<span class="pill ${cls}"><span class="dot"></span>${esc(txt)}</span>`}</div>
+        ${tags.length ? `<div class="tags">${tags.map(x => `<span class="tag">${esc(x)}</span>`).join('')}</div>` : ''}
+        ${s.ok ? homeStats(s.metrics) + homeChecks(s.checks) : ''}${issuesHtml(s)}</a>`;
+    };
+    const paint = () => {
+      const box = $('.list-srv', app);
+      if (!box || seq !== state.seq) return;
+      // Nach Kunde und Standort gruppieren (ohne Zuordnung: oben)
+      const groups = new Map();
+      for (const s of state.servers) {
+        const k = s.meta && (s.meta.client || s.meta.site) ? `${s.meta.client || ''}${s.meta.site ? ' · ' + s.meta.site : ''}`.replace(/^ · /, '') : '';
+        if (!groups.has(k)) groups.set(k, []);
+        groups.get(k).push(s);
+      }
+      const keys = [...groups.keys()].sort((x, y) => (x === '' ? -1 : y === '' ? 1 : x.localeCompare(y)));
+      box.innerHTML = keys.map(k => `${k && keys.length > 1 ? `<div class="section-title">${esc(k)}</div>` : k ? `<div class="section-title">${esc(k)}</div>` : ''}${groups.get(k).map(card).join('')}`).join('');
+      applyWidths(box);
+      if (selecting) for (const a of box.querySelectorAll('a.srv')) a.addEventListener('click', e => { e.preventDefault(); const id = a.dataset.id; if (sel.has(id)) sel.delete(id); else sel.add(id); paint(); paintBar(); });
+    };
     const load = async spin => {
       const b = $('[data-a=refresh]', app);
       if (spin) b.classList.add('spin');
       try { state.servers = await api('GET', '/api/servers'); } catch (e) { toast(e.message, true); return; } finally { b.classList.remove('spin'); }
-      const box = $('.list-srv', app);
-      if (!box) return;
       $('.top .sub', app).textContent = (state.me.demo ? t('demo') + ' · ' : '') + (state.servers.length === 1 ? t('oneServer') : t('nServers', { n: state.servers.length }));
-      box.innerHTML = state.servers.map(s => {
-        const [cls, txt] = srvState(s);
-        return `<a class="card srv" href="#/s/${encodeURIComponent(s.id)}/status">
-          <div class="srv-head"><span class="srv-name">${esc(s.name)}</span><span class="pill ${cls}"><span class="dot"></span>${esc(txt)}</span></div>
-          ${s.ok ? homeStats(s.metrics) + homeChecks(s.checks) : ''}${issuesHtml(s)}</a>`;
-      }).join('');
-      applyWidths(box);
+      paint();
     };
+
+    // Sammelaktionen
+    bar.querySelector('[data-b=script]').addEventListener('click', async () => {
+      let list; try { list = await api('GET', '/api/scripts'); } catch (e) { toast(e.message, true); return; }
+      const sh = openSheet(`<h2>${t('runOnN', { n: sel.size })}</h2><div class="list">${list.map(sc => `<div class="row" data-sc="${esc(sc.id)}">${ic('code')}<div class="r-main"><div class="r-title">${esc(sc.name)}</div><div class="r-sub">${esc(sc.description || '')}</div></div></div>`).join('')}</div><div class="s-btns"><button class="btn block" data-x="cancel">${t('cancel')}</button></div>`);
+      sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+      for (const r of sh.querySelectorAll('[data-sc]')) r.addEventListener('click', () => {
+        const sc = list.find(x => x.id === r.dataset.sc);
+        confirmSheet(t('runTitle', { name: sc.name }), t('runMsg', { servers: [...sel].map(id => state.servers.find(x => x.id === id)?.name || id).join(', ') }), t('run'), async () => {
+          const runs = await api('POST', `/api/scripts/${sc.id}/run`, { servers: [...sel] });
+          runSheet(runs.map(x => x.id));
+        });
+      });
+    });
+    bar.querySelector('[data-b=updates]').addEventListener('click', () => confirmSheet(t('bulkUpdatesTitle', { n: sel.size }), t('installMsg'), t('installAll'), async () => {
+      const res = await Promise.all([...sel].map(id => api('POST', `/api/s/${encodeURIComponent(id)}/updates/install`, {}).then(() => true).catch(() => false)));
+      closeSheet(); toast(t('bulkStarted', { ok: res.filter(Boolean).length, n: res.length }), res.some(x => !x));
+    }));
+    bar.querySelector('[data-b=reboot]').addEventListener('click', () => formSheet({
+      title: t('bulkRebootTitle', { n: sel.size }), sub: t('rebootMsg'), submit: t('reboot'), danger: true, fields: [codeField()],
+      onSubmit: async f => { const r = await api('POST', '/api/bulk/reboot', { servers: [...sel], code: f.code.value }); closeSheet(); toast(t('bulkStarted', { ok: r.filter(x => x.ok).length, n: r.length })); },
+    }));
+
     await load();
-    every(15000, load);
+    every(15000, () => { if (!$('#sheet').hidden) return; load(); }, seq);
   }
 
   function renderBanners(box) {
@@ -658,8 +858,9 @@
 
   // ---------- Ein Server ----------
   async function renderServer(id, tab) {
+    const seq = state.seq;
     const known = state.servers.find(s => s.id === id);
-    const SUB = ['updates', 'scripts', 'inventory', 'audit'];
+    const SUB = ['updates', 'scripts', 'inventory', 'audit', 'tasks', 'processes'];
     const sub = SUB.includes(tab);
     const multi = state.servers.length > 1 || sub;
     const navTab = sub ? 'more' : tab;
@@ -677,10 +878,10 @@
     $('[data-a=back]', app)?.addEventListener('click', () => go(sub ? `#/s/${encodeURIComponent(id)}/more` : '#/'));
     $('[data-a=settings]', app).addEventListener('click', () => go('#/settings'));
     for (const b of app.querySelectorAll('.tabbar [data-t]')) b.addEventListener('click', () => go(`#/s/${encodeURIComponent(id)}/${b.dataset.t}`));
-    if (!state.servers.length) api('GET', '/api/servers').then(l => { state.servers = l; const s = l.find(x => x.id === id); if (s) $('.top .nm', app).textContent = s.name; if (l.length > 1 && !$('[data-a=back]', app)) route(); }).catch(() => {});
+    if (!state.servers.length) api('GET', '/api/servers').then(l => { state.servers = l; const s = l.find(x => x.id === id); if (s && !sub) $('.top .nm', app).textContent = s.name; if (l.length > 1 && !$('[data-a=back]', app)) route(); }).catch(() => {});
     const main = $('main', app);
     const refreshBtn = $('[data-a=refresh]', app);
-    const view = { status: viewStatus, services: viewServices, docker: viewDocker, checks: viewChecks, more: viewMore, updates: viewUpdates, scripts: viewScripts, inventory: viewInventory, audit: viewAudit }[tab] || viewStatus;
+    const view = { status: viewStatus, services: viewServices, docker: viewDocker, checks: viewChecks, more: viewMore, updates: viewUpdates, scripts: viewScripts, inventory: viewInventory, audit: viewAudit, tasks: viewTasks, processes: viewProcesses }[tab] || viewStatus;
     const load = async spin => {
       if (spin) refreshBtn.classList.add('spin');
       try { await view(id, main); } catch (e) { toast(e.message, true); } finally { refreshBtn.classList.remove('spin'); }
@@ -689,7 +890,7 @@
     // Fehlerzahl am Checks-Tab auch auf den anderen Seiten
     if (tab !== 'checks') api('GET', `/api/s/${encodeURIComponent(id)}/checks`).then(l => { const b = $('.tabbar [data-t=checks] .badge', app); const n = l.filter(c => c.state.status === 'fail').length; if (b) { b.hidden = !n; b.textContent = n; } }).catch(() => {});
     await load();
-    if (['status', 'services', 'docker', 'checks'].includes(tab)) every(tab === 'status' ? 10000 : 15000, () => view(id, main, true));
+    if (['status', 'services', 'docker', 'checks'].includes(tab)) every(tab === 'status' ? 10000 : 15000, () => view(id, main, true), seq);
   }
 
   // ----- Status -----
@@ -737,7 +938,9 @@
       return `<div class="row" data-pin="${esc(p.kind + ':' + p.name)}"><span class="dot ${dot}"></span><div class="r-main"><div class="r-title">${esc(p.kind === 'service' ? shortName(p.name) : p.name)}</div><div class="r-sub">${esc(p.kind === 'service' ? word('state_', p.it.active) : p.it.status)}</div></div>${admin ? `<button class="qbtn" data-q="${running ? 'restart' : 'start'}" aria-label="${t(running ? 'restart' : 'start')}">${ic(running ? 'restart' : 'play')}</button>` : ''}<span class="chev">${ic('chev')}</span></div>`;
     };
 
+    const maint = o.maintenance || state.servers.find(x => x.id === id)?.maintenance;
     main.innerHTML = `
+      ${maint && maint.until > Date.now() ? `<div class="banner maint-banner">${ic('tool')}<div><b>${t('maintenanceOn')}</b>${t('maintUntil', { time: new Date(maint.until).toLocaleString(LANG, { weekday: 'short', hour: '2-digit', minute: '2-digit' }) })}${maint.reason ? ' · ' + esc(maint.reason) : ''}</div></div>` : ''}
       ${issues.length ? `<div class="card alert-card"><h3>${t('problems')}</h3>${issuesHtml({ ok: true, issues })}</div>` : ''}
       <div class="card rings">
         ${ring(cpu, t('cpu'), t('coresShort', { n: m.cpus || '?' }))}
@@ -860,12 +1063,19 @@
         ${admin ? `<button class="btn" data-x="restart">${ic('restart')}${t('restart')}</button>` : ''}
         ${admin ? (running ? `<button class="btn danger" data-x="stop" ${canStop ? '' : 'disabled'}>${ic('stop')}${t('stop')}</button>` : `<button class="btn" data-x="start">${ic('play')}${t('start')}</button>`) : ''}
         <button class="btn" data-x="logs">${ic('logs')}${t('logs')}</button>
+        ${admin && kind === 'service' && /^(enabled|disabled)$/.test(it.enabled || '') ? `<button class="btn" data-x="boot">${ic('power')}${it.enabled === 'enabled' ? t('bootOn') : t('bootOff')}</button>` : ''}
         <button class="btn ${getPins(id).includes(kind + ':' + it.name) ? 'on' : ''}" data-x="pin">${ic('star')}${getPins(id).includes(kind + ':' + it.name) ? t('unpin') : t('pin')}</button>
       </div>
       ${!admin ? `<p class="hint">${esc(t('viewerHint'))}</p>` : running && kind === 'service' && it.protected ? `<p class="hint">${esc(t('protectedHint'))}</p>` : ''}
       <div class="s-btns"><button class="btn block" data-x="close">${t('cancel')}</button></div>`);
     sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
     sh.querySelector('[data-x=logs]').addEventListener('click', () => go(`#/logs/${encodeURIComponent(id)}/${kind}/${encodeURIComponent(it.name)}`));
+    sh.querySelector('[data-x=boot]')?.addEventListener('click', () => {
+      const on = it.enabled === 'enabled';
+      confirmSheet(t(on ? 'bootDisableTitle' : 'bootEnableTitle', { name: title }), t(on ? 'bootDisableMsg' : 'bootEnableMsg'), t(on ? 'bootDisable' : 'bootEnable'), async () => {
+        await api('POST', `/api/s/${encodeURIComponent(id)}/services/${encodeURIComponent(it.name)}/${on ? 'disable' : 'enable'}`); closeSheet(); toast(t('done')); route();
+      }, on);
+    });
     sh.querySelector('[data-x=pin]').addEventListener('click', () => { toast(togglePin(id, kind, it.name) ? t('pinned1') : t('unpinned1')); closeSheet(); if (/\/status$/.test(location.hash)) route(); });
     for (const a of ['restart', 'stop', 'start']) sh.querySelector(`[data-x=${a}]`)?.addEventListener('click', () => confirmAction(id, kind, it, a, title));
   }
@@ -895,10 +1105,14 @@
     const enc = encodeURIComponent(id);
     const tile = (k, icon, title, sub, cls = '') => `<button class="tile-btn ${cls}" data-go="${k}">${ic(icon)}<b>${title}</b><span>${sub}</span><i class="badge" hidden></i></button>`;
     main.innerHTML = `
+      <div class="card maint"></div>
       <div class="tile-grid">
         ${tile('updates', 'download', t('updates'), t('updatesTile'))}
         ${tile('scripts', 'code', t('scripts'), t('scriptsTile'))}
         ${tile('inventory', 'box', t('inventory'), t('inventoryTile'))}
+        ${tile('tasks', 'clock', t('tasks'), t('tasksTile'))}
+        ${tile('processes', 'cpu', t('processes'), t('processesTile'))}
+        <button class="tile-btn" data-a="notes">${ic('edit')}<b>${t('notes')}</b><span>${t('notesTile')}</span></button>
         ${admin ? tile('audit', 'list', t('audit'), t('auditDesc')) : ''}
       </div>
       <div class="list">
@@ -906,6 +1120,8 @@
       </div>
       ${admin ? `<div class="section-title"></div><button class="btn danger block" data-a="reboot">${ic('power')}${t('reboot')}</button>` : ''}`;
     for (const b of main.querySelectorAll('[data-go]')) b.addEventListener('click', () => go(`#/s/${enc}/${b.dataset.go}`));
+    main.querySelector('[data-a=notes]').addEventListener('click', () => notesSheet(id));
+    paintMaint(id, main.querySelector('.maint'));
     $('[data-a=settings]', main).addEventListener('click', () => go('#/settings'));
     $('[data-a=reboot]', main)?.addEventListener('click', () => rebootSheet(id, name));
     // Anzahl offener Updates nachladen
@@ -913,6 +1129,144 @@
       const b = main.querySelector('[data-go=updates] .badge');
       if (b && u.list && u.list.length) { b.hidden = false; b.textContent = u.list.length; b.classList.toggle('sec', u.list.some(p => p.security)); }
     }).catch(() => {});
+  }
+
+  // Wartungsfenster: Karte oben in „Mehr“
+  async function paintMaint(id, box) {
+    const admin = state.me.role === 'admin';
+    let m; try { m = await api('GET', `/api/s/${encodeURIComponent(id)}/maintenance`); } catch { box.hidden = true; return; }
+    box.classList.toggle('on', !!m.active);
+    box.innerHTML = m.active
+      ? `<div class="maint-row">${ic('tool')}<div><b>${t('maintenanceOn')}</b><span>${t('maintUntil', { time: new Date(m.until).toLocaleString(LANG, { weekday: 'short', hour: '2-digit', minute: '2-digit' }) })}${m.reason ? ' · ' + esc(m.reason) : ''}</span></div>${admin ? `<button class="btn small" data-m="end">${t('end')}</button>` : ''}</div>`
+      : `<div class="maint-row">${ic('tool')}<div><b>${t('maintenance')}</b><span>${t('maintHint')}</span></div>${admin ? `<button class="btn small" data-m="start">${t('start')}</button>` : ''}</div>`;
+    box.querySelector('[data-m=end]')?.addEventListener('click', async () => { try { await api('POST', `/api/s/${encodeURIComponent(id)}/maintenance/end`); paintMaint(id, box); toast(t('done')); } catch (e) { toast(e.message, true); } });
+    box.querySelector('[data-m=start]')?.addEventListener('click', () => formSheet({
+      title: t('maintStartTitle'), sub: t('maintStartSub'), submit: t('start'),
+      fields: [
+        { html: `<label>${t('duration')}<select name="minutes">${[[30, '30 min'], [60, '1 h'], [120, '2 h'], [240, '4 h'], [480, '8 h'], [1440, '24 h']].map(([v, l]) => `<option value="${v}" ${v === 60 ? 'selected' : ''}>${l}</option>`).join('')}</select></label>` },
+        { name: 'reason', label: t('reason'), attrs: `maxlength="120" placeholder="${t('optional')}"` },
+      ],
+      onSubmit: async f => { await api('POST', `/api/s/${encodeURIComponent(id)}/maintenance`, { minutes: Number(f.minutes.value), reason: f.reason.value }); closeSheet(); paintMaint(id, box); toast(t('maintStarted')); },
+    }));
+  }
+
+  // Kunde, Standort, Tags, Notizen
+  async function notesSheet(id) {
+    const admin = state.me.role === 'admin';
+    let all = {}; try { all = await api('GET', '/api/meta'); } catch {}
+    const m = all[id] || {};
+    if (!admin) {
+      const sh = openSheet(`<h2>${t('notes')}</h2><dl class="kv"><dt>${t('client')}</dt><dd>${esc(m.client || '–')}</dd><dt>${t('site')}</dt><dd>${esc(m.site || '–')}</dd><dt>${t('tags')}</dt><dd>${esc((m.tags || []).join(', ') || '–')}</dd></dl><pre class="code-pre notes-pre"></pre><div class="s-btns"><button class="btn block" data-x="close">${t('close')}</button></div>`);
+      sh.querySelector('.notes-pre').textContent = m.notes || '–';
+      sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+      return;
+    }
+    const sh = formSheet({
+      title: t('notes'), sub: t('notesSub'), submit: t('save'),
+      fields: [
+        { html: `<div class="grid2"><label>${t('client')}<input name="client" value="${esc(m.client || '')}" maxlength="60"></label><label>${t('site')}<input name="site" value="${esc(m.site || '')}" maxlength="60"></label></div>` },
+        { name: 'tags', label: t('tagsHint'), attrs: `value="${esc((m.tags || []).join(', '))}" placeholder="produktion, web"` },
+        { html: `<label>${t('notes')}<textarea name="notes" rows="7" placeholder="${t('notesPh')}"></textarea></label>` },
+      ],
+      onSubmit: async f => { await api('POST', `/api/meta/${encodeURIComponent(id)}`, { client: f.client.value, site: f.site.value, tags: f.tags.value, notes: f.notes.value }); closeSheet(); toast(t('saved')); },
+    });
+    sh.querySelector('textarea[name=notes]').value = m.notes || '';
+  }
+
+  // ----- Geplante Aufgaben -----
+  const schedText = s => s.type === 'daily' ? t('schedDaily', { time: s.time }) : s.type === 'weekly' ? t('schedWeekly', { day: t('wd' + s.day), time: s.time }) : s.type === 'hourly' ? t('schedHourly', { m: String(s.minute).padStart(2, '0') }) : t('schedEvery', { n: s.every });
+
+  async function viewTasks(id, main) {
+    $('.top .nm', app).textContent = t('tasks');
+    const [list, scriptsList] = await Promise.all([api('GET', '/api/tasks'), api('GET', '/api/scripts')]);
+    const admin = state.me.role === 'admin';
+    const sname = sid => scriptsList.find(x => x.id === sid)?.name || '?';
+    const srvName = sid => state.servers.find(x => x.id === sid)?.name || sid;
+    main.innerHTML = `
+      ${admin ? `<div class="sumrow"><span class="muted">${t('tasksHint')}</span><span class="spacer"></span><button class="btn small" data-a="add">${ic('plus')}${t('newTask')}</button></div>` : ''}
+      ${list.length ? `<div class="list">${list.map(tk => `<div class="row" data-tk="${esc(tk.id)}"><span class="dot ${!tk.enabled ? '' : tk.lastStatus === 'fail' ? 'bad' : tk.lastStatus === 'running' ? 'warn' : tk.lastStatus === 'ok' ? 'ok' : ''}"></span><div class="r-main"><div class="r-title">${esc(tk.name)}${tk.enabled ? '' : ` <span class="pill">${t('paused')}</span>`}</div><div class="r-sub">${esc(schedText(tk.schedule))} · ${esc(sname(tk.script))} · ${esc(tk.servers.map(srvName).join(', '))}</div></div><span class="chev">${ic('chev')}</span></div>`).join('')}</div>`
+        : `<div class="card empty-card">${ic('clock')}<b>${t('noTasks')}</b><p>${t('noTasksHint')}</p>${admin ? `<button class="btn primary" data-a="add">${ic('plus')}${t('newTask')}</button>` : ''}</div>`}`;
+    for (const b of main.querySelectorAll('[data-a=add]')) b.addEventListener('click', () => taskForm(id, null, scriptsList, () => viewTasks(id, main)));
+    for (const r of main.querySelectorAll('[data-tk]')) r.addEventListener('click', () => {
+      const tk = list.find(x => x.id === r.dataset.tk);
+      const sh = openSheet(`<h2>${esc(tk.name)}</h2><div class="s-sub">${esc(schedText(tk.schedule))}</div>
+        <div class="kv-card"><dl class="kv"><dt>${t('scriptOne')}</dt><dd>${esc(sname(tk.script))}</dd><dt>${t('servers')}</dt><dd>${esc(tk.servers.map(srvName).join(', '))}</dd><dt>${t('lastCheck')}</dt><dd>${tk.lastRun ? ago(tk.lastRun) : '–'}</dd></dl></div>
+        ${admin ? `<div class="btn-row"><button class="btn primary" data-x="run">${ic('play')}${t('runNow')}</button><button class="btn" data-x="edit">${ic('edit')}${t('edit')}</button></div>` : ''}
+        <div class="s-btns">${admin ? `<button class="btn danger block" data-x="del">${ic('trash')}${t('delete')}</button>` : ''}<button class="btn block" data-x="close">${t('close')}</button></div>`);
+      sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+      sh.querySelector('[data-x=run]')?.addEventListener('click', async () => { try { const runs = await api('POST', `/api/tasks/${tk.id}/run`); runSheet(runs.map(x => x.id), () => viewTasks(id, main)); } catch (e) { toast(e.message, true); } });
+      sh.querySelector('[data-x=edit]')?.addEventListener('click', () => taskForm(id, tk, scriptsList, () => viewTasks(id, main)));
+      sh.querySelector('[data-x=del]')?.addEventListener('click', () => confirmSheet(t('deleteTaskTitle', { name: tk.name }), t('deleteTaskMsg'), t('delete'), async () => { await api('POST', `/api/tasks/${tk.id}/delete`); closeSheet(); viewTasks(id, main); }, true));
+    });
+  }
+
+  function taskForm(id, tk, scriptsList, after) {
+    const s = tk ? tk.schedule : { type: 'daily', time: '03:00', day: 1, minute: 0, every: 60 };
+    const chosen = new Set(tk ? tk.servers : [id]);
+    const sh = openSheet(`
+      <h2>${tk ? t('editTask') : t('newTaskTitle')}</h2><div class="s-sub">${t('taskFormSub')}</div>
+      <form class="sheet-form">
+        <label>${t('name')}<input name="name" value="${esc(tk?.name || '')}" maxlength="60" required></label>
+        <label>${t('scriptOne')}<select name="script">${scriptsList.map(sc => `<option value="${esc(sc.id)}" ${tk?.script === sc.id ? 'selected' : ''}>${esc(sc.name)}</option>`).join('')}</select></label>
+        <label>${t('schedule')}<select name="type">${['daily', 'weekly', 'hourly', 'interval'].map(k => `<option value="${k}" ${s.type === k ? 'selected' : ''}>${t('st_' + k)}</option>`).join('')}</select></label>
+        <div class="grid2">
+          <label class="tf" data-for="weekly">${t('dayLabel')}<select name="day">${[1, 2, 3, 4, 5, 6, 0].map(d => `<option value="${d}" ${s.day === d ? 'selected' : ''}>${t('wd' + d)}</option>`).join('')}</select></label>
+          <label class="tf" data-for="daily weekly">${t('timeLabel')}<input name="time" type="time" value="${esc(s.time || '03:00')}"></label>
+          <label class="tf" data-for="hourly">${t('minuteLabel')}<input name="minute" type="number" min="0" max="59" value="${esc(s.minute ?? 0)}"></label>
+          <label class="tf" data-for="interval">${t('everyMin')}<input name="every" type="number" min="5" max="1440" value="${esc(s.every || 60)}"></label>
+        </div>
+        <div class="sub-head">${t('servers')}</div>
+        <div class="list pick">${state.servers.map(x => `<label class="row"><input type="checkbox" name="srv" value="${esc(x.id)}" ${chosen.has(x.id) ? 'checked' : ''}><div class="r-main"><div class="r-title">${esc(x.name)}</div></div></label>`).join('')}</div>
+        <label class="check"><input type="checkbox" name="enabled" ${tk?.enabled === false ? '' : 'checked'}><span>${t('taskActive')}</span></label>
+        <div class="err" hidden></div>
+        <div class="s-btns"><button class="btn primary block" type="submit">${t('save')}</button><button class="btn block" type="button" data-x="cancel">${t('cancel')}</button></div>
+      </form>`);
+    const f = sh.querySelector('form'), err = sh.querySelector('.err');
+    const sync = () => { for (const d of f.querySelectorAll('.tf')) d.hidden = !d.dataset.for.split(' ').includes(f.type.value); };
+    f.type.addEventListener('change', sync); sync();
+    sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+    f.addEventListener('submit', async e => {
+      e.preventDefault(); err.hidden = true;
+      try {
+        await api('POST', '/api/tasks', { id: tk?.id, name: f.name.value, script: f.script.value, servers: [...f.querySelectorAll('input[name=srv]:checked')].map(i => i.value), enabled: f.enabled.checked,
+          schedule: { type: f.type.value, time: f.time.value, day: Number(f.day.value), minute: Number(f.minute.value), every: Number(f.every.value) } });
+        closeSheet(); toast(t('saved')); after();
+      } catch (ex) { err.textContent = ex.message; err.hidden = false; }
+    });
+  }
+
+  // ----- Prozesse -----
+  async function viewProcesses(id, main) {
+    $('.top .nm', app).textContent = t('processes');
+    const enc = encodeURIComponent(id);
+    const list = await api('GET', `/api/s/${enc}/processes?sort=${state.psort}&limit=150`);
+    const admin = state.me.role === 'admin';
+    main.innerHTML = `
+      <div class="sumrow"><div class="search grow">${ic('search')}<input type="search" placeholder="${t('search')}" autocapitalize="none" autocorrect="off" spellcheck="false"></div>
+        <div class="seg-small"><button data-ps="cpu" class="${state.psort === 'cpu' ? 'on' : ''}">CPU</button><button data-ps="mem" class="${state.psort === 'mem' ? 'on' : ''}">RAM</button></div></div>
+      <div class="list procs-list"></div>`;
+    const inp = main.querySelector('input');
+    const paint = () => {
+      const q = inp.value.trim().toLowerCase();
+      const hits = list.filter(p => !q || p.name.toLowerCase().includes(q) || p.user.includes(q) || String(p.pid) === q);
+      main.querySelector('.procs-list').innerHTML = hits.map(p => `<div class="row" data-pid="${p.pid}"><div class="r-main"><div class="r-title">${esc(p.name)}</div><div class="r-sub">${esc(p.user)} · PID ${p.pid}</div></div><div class="p-num"><b>${p.cpu.toFixed(1)} %</b><span>${bytes(p.rss)}</span></div></div>`).join('') || `<div class="empty">–</div>`;
+      for (const r of main.querySelectorAll('[data-pid]')) r.addEventListener('click', () => {
+        const p = list.find(x => String(x.pid) === r.dataset.pid);
+        const sh = openSheet(`<h2>${esc(p.name)}</h2><div class="s-sub">PID ${p.pid} · ${esc(p.user)}</div>
+          <div class="kv-card"><dl class="kv"><dt>CPU</dt><dd>${p.cpu.toFixed(1)} %</dd><dt>${t('ram')}</dt><dd>${bytes(p.rss)} (${p.mem.toFixed(1)} %)</dd></dl></div>
+          ${admin ? `<div class="btn-row"><button class="btn" data-x="term">${ic('stop')}${t('killTerm')}</button><button class="btn danger" data-x="kill">${ic('close')}${t('killNow')}</button></div>` : `<p class="hint">${t('viewerHint')}</p>`}
+          <div class="s-btns"><button class="btn block" data-x="close">${t('close')}</button></div>`);
+        sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+        const kill = signal => confirmSheet(t('killTitle', { name: p.name, pid: p.pid }), signal === 'KILL' ? t('killNowMsg') : t('killTermMsg'), signal === 'KILL' ? t('killNow') : t('killTerm'), async () => {
+          await api('POST', `/api/s/${enc}/processes/${p.pid}/kill`, { signal }); closeSheet(); toast(t('done')); viewProcesses(id, main);
+        }, true);
+        sh.querySelector('[data-x=term]')?.addEventListener('click', () => kill('TERM'));
+        sh.querySelector('[data-x=kill]')?.addEventListener('click', () => kill('KILL'));
+      });
+    };
+    inp.addEventListener('input', paint);
+    for (const b of main.querySelectorAll('[data-ps]')) b.addEventListener('click', () => { state.psort = b.dataset.ps; viewProcesses(id, main); });
+    paint();
   }
 
   async function viewAudit(id, main) {
