@@ -85,6 +85,7 @@
       'passwordsDiffer': 'Die neuen Passwörter sind verschieden.',
       'passwordChanged': 'Passwort geändert ✓ – andere Geräte sind abgemeldet.',
       'copy': 'Kopieren',
+      'newPhoneAuth': 'Zur Sicherheit: Passwort und aktueller Code vom bisherigen Gerät.',
       'newPhoneSub': 'Scanne den QR-Code mit der Authenticator-App auf dem neuen Gerät und gib den Code ein, den sie jetzt zeigt. Erst dann wird umgestellt – der alte Code gilt bis dahin weiter.',
       'totpChanged': '2FA umgestellt ✓ – ab jetzt gilt der Code vom neuen Gerät.',
       'devicesSub': 'Hier bist du angemeldet. Unbekanntes Gerät? Abmelden und Passwort ändern.',
@@ -405,6 +406,7 @@
       'passwordsDiffer': 'The new passwords differ.',
       'passwordChanged': 'Password changed ✓ – other devices are signed out.',
       'copy': 'Copy',
+      'newPhoneAuth': 'For safety: password and current code from the existing device.',
       'newPhoneSub': 'Scan the QR code with the authenticator app on the new device and enter the code it shows now. Only then it switches – the old code keeps working until then.',
       'totpChanged': '2FA switched ✓ – from now on the code from the new device counts.',
       'devicesSub': 'You are signed in here. Unknown device? Sign it out and change your password.',
@@ -1414,6 +1416,7 @@
     const f = sh.querySelector('form'), err = sh.querySelector('.err');
     const sync = () => { for (const d of f.querySelectorAll('.tf')) d.hidden = !d.dataset.for.split(' ').includes(f.type.value); };
     f.type.addEventListener('change', sync); sync();
+    for (const ci of f.querySelectorAll('input.code')) ci.addEventListener('input', () => { ci.value = ci.value.replace(/\D/g, '').slice(0, 6); });
     sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
     f.addEventListener('submit', async e => {
       e.preventDefault(); err.hidden = true;
@@ -1513,7 +1516,7 @@
         <div class="tf" data-for="cert"><label>${t('certDays')}<input name="days" type="number" inputmode="numeric" value="${esc(c?.days || 14)}"></label></div>
         <div class="tf" data-for="service"><label>${t('serviceName')}<input name="service" value="${esc(c?.service || '')}" placeholder="nginx" autocapitalize="none" autocorrect="off" spellcheck="false"></label></div>
         <div class="tf" data-for="disk"><label>${t('pathLabel')}<input name="path" value="${esc(c?.path || '/')}" autocapitalize="none" spellcheck="false"></label><label>${t('diskLimit')}<input name="limit" type="number" inputmode="numeric" value="${esc(c?.limit || 90)}"></label></div>
-        <div class="tf" data-for="script"><label>${t('checkScript')}<textarea name="body" rows="5" spellcheck="false" autocapitalize="none" placeholder="test -f /var/run/app.pid">${esc(c?.body || '')}</textarea></label></div>
+        <div class="tf" data-for="script"><label>${t('checkScript')}<textarea name="body" rows="5" spellcheck="false" autocapitalize="none" placeholder="test -f /var/run/app.pid">${esc(c?.body || '')}</textarea></label>${codeField().html}</div>
         <div class="grid2"><label>${t('interval')}<select name="interval">${[30, 60, 300, 900, 3600].map(n => `<option value="${n}" ${(c?.interval || 60) === n ? 'selected' : ''}>${t('everyS', { n })}</option>`).join('')}</select></label>
           <label>${t('failAfter')}<select name="failAfter">${[1, 2, 3, 5].map(n => `<option value="${n}" ${(c?.failAfter || 2) === n ? 'selected' : ''}>${n}×</option>`).join('')}</select></label></div>
         <div class="err" hidden></div>
@@ -1908,15 +1911,22 @@
   const qrBlock = r => `<div class="qr">${String(r.qr || '').startsWith('<svg') ? r.qr : ''}</div><div class="secret"><span>${esc(r.secret.replace(/(.{4})/g, '$1 ').trim())}</span><button class="qbtn" type="button" data-x="copy" aria-label="${t('copy')}">${ic('copy')}</button></div>`;
   const wireCopy = (sh, secret) => sh.querySelector('[data-x=copy]')?.addEventListener('click', () => navigator.clipboard.writeText(secret).then(() => toast(t('copied'))).catch(() => {}));
 
-  async function totpSheet() {
-    let r;
-    try { r = await api('POST', '/api/me/totp/start'); } catch (e) { toast(e.message, true); return; }
-    const sh = formSheet({
-      title: t('newPhone'), sub: t('newPhoneSub'), submit: t('confirm'),
-      fields: [{ html: qrBlock(r) }, codeField()],
-      onSubmit: async f => { await api('POST', '/api/me/totp/confirm', { code: f.code.value }); closeSheet(); toast(t('totpChanged')); },
+  // Erst Passwort + Code des bisherigen Geräts, dann erst bekommt man den neuen Schlüssel
+  function totpSheet() {
+    formSheet({
+      title: t('newPhone'), sub: t('newPhoneAuth'), submit: t('confirm'),
+      fields: [{ name: 'current', label: t('currentPassword'), type: 'password', attrs: 'autocomplete="current-password" required' }, codeField()],
+      onSubmit: async f => {
+        const r = await api('POST', '/api/me/totp/start', { password: f.current.value, code: f.code.value });
+        closeSheet();
+        const sh = formSheet({
+          title: t('newPhone'), sub: t('newPhoneSub'), submit: t('confirm'),
+          fields: [{ html: qrBlock(r) }, codeField()],
+          onSubmit: async g => { await api('POST', '/api/me/totp/confirm', { code: g.code.value }); closeSheet(); toast(t('totpChanged')); },
+        });
+        wireCopy(sh, r.secret);
+      },
     });
-    wireCopy(sh, r.secret);
   }
 
   async function devicesSheet() {

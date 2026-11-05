@@ -42,7 +42,8 @@ jobs:
           mkdir -p dist/pkg/s3cure-agent
           cp -a bin lib public package.json package-lock.json install.sh README.md LICENSE dist/pkg/s3cure-agent/
           tar czf dist/s3cure-agent.tar.gz -C dist/pkg s3cure-agent
-          ls -la dist/s3cure-agent.tar.gz
+          (cd dist && sha256sum s3cure-agent.tar.gz > s3cure-agent.tar.gz.sha256)
+          ls -la dist/s3cure-agent.tar.gz dist/s3cure-agent.tar.gz.sha256
 
       - name: Echte Installation aus dem Paket und Probe
         run: |
@@ -57,7 +58,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: s3cure-agent
-          path: dist/s3cure-agent.tar.gz
+          path: |
+            dist/s3cure-agent.tar.gz
+            dist/s3cure-agent.tar.gz.sha256
           if-no-files-found: error
 
   release:
@@ -82,7 +85,7 @@ jobs:
           awk -v v="$V" '$0 ~ "^## " v "( |$)" {on=1; next} /^## / {if (on) exit} on' CHANGELOG.md > notes.md
           [ -s notes.md ] || echo "S3cure Agent $V" > notes.md
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" dist/s3cure-agent.tar.gz --clobber
+            gh release upload "$GITHUB_REF_NAME" dist/s3cure-agent.tar.gz dist/s3cure-agent.tar.gz.sha256 --clobber
           else
-            gh release create "$GITHUB_REF_NAME" dist/s3cure-agent.tar.gz --title "S3cure Agent $V" --notes-file notes.md
+            gh release create "$GITHUB_REF_NAME" dist/s3cure-agent.tar.gz dist/s3cure-agent.tar.gz.sha256 --title "S3cure Agent $V" --notes-file notes.md
           fi

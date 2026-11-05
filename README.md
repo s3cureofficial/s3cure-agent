@@ -28,11 +28,14 @@ Der S3cure Agent läuft auf deinem Server und bringt dir eine **App fürs iPhone
 **2. Agent installieren** (auf dem Server, als root):
 
 ```bash
-cd /tmp && curl -fsSL https://github.com/s3cureofficial/s3cure-agent/releases/latest/download/s3cure-agent.tar.gz | tar xz
+D=$(mktemp -d) && cd "$D" && B=https://github.com/s3cureofficial/s3cure-agent/releases/latest/download
+curl -fsSLO $B/s3cure-agent.tar.gz && curl -fsSLO $B/s3cure-agent.tar.gz.sha256 && sha256sum -c s3cure-agent.tar.gz.sha256 && tar xzf s3cure-agent.tar.gz
 ```
 ```bash
-/tmp/s3cure-agent/install.sh --domain ops.deine-domain.de
+"$D"/s3cure-agent/install.sh --domain ops.deine-domain.de
 ```
+
+(Eigenes, frisches Verzeichnis statt `/tmp/s3cure-agent` – so kann auf einem Server mit mehreren Benutzern niemand das Paket vor dem Start als root austauschen.)
 
 Das Skript installiert Node.js (falls nötig), richtet den Agenten als Dienst ein und – mit `--domain` – nginx oder Caddy mit HTTPS-Zertifikat. Ohne `--domain` läuft der Agent nur lokal (127.0.0.1:7777).
 

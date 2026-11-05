@@ -143,6 +143,16 @@ test('API: Anmeldung, Rechte, Aktionen, Schutz', async () => {
   assert.equal(blocked.status, 429);
   const other = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '198.51.100.7' }, body: JSON.stringify({ user: 'gast', password: 'gast-passwort-123', code: totp.hotp(viewer.secret, totp.step() + 1) }) });
   assert.equal(other.status, 200, 'andere IP darf sich anmelden');
+  // Gefälschtes X-Real-IP umgeht die Sperre nicht: X-Forwarded-For (vom Proxy gesetzt) zählt zuerst
+  const spoof = (n) => fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Forwarded-For': '203.0.113.50', 'X-Real-IP': '10.9.8.' + n }, body: JSON.stringify({ user: 'y' + n, password: 'y', code: '1' }) });
+  for (let i = 0; i < 5; i++) await spoof(i);
+  assert.equal((await spoof(99)).status, 429, 'IP-Sperre trotz wechselndem X-Real-IP');
+  // Script-Check = root-Code: wie beim Speichern eines Skripts nur mit frischem 2FA-Code
+  const scriptCheck = { type: 'script', name: 'x', body: 'true' };
+  assert.equal((await call('POST', '/api/s/local/checks', { cookie: c, body: scriptCheck })).status, 403, 'ohne Code abgelehnt');
+  assert.equal((await call('POST', '/api/s/local/checks', { cookie: c, body: { ...scriptCheck, code: '000000' } })).status, 403, 'falscher Code abgelehnt');
+  assert.equal((await call('POST', '/api/s/local/checks', { cookie: c, body: { ...scriptCheck, code: totp.hotp(admin.secret, totp.step() + 1) } })).status, 200, 'mit Code ok');
+  assert.equal((await call('POST', '/api/s/local/checks', { cookie: c, body: { type: 'port', host: '127.0.0.1', port: 22 } })).status, 200, 'andere Checks brauchen keinen Code');
   const sneaky = await fetch(base + '/..%2fpackage.json');
   assert.ok(!(await sneaky.text()).includes('"dependencies"'));
 });
@@ -171,8 +181,14 @@ test('API 1.1: Passwort, Geräte, 2FA-Umzug, Benutzer, Warnungen, Prozesse, Lauf
   assert.equal(pw.status, 200, JSON.stringify(pw.data));
   assert.equal((await call('GET', '/api/me', { cookie: c1 })).status, 200, 'eigenes Gerät bleibt angemeldet');
   assert.equal((await call('GET', '/api/me', { cookie: c2 })).status, 401, 'anderes Gerät abgemeldet');
-  // 2FA umziehen: erst mit Code aus dem NEUEN Schlüssel
-  const start = (await call('POST', '/api/me/totp/start', { cookie: c1 })).data;
+  // 2FA umziehen: erst Passwort + Code des bisherigen Geräts, dann Code aus dem NEUEN Schlüssel
+  const cfgm = require('../lib/config');
+  const rewind = () => { const u = cfgm.readJson('users.json', {}); u.boss.lastStep = totp.step() - 2; cfgm.writeJson('users.json', u); };
+  rewind();
+  assert.equal((await call('POST', '/api/me/totp/start', { cookie: c1 })).status, 403, 'nur mit Sitzung geht es nicht');
+  assert.equal((await call('POST', '/api/me/totp/start', { cookie: c1, body: { password: 'falsch-falsch', code: totp.hotp(info.secret, totp.step()) } })).status, 403, 'falsches Passwort');
+  assert.equal((await call('POST', '/api/me/totp/start', { cookie: c1, body: { password: 'neues-passwort-99', code: '000000' } })).status, 403, 'falscher Code');
+  const start = (await call('POST', '/api/me/totp/start', { cookie: c1, body: { password: 'neues-passwort-99', code: totp.hotp(info.secret, totp.step()) } })).data;
   assert.match(start.qr, /^<svg/);
   assert.equal((await call('POST', '/api/me/totp/confirm', { cookie: c1, body: { code: '123456' } })).status, 403);
   assert.equal((await call('POST', '/api/me/totp/confirm', { cookie: c1, body: { code: totp.hotp(start.secret, totp.step()) } })).status, 200);
@@ -197,3 +213,11 @@ test('API 1.1: Passwort, Geräte, 2FA-Umzug, Benutzer, Warnungen, Prozesse, Lauf
   assert.ok((await call('GET', '/api/s/local/disks', { cookie: c1 })).data.some(d => d.mount === '/'));
 });
 
+
+test('Auth: 2FA-Zweitcode wird nach zu vielen Fehlversuchen gesperrt', async () => {
+  const { createAuth } = require('../lib/auth');
+  const a = createAuth();
+  const u = await a.addUser('sperre', 'sperre-passwort-1', 'admin');
+  for (let i = 0; i < 10; i++) assert.equal(a.confirmCode('sperre', '000000'), false);
+  assert.equal(a.confirmCode('sperre', totp.hotp(u.secret, totp.step())), false, 'auch der richtige Code wird jetzt abgelehnt');
+});

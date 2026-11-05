@@ -136,9 +136,10 @@ if [ -n "$DOMAIN" ]; then
   if command -v caddy >/dev/null 2>&1 && [ -f /etc/caddy/Caddyfile ]; then
     if grep -q "^$DOMAIN" /etc/caddy/Caddyfile; then
       ok "Caddy: $DOMAIN ist schon eingetragen"
+      grep -q 'header_up X-Real-IP' /etc/caddy/Caddyfile || say "Tipp: im Caddy-Block von $DOMAIN unter reverse_proxy die Zeile  header_up X-Real-IP {remote_host}  ergänzen (echte Besucher-IP im Protokoll)."
     else
       cp /etc/caddy/Caddyfile "/etc/caddy/Caddyfile.bak-s3cure-$(date +%Y%m%d%H%M%S)"
-      printf '\n# S3cure Agent\n%s {\n\treverse_proxy 127.0.0.1:7777 {\n\t\tflush_interval -1\n\t}\n}\n' "$DOMAIN" >> /etc/caddy/Caddyfile
+      printf '\n# S3cure Agent\n%s {\n\treverse_proxy 127.0.0.1:7777 {\n\t\tflush_interval -1\n\t\theader_up X-Real-IP {remote_host}\n\t}\n}\n' "$DOMAIN" >> /etc/caddy/Caddyfile
       caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile >/dev/null 2>&1 || die "Caddy-Konfiguration ungültig – Sicherung liegt neben /etc/caddy/Caddyfile."
       systemctl reload caddy
       ok "Caddy: https://$DOMAIN eingerichtet (Zertifikat holt Caddy selbst)"
@@ -155,6 +156,7 @@ server {
         proxy_pass http://127.0.0.1:7777;
         proxy_http_version 1.1;
         proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
         proxy_set_header X-Forwarded-For \$remote_addr;
         proxy_set_header X-Forwarded-Proto \$scheme;
         proxy_buffering off;

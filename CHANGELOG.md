@@ -1,5 +1,17 @@
 # Changelog – S3cure Agent
 
+## Unveröffentlicht
+
+### Sicherheit
+- Checks vom Typ „Skript“ (laufen als root) brauchen jetzt wie das Speichern eines Skripts einen frischen 2FA-Code.
+- „Neues Handy für 2FA“ verlangt jetzt Passwort und einen Code des bisherigen Geräts.
+- Der zweite 2FA-Code (Freischalten, Neustart, Skripte …) ist jetzt gegen Durchprobieren gesperrt (10 Fehlversuche / 15 Min.).
+- Besucher-IP: `X-Forwarded-For` hat Vorrang vor `X-Real-IP`; `install.sh` setzt `X-Real-IP` in nginx und Caddy. Die Fehlversuch-Tabelle wächst nicht mehr unbegrenzt.
+- Installation: Paket in eigenem temporären Ordner entpacken, SHA-256-Prüfsumme wird mit jedem Release veröffentlicht. nodemailer auf 10.x aktualisiert.
+
+### English
+- Script checks (run as root) now require a fresh 2FA code; moving 2FA to a new phone requires password and a current code; second-factor codes are rate-limited; client-IP handling hardened; install package checksum.
+
 ## 1.4.1 – 2026-11-05
 
 ### Behoben
