@@ -1,5 +1,13 @@
 # Changelog – S3cure Agent
 
+## 1.1.1 – 2026-11-05
+
+### Behoben
+- Ein Update (install.sh erneut ausführen) stellte die selbst gewählte Docker-Adresse des Agenten (z. B. 172.17.0.1) wieder um – danach meldete der Nginx Proxy Manager „502 Bad Gateway“. Die eingestellte Adresse bleibt jetzt erhalten.
+
+### English
+- Re-running install.sh no longer resets a custom Docker bind address (which caused 502 in Nginx Proxy Manager).
+
 ## 1.1.0 – 2026-11-05
 
 ### Neu

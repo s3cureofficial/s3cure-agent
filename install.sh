@@ -97,6 +97,11 @@ if command -v docker >/dev/null 2>&1; then
 fi
 if [ -n "$NPM_NAME" ]; then
   GW="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.Gateway}} {{end}}' "$NPM_NAME" 2>/dev/null | awk '{print $1}')"
+  # Update: eine schon eingestellte Docker-Adresse (z. B. 172.17.0.1) behalten – der Proxy Host zeigt darauf
+  CUR="$(node -e 'try{console.log(require("/var/lib/s3cure-agent/config.json").bind||"")}catch{}' 2>/dev/null)"
+  if printf '%s' "$CUR" | grep -Eq '^(172\.(1[6-9]|2[0-9]|3[01])|10|192\.168)\.' && ip -4 addr 2>/dev/null | grep -q "inet $CUR/"; then
+    GW="$CUR"
+  fi
   if printf '%s' "$GW" | grep -Eq '^[0-9]+(\.[0-9]+){3}$'; then
     s3cure-agent set bind "$GW" >/dev/null
     systemctl restart s3cure-agent
