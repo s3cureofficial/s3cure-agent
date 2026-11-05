@@ -1,5 +1,13 @@
 # Changelog – S3cure Agent
 
+## 1.4.1 – 2026-11-05
+
+### Behoben
+- Aus den Einstellungen kam man nicht mehr heraus (nach „Benutzer“ sprang „Zurück“ im Kreis). „Zurück“ führt jetzt immer zur Seite, von der man gekommen ist.
+
+### English
+- Fixed being stuck in Settings: “Back” now always returns to the page you came from.
+
 ## 1.4.0 – 2026-11-05
 
 ### Neu

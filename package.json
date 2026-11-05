@@ -1,6 +1,6 @@
 {
   "name": "s3cure-agent",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "S3cure Agent – Server-Status, Dienste, Docker und Logs fürs Handy (Web-App mit Login und 2FA)",
   "license": "MIT",
   "private": true,

@@ -717,6 +717,8 @@
   async function route() {
     clearTimers(); closeSheet(); state.seq++;
     const h = location.hash || '#/';
+    // Letzte normale Seite merken: dahin führt „Zurück“ aus Einstellungen/Benutzern
+    if (!/^#\/(settings|users|login)/.test(h)) state.lastPage = h;
     if (!state.me && h !== '#/login') {
       try { state.me = await api('GET', '/api/me'); } catch { return; }
     }
@@ -1834,7 +1836,7 @@
 
         <button class="btn danger block logout" data-a="logout">${ic('logout')}${t('logout')}</button>
       </main>`;
-    $('[data-a=back]', app).addEventListener('click', () => (history.length > 1 ? history.back() : go('#/')));
+    $('[data-a=back]', app).addEventListener('click', () => go(state.lastPage || '#/'));
     $('[data-a=logout]', app).addEventListener('click', async () => {
       try { const s = await currentSub(); if (s) { await api('POST', '/api/push/unsubscribe', { subscription: s.toJSON() }).catch(() => {}); await s.unsubscribe(); } } catch {}
       await api('POST', '/api/logout').catch(() => {});
