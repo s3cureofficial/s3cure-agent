@@ -28,6 +28,8 @@ cd /tmp && curl -fsSL https://github.com/s3cureofficial/s3cure-agent/releases/la
 
 Das Skript installiert Node.js (falls nötig), richtet den Agenten als Dienst ein und – mit `--domain` – nginx oder Caddy mit HTTPS-Zertifikat. Ohne `--domain` läuft der Agent nur lokal (127.0.0.1:7777).
 
+**Nginx Proxy Manager (Docker)?** install.sh erkennt ihn und zeigt dir die Werte für den Proxy Host an (Ziel: Docker-Adresse des Servers, Port 7777, Scheme http). Wichtig: **„Cache Assets“ ausschalten**.
+
 **3. Benutzer anlegen:**
 
 ```bash

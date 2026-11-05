@@ -134,7 +134,9 @@ test('API: Anmeldung, Rechte, Aktionen, Schutz', async () => {
   // Web-App mit Sicherheits-Header, keine Dateien außerhalb von public
   const page = await fetch(base + '/');
   assert.match(page.headers.get('content-security-policy'), /script-src 'self'/);
-  assert.match(await page.text(), /<title>S3cure<\/title>/);
+  const html = await page.text();
+  assert.match(html, /<title>S3cure<\/title>/);
+  assert.match(html, /src="\/app\.js\?v=\d+\.\d+\.\d+"/, 'Versionsnummer an app.js');
   // Hinter dem Proxy (Anfragen von 127.0.0.1): Fehlversuche einer Besucher-IP sperren nicht die anderen
   for (let i = 0; i < 5; i++) await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '203.0.113.9' }, body: JSON.stringify({ user: 'x', password: 'y', code: '1' }) });
   const blocked = await fetch(base + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-S3cure': '1', 'X-Real-IP': '203.0.113.9' }, body: JSON.stringify({ user: 'gast', password: 'gast-passwort-123', code: totp.hotp(viewer.secret, totp.step()) }) });

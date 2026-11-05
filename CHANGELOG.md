@@ -1,5 +1,14 @@
 # Changelog – S3cure Agent
 
+## 1.1.2 – 2026-11-05
+
+### Behoben
+- **Nach einem Update zeigte das iPhone weiter die alte App**, wenn ein Proxy davor die Dateien zwischenspeichert (z. B. „Cache Assets“ im Nginx Proxy Manager). App-Dateien tragen jetzt die Versionsnummer in der Adresse und werden nach jedem Update garantiert neu geladen.
+- install.sh weist beim Nginx Proxy Manager darauf hin, „Cache Assets“ auszuschalten.
+
+### English
+- After an update, iPhones kept showing the old app when a proxy cached the files. App files now carry the version in their URL.
+
 ## 1.1.1 – 2026-11-05
 
 ### Behoben

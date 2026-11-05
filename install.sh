@@ -120,6 +120,7 @@ if [ -n "$NPM_NAME" ]; then
     echo "    Forward Hostname / IP:   $GW"
     echo "    Forward Port:            7777"
     echo "    Block Common Exploits:   an      Websockets Support: an"
+    echo "    Cache Assets:            AUS  (sonst sieht das Handy nach Updates die alte App)"
     echo "    Reiter SSL:              „Request a new SSL Certificate“, Force SSL an, HTTP/2 an"
     echo
     [ -n "$DOMAIN" ] && s3cure-agent set publicUrl "https://$DOMAIN" >/dev/null && systemctl restart s3cure-agent
