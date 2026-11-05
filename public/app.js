@@ -35,6 +35,80 @@
       act_login: 'angemeldet', 'act_login-failed': 'Anmeldung fehlgeschlagen', 'act_login-locked': 'gesperrt (zu viele Versuche)', act_reboot: 'Server neu gestartet', act_alert: 'Warnung',
       'act_service-start': 'Dienst gestartet', 'act_service-stop': 'Dienst gestoppt', 'act_service-restart': 'Dienst neu gestartet',
       'act_container-start': 'Container gestartet', 'act_container-stop': 'Container gestoppt', 'act_container-restart': 'Container neu gestartet',
+      'coresShort': '{n} Kerne',
+      'load': 'Last',
+      'pinned': 'Angeheftet',
+      'pinHint': 'Tippe in „Dienste“ oder „Docker“ auf einen Eintrag und dann auf „Anheften“ – dann siehst du ihn hier und kannst ihn mit einem Tipp neu starten.',
+      'processes': 'Prozesse',
+      'disks': 'Laufwerke',
+      'pin': 'Anheften',
+      'unpin': 'Lösen',
+      'pinned1': 'Angeheftet ✓',
+      'unpinned1': 'Gelöst',
+      'share': 'Teilen',
+      'copied': 'Kopiert ✓',
+      'device': 'Gerät',
+      'agoH': 'vor {n} Std.',
+      'security': 'Sicherheit',
+      'changePassword': 'Passwort ändern',
+      'changePasswordDesc': 'Andere Geräte werden danach abgemeldet',
+      'newPhone': 'Neues Handy für 2FA',
+      'newPhoneDesc': 'Zwei-Faktor-Code auf ein anderes Gerät umziehen',
+      'devicesTitle': 'Angemeldete Geräte',
+      'devicesDesc': 'Sehen und abmelden',
+      'admin': 'Verwaltung',
+      'users': 'Benutzer',
+      'usersDesc': 'Anlegen, Rechte, 2FA, löschen',
+      'alertsTitle': 'Warnungen',
+      'alertsDesc': 'Grenzen für Mitteilungen, Servername',
+      'auditDesc': 'Wer hat wann was gemacht',
+      'about': 'Über',
+      'changePasswordSub': 'Zur Sicherheit brauchst du dein aktuelles Passwort und einen 2FA-Code.',
+      'currentPassword': 'Aktuelles Passwort',
+      'newPassword': 'Neues Passwort (mind. 10 Zeichen)',
+      'repeatPassword': 'Neues Passwort wiederholen',
+      'passwordsDiffer': 'Die neuen Passwörter sind verschieden.',
+      'passwordChanged': 'Passwort geändert ✓ – andere Geräte sind abgemeldet.',
+      'copy': 'Kopieren',
+      'newPhoneSub': 'Scanne den QR-Code mit der Authenticator-App auf dem neuen Gerät und gib den Code ein, den sie jetzt zeigt. Erst dann wird umgestellt – der alte Code gilt bis dahin weiter.',
+      'totpChanged': '2FA umgestellt ✓ – ab jetzt gilt der Code vom neuen Gerät.',
+      'devicesSub': 'Hier bist du angemeldet. Unbekanntes Gerät? Abmelden und Passwort ändern.',
+      'thisDevice': 'Dieses Gerät',
+      'logoutOthers': 'Alle anderen abmelden',
+      'close': 'Schließen',
+      'alertsSub': 'Ab diesen Werten schickt S3cure eine Mitteilung (an alle mit eingeschalteten Mitteilungen).',
+      'save': 'Speichern',
+      'serverName': 'Name des Servers',
+      'alertDisk': 'Platte voller als',
+      'alertMem': 'Arbeitsspeicher voller als',
+      'alertLoad': 'Last höher als',
+      'perCore': 'Kerne',
+      'alertSvc': 'Melden, wenn ein Dienst ausfällt',
+      'saved': 'Gespeichert ✓',
+      'addUser': 'Benutzer anlegen',
+      'usersHint': 'Admins dürfen steuern (Dienste, Neustart) und Benutzer verwalten. „Nur ansehen“ sieht alles, kann aber nichts ändern.',
+      'you': 'du',
+      'lastLogin': 'zuletzt {when}',
+      'neverLoggedIn': 'noch nie angemeldet',
+      'addUserSub': 'Danach bekommst du einen QR-Code für die Authenticator-App der Person.',
+      'role': 'Rolle',
+      'initialPassword': 'Passwort (mind. 10 Zeichen)',
+      'userCreated': '„{name}“ angelegt',
+      'qrHandOver': 'Diesen QR-Code mit der Authenticator-App scannen (oder den Schlüssel abtippen). Er wird nur jetzt angezeigt.',
+      'reset2fa': '2FA zurücksetzen',
+      'deleteUser': 'Benutzer löschen',
+      'reset2faTitle': '2FA von {name} zurücksetzen?',
+      'reset2faMsg': 'Der alte Code gilt sofort nicht mehr und alle Geräte werden abgemeldet. Danach bekommst du einen neuen QR-Code.',
+      'newQrFor': 'Neuer QR-Code für {name}',
+      'deleteUserTitle': '{name} löschen?',
+      'deleteUserMsg': 'Die Person wird sofort abgemeldet und kann sich nicht mehr anmelden.',
+      'act_password': 'Passwort geändert',
+      'act_totp': '2FA umgestellt',
+      'act_user-add': 'Benutzer angelegt',
+      'act_user-role': 'Rolle geändert',
+      'act_user-2fa': '2FA zurückgesetzt',
+      'act_user-delete': 'Benutzer gelöscht',
+      'act_settings': 'Einstellungen geändert',
     },
     en: {
       tagline: 'Your servers – always with you', user: 'User', password: 'Password', code: '2FA code', login: 'Sign in', loggingIn: 'Signing in…',
@@ -64,6 +138,80 @@
       act_login: 'signed in', 'act_login-failed': 'sign-in failed', 'act_login-locked': 'locked (too many attempts)', act_reboot: 'server restarted', act_alert: 'warning',
       'act_service-start': 'service started', 'act_service-stop': 'service stopped', 'act_service-restart': 'service restarted',
       'act_container-start': 'container started', 'act_container-stop': 'container stopped', 'act_container-restart': 'container restarted',
+      'coresShort': '{n} cores',
+      'load': 'Load',
+      'pinned': 'Pinned',
+      'pinHint': 'In “Services” or “Docker”, tap an entry and then “Pin” – it shows up here and can be restarted with one tap.',
+      'processes': 'Processes',
+      'disks': 'Disks',
+      'pin': 'Pin',
+      'unpin': 'Unpin',
+      'pinned1': 'Pinned ✓',
+      'unpinned1': 'Unpinned',
+      'share': 'Share',
+      'copied': 'Copied ✓',
+      'device': 'Device',
+      'agoH': '{n} h ago',
+      'security': 'Security',
+      'changePassword': 'Change password',
+      'changePasswordDesc': 'Other devices are signed out afterwards',
+      'newPhone': 'New phone for 2FA',
+      'newPhoneDesc': 'Move the two-factor code to another device',
+      'devicesTitle': 'Signed-in devices',
+      'devicesDesc': 'See and sign out',
+      'admin': 'Administration',
+      'users': 'Users',
+      'usersDesc': 'Add, roles, 2FA, delete',
+      'alertsTitle': 'Alerts',
+      'alertsDesc': 'Notification limits, server name',
+      'auditDesc': 'Who did what and when',
+      'about': 'About',
+      'changePasswordSub': 'For safety you need your current password and a 2FA code.',
+      'currentPassword': 'Current password',
+      'newPassword': 'New password (min. 10 characters)',
+      'repeatPassword': 'Repeat new password',
+      'passwordsDiffer': 'The new passwords differ.',
+      'passwordChanged': 'Password changed ✓ – other devices are signed out.',
+      'copy': 'Copy',
+      'newPhoneSub': 'Scan the QR code with the authenticator app on the new device and enter the code it shows now. Only then it switches – the old code keeps working until then.',
+      'totpChanged': '2FA switched ✓ – from now on the code from the new device counts.',
+      'devicesSub': 'You are signed in here. Unknown device? Sign it out and change your password.',
+      'thisDevice': 'This device',
+      'logoutOthers': 'Sign out all others',
+      'close': 'Close',
+      'alertsSub': 'From these values S3cure sends a notification (to everyone with notifications on).',
+      'save': 'Save',
+      'serverName': 'Server name',
+      'alertDisk': 'Disk fuller than',
+      'alertMem': 'Memory fuller than',
+      'alertLoad': 'Load higher than',
+      'perCore': 'cores',
+      'alertSvc': 'Notify when a service fails',
+      'saved': 'Saved ✓',
+      'addUser': 'Add user',
+      'usersHint': 'Admins can control (services, reboot) and manage users. “View only” sees everything but cannot change anything.',
+      'you': 'you',
+      'lastLogin': 'last {when}',
+      'neverLoggedIn': 'never signed in',
+      'addUserSub': 'Afterwards you get a QR code for the person’s authenticator app.',
+      'role': 'Role',
+      'initialPassword': 'Password (min. 10 characters)',
+      'userCreated': '“{name}” created',
+      'qrHandOver': 'Scan this QR code with the authenticator app (or type the key). It is only shown now.',
+      'reset2fa': 'Reset 2FA',
+      'deleteUser': 'Delete user',
+      'reset2faTitle': 'Reset 2FA of {name}?',
+      'reset2faMsg': 'The old code stops working immediately and all devices are signed out. You then get a new QR code.',
+      'newQrFor': 'New QR code for {name}',
+      'deleteUserTitle': 'Delete {name}?',
+      'deleteUserMsg': 'The person is signed out right away and can no longer sign in.',
+      'act_password': 'password changed',
+      'act_totp': '2FA switched',
+      'act_user-add': 'user added',
+      'act_user-role': 'role changed',
+      'act_user-2fa': '2FA reset',
+      'act_user-delete': 'user deleted',
+      'act_settings': 'settings changed',
     },
   };
   const t = (k, p = {}) => String(DICT[LANG][k] ?? DICT.de[k] ?? k).replace(/\{(\w+)\}/g, (_, x) => (p[x] ?? ''));
@@ -76,7 +224,10 @@
     restart: 'M3 12a9 9 0 1 0 3-6.7 M3 4v5h5', play: 'M7 4.5v15l12-7.5z', stop: 'M7 7h10v10H7z', logs: 'M8 6h13 M8 12h13 M8 18h13 M3 6h.01 M3 12h.01 M3 18h.01',
     power: 'M18.4 6.6a9 9 0 1 1-12.8 0 M12 2v10', bell: 'M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z M10 20.5a2 2 0 0 0 4 0', search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z M20 20l-3.5-3.5',
     share: 'M12 3v12 M8 7l4-4 4 4 M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7', close: 'M6 6l12 12 M18 6L6 18', list: 'M4 6h16 M4 12h16 M4 18h10', user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0',
-    shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z', logout: 'M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3 M10 17l5-5-5-5 M15 12H3',
+    shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',
+    star: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z', key: 'M15 7a4 4 0 1 1-3.8 5.2L4 19.4V21h3v-2h2v-2h2l1.2-1.2A4 4 0 0 1 15 7z M16 9h.01',
+    phone: 'M8 2.5h8A1.5 1.5 0 0 1 17.5 4v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5z M11 18.5h2', users: 'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M22 21a7 7 0 0 0-4.5-6.5',
+    sliders: 'M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M16 4v4 M10 10v4 M18 16v4', copy: 'M9 9h10v12H9z M5 15V3h10', info: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z M12 16v-5 M12 8h.01', plus: 'M12 5v14 M5 12h14', trash: 'M4 7h16 M10 11v6 M14 11v6 M6 7l1 13h10l1-13 M9 7V4h6v3', logout: 'M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3 M10 17l5-5-5-5 M15 12H3',
   };
   const ic = n => `<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="${PATHS[n] || ''}"/></svg>`;
 
@@ -115,7 +266,7 @@
   }
 
   // ---------- Zustand und Navigation ----------
-  const state = { me: null, servers: [], timers: [], es: null, filter: { q: '', chip: 'all' }, range: 24 };
+  const state = { me: null, servers: [], timers: [], es: null, filter: { q: '', chip: 'all' }, range: 24, psort: 'cpu' };
   const clearTimers = () => { state.timers.forEach(clearInterval); state.timers = []; if (state.es) { state.es.close(); state.es = null; } };
   const every = (ms, fn) => state.timers.push(setInterval(() => { if (!document.hidden) fn(); }, ms));
   const go = h => { if (location.hash !== h) location.hash = h; else route(); };
@@ -135,6 +286,7 @@
     if (p[0] === 's' && p[1]) return renderServer(p[1], p[2] || 'status');
     if (p[0] === 'logs' && p[3]) return renderLogs(p[1], p[2], p.slice(3).join('/'));
     if (p[0] === 'settings') return renderSettings();
+    if (p[0] === 'users') return renderUsers();
     return renderHome();
   }
 
@@ -264,33 +416,82 @@
   }
 
   // ----- Status -----
+  // Angeheftete Dienste/Container pro Server (auf diesem Gerät gemerkt): ["service:nginx.service", "container:web"]
+  const pinKey = id => 's3:pins:' + id;
+  const getPins = id => { try { const l = JSON.parse(store.get(pinKey(id)) || '[]'); return Array.isArray(l) ? l : []; } catch { return []; } };
+  const setPins = (id, list) => store.set(pinKey(id), JSON.stringify(list));
+  const togglePin = (id, kind, name) => { const k = `${kind}:${name}`; const l = getPins(id); setPins(id, l.includes(k) ? l.filter(x => x !== k) : [...l, k]); return !l.includes(k); };
+
+  // Ring-Anzeige (SVG). Füllung über stroke-dashoffset als Attribut – style-Attribute sind gesperrt.
+  function ring(v, label, sub) {
+    const r = 30, c = 2 * Math.PI * r, val = v == null ? 0 : Math.max(0, Math.min(100, v));
+    return `<div class="ring ${level(v)}"><div class="r-gfx"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="${r}" class="r-bg"/><circle cx="36" cy="36" r="${r}" class="r-fg" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c * (1 - val / 100)).toFixed(1)}" transform="rotate(-90 36 36)"/></svg><div class="r-val">${v == null ? '–' : Math.round(v) + '<small>%</small>'}</div></div><div class="r-lbl">${label}</div><div class="r-sub">${esc(sub)}</div></div>`;
+  }
+
   async function viewStatus(id, main, quiet) {
-    const o = await api('GET', `/api/s/${encodeURIComponent(id)}/overview?hours=${state.range}`);
+    const enc = encodeURIComponent(id);
+    const pins = getPins(id);
+    const needSvc = pins.some(p => p.startsWith('service:')), needCtr = pins.some(p => p.startsWith('container:'));
+    const [o, procs, disks, svc, ctr] = await Promise.all([
+      api('GET', `/api/s/${enc}/overview?hours=${state.range}`),
+      api('GET', `/api/s/${enc}/processes?sort=${state.psort}`).catch(() => []),
+      api('GET', `/api/s/${enc}/disks`).catch(() => []),
+      needSvc ? api('GET', `/api/s/${enc}/services`).catch(() => null) : null,
+      needCtr ? api('GET', `/api/s/${enc}/containers`).catch(() => null) : null,
+    ]);
     const m = o.metrics || {};
     $('.top .nm', app).textContent = o.name;
     $('.top .sub', app).textContent = m.os || '';
     const failed = (o.failed || []).length;
     const badge = $('.tabbar .badge', app); if (badge) { badge.hidden = !failed; badge.textContent = failed; }
-    const ram = pct(m.mem?.used, m.mem?.total), disk = m.disk ? pct(m.disk.total - m.disk.free, m.disk.total) : null, cpu = Math.round(m.cpu ?? 0);
-    const tile = (lbl, val, v, sub) => `<div class="tile"><div class="t-lbl">${lbl}</div><div class="t-val">${val}</div>${v != null ? `<div class="track ${level(v)}"><div data-w="${v}"></div></div>` : ''}<div class="t-sub">${esc(sub)}</div></div>`;
+    const ram = pct(m.mem?.used, m.mem?.total), disk = m.disk ? pct(m.disk.total - m.disk.free, m.disk.total) : null, cpu = m.cpu ?? null;
     const issues = o.issues || [];
-    const html = `
-      ${issues.length ? `<div class="card"><h3>${t('problems')}</h3>${issuesHtml({ ok: true, issues })}</div>` : ''}
-      <div class="tiles">
-        ${tile(t('cpu'), cpu + ' %', cpu, t('cores', { n: m.cpus || '?', l: (m.load || [0])[0].toFixed(2) }))}
-        ${tile(t('ram'), ram == null ? '–' : ram + ' %', ram, m.mem ? t('of', { a: bytes(m.mem.used), b: bytes(m.mem.total) }) : '')}
-        ${tile(t('disk'), disk == null ? '–' : disk + ' %', disk, m.disk ? t('free', { a: bytes(m.disk.free) }) : '')}
-        ${tile(t('uptime'), `<span class="upt">${esc(upt(m.uptime))}</span>`, null, m.net ? `↓ ${rate(m.net.rx)} · ↑ ${rate(m.net.tx)}` : '')}
+    const admin = state.me.role === 'admin';
+
+    // Angeheftete Einträge mit aktuellem Zustand
+    const pinned = pins.map(k => {
+      const [kind, ...rest] = k.split(':'); const name = rest.join(':');
+      const it = kind === 'service' ? svc?.list?.find(x => x.name === name) : ctr?.list?.find(x => x.name === name);
+      return it ? { kind, name, it } : null;
+    }).filter(Boolean);
+    const pinRow = p => {
+      const running = p.kind === 'service' ? p.it.active === 'active' : p.it.state === 'running';
+      const dot = p.kind === 'service' ? svcState(p.it) : ctrState(p.it);
+      return `<div class="row" data-pin="${esc(p.kind + ':' + p.name)}"><span class="dot ${dot}"></span><div class="r-main"><div class="r-title">${esc(p.kind === 'service' ? shortName(p.name) : p.name)}</div><div class="r-sub">${esc(p.kind === 'service' ? word('state_', p.it.active) : p.it.status)}</div></div>${admin ? `<button class="mini" data-q="${running ? 'restart' : 'start'}" aria-label="${t(running ? 'restart' : 'start')}">${ic(running ? 'restart' : 'play')}</button>` : ''}<span class="chev">${ic('chev')}</span></div>`;
+    };
+
+    main.innerHTML = `
+      ${issues.length ? `<div class="card alert-card"><h3>${t('problems')}</h3>${issuesHtml({ ok: true, issues })}</div>` : ''}
+      <div class="card rings">
+        ${ring(cpu, t('cpu'), t('coresShort', { n: m.cpus || '?' }))}
+        ${ring(ram, t('ram'), m.mem ? `${bytes(m.mem.used)} / ${bytes(m.mem.total)}` : '')}
+        ${ring(disk, t('disk'), m.disk ? t('free', { a: bytes(m.disk.free) }) : '')}
       </div>
+      <div class="tiles">
+        <div class="tile"><div class="t-lbl">${t('uptime')}</div><div class="t-val small">${esc(upt(m.uptime))}</div><div class="t-sub">${t('load')} ${(m.load || []).map(x => x.toFixed(2)).join(' · ')}</div></div>
+        <div class="tile"><div class="t-lbl">${t('network')}</div><div class="t-val small">↓ ${m.net ? rate(m.net.rx) : '–'}</div><div class="t-sub">↑ ${m.net ? rate(m.net.tx) : '–'}</div></div>
+      </div>
+      <div class="section-title">${t('pinned')}</div>
+      ${pinned.length ? `<div class="list pins">${pinned.map(pinRow).join('')}</div>` : `<div class="card hint-card">${ic('star')}<span>${t('pinHint')}</span></div>`}
       <div class="card">
         <div class="chart-head"><h3>${t('history')}</h3><div class="seg-small"><button data-r="24" class="${state.range === 24 ? 'on' : ''}">${t('h24')}</button><button data-r="168" class="${state.range === 168 ? 'on' : ''}">${t('d7')}</button></div></div>
         ${chart(o.history || [])}
         <div class="chart-legend"><span><i class="lg cpu"></i>${t('cpu')}</span><span><i class="lg mem"></i>${t('ram')}</span><span><i class="lg disk"></i>${t('disk')}</span></div>
       </div>
-      <div class="card"><h3>${t('system')}</h3><dl class="kv"><dt>${t('hostname')}</dt><dd>${esc(m.hostname || '–')}</dd><dt>${t('os')}</dt><dd>${esc(m.os || '–')}</dd><dt>${t('kernel')}</dt><dd>${esc(m.kernel || '–')}</dd></dl></div>`;
-    main.innerHTML = html;
+      <div class="card">
+        <div class="chart-head"><h3>${t('processes')}</h3><div class="seg-small"><button data-ps="cpu" class="${state.psort === 'cpu' ? 'on' : ''}">CPU</button><button data-ps="mem" class="${state.psort === 'mem' ? 'on' : ''}">RAM</button></div></div>
+        <div class="procs">${procs.slice(0, 6).map(p => `<div class="proc"><div class="p-main"><b>${esc(p.name)}</b><span>${esc(p.user)} · PID ${p.pid}</span></div><div class="p-num"><b>${p.cpu.toFixed(1)} %</b><span>${bytes(p.rss)}</span></div></div>`).join('') || `<div class="empty">–</div>`}</div>
+      </div>
+      ${disks.length ? `<div class="card"><h3>${t('disks')}</h3>${disks.map(d => { const v = pct(d.total - d.free, d.total); return `<div class="disk"><div class="lbl"><span class="mnt">${esc(d.mount)}</span><b>${v} %</b></div><div class="track ${level(v)}"><div data-w="${v}"></div></div><div class="d-sub">${t('free', { a: bytes(d.free) })} · ${bytes(d.total)} · ${esc(d.type)}</div></div>`; }).join('')}</div>` : ''}
+      <div class="card"><h3>${t('system')}</h3><dl class="kv"><dt>${t('hostname')}</dt><dd>${esc(m.hostname || '–')}</dd><dt>${t('os')}</dt><dd>${esc(m.os || '–')}</dd><dt>${t('kernel')}</dt><dd>${esc(m.kernel || '–')}</dd><dt>${t('cpu')}</dt><dd>${t('coresShort', { n: m.cpus || '?' })}</dd></dl></div>`;
     applyWidths(main);
     for (const b of main.querySelectorAll('[data-r]')) b.addEventListener('click', () => { state.range = Number(b.dataset.r); viewStatus(id, main); });
+    for (const b of main.querySelectorAll('[data-ps]')) b.addEventListener('click', () => { state.psort = b.dataset.ps; viewStatus(id, main); });
+    for (const r of main.querySelectorAll('[data-pin]')) {
+      const p = pinned.find(x => `${x.kind}:${x.name}` === r.dataset.pin);
+      r.addEventListener('click', e => { if (!e.target.closest('[data-q]')) itemSheet(id, p.kind, p.it); });
+      r.querySelector('[data-q]')?.addEventListener('click', () => confirmAction(id, p.kind, p.it, r.querySelector('[data-q]').dataset.q, p.kind === 'service' ? shortName(p.name) : p.name));
+    }
   }
 
   // Liniengrafik (SVG) für CPU, RAM, Platte in %
@@ -382,11 +583,13 @@
         ${admin ? `<button class="btn" data-x="restart">${ic('restart')}${t('restart')}</button>` : ''}
         ${admin ? (running ? `<button class="btn danger" data-x="stop" ${canStop ? '' : 'disabled'}>${ic('stop')}${t('stop')}</button>` : `<button class="btn" data-x="start">${ic('play')}${t('start')}</button>`) : ''}
         <button class="btn" data-x="logs">${ic('logs')}${t('logs')}</button>
+        <button class="btn ${getPins(id).includes(kind + ':' + it.name) ? 'on' : ''}" data-x="pin">${ic('star')}${getPins(id).includes(kind + ':' + it.name) ? t('unpin') : t('pin')}</button>
       </div>
       ${!admin ? `<p class="hint">${esc(t('viewerHint'))}</p>` : running && kind === 'service' && it.protected ? `<p class="hint">${esc(t('protectedHint'))}</p>` : ''}
       <div class="s-btns"><button class="btn block" data-x="close">${t('cancel')}</button></div>`);
     sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
     sh.querySelector('[data-x=logs]').addEventListener('click', () => go(`#/logs/${encodeURIComponent(id)}/${kind}/${encodeURIComponent(it.name)}`));
+    sh.querySelector('[data-x=pin]').addEventListener('click', () => { toast(togglePin(id, kind, it.name) ? t('pinned1') : t('unpinned1')); closeSheet(); if (/\/status$/.test(location.hash)) route(); });
     for (const a of ['restart', 'stop', 'start']) sh.querySelector(`[data-x=${a}]`)?.addEventListener('click', () => confirmAction(id, kind, it, a, title));
   }
 
@@ -450,6 +653,7 @@
     app.innerHTML = `
       <div class="logs-page">
         <header class="top"><button class="icon-btn" data-a="back" aria-label="${t('back')}">${ic('back')}</button><h1>${esc(title)}<span class="sub">${t('logs')}</span></h1>
+          <button class="icon-btn" data-a="share" aria-label="${t('share')}">${ic('share')}</button>
           <button class="icon-btn" data-a="refresh" aria-label="${t('refresh')}">${ic('refresh')}</button></header>
         <div class="logbar"><div class="search">${ic('search')}<input type="search" placeholder="${t('filter')}" autocapitalize="none" autocorrect="off" spellcheck="false"></div>
           <button class="live" data-a="live"><span class="dot"></span>${t('live')}</button></div>
@@ -476,6 +680,15 @@
       catch (e) { toast(e.message, true); } finally { b.classList.remove('spin'); }
     };
     $('[data-a=refresh]', app).addEventListener('click', load);
+    // Teilen (iPhone: Teilen-Menü) oder in die Zwischenablage
+    $('[data-a=share]', app).addEventListener('click', async () => {
+      const q = inp.value.trim().toLowerCase();
+      const text = (q ? lines.filter(l => l.toLowerCase().includes(q)) : lines).join('\n');
+      try {
+        if (navigator.share) await navigator.share({ title: `${title} – ${t('logs')}`, text });
+        else { await navigator.clipboard.writeText(text); toast(t('copied')); }
+      } catch (e) { if (e && e.name !== 'AbortError') { try { await navigator.clipboard.writeText(text); toast(t('copied')); } catch { toast(e.message, true); } } }
+    });
     inp.addEventListener('input', () => paint(false));
     liveBtn.addEventListener('click', () => {
       if (state.es) { state.es.close(); state.es = null; liveBtn.classList.remove('on'); return; }
@@ -518,21 +731,52 @@
     } catch (e) { toast(e.message, true); return false; }
   }
 
+  // Gerät aus dem User-Agent („iPhone · Safari“)
+  function deviceName(ua) {
+    const u = String(ua || '');
+    const dev = /iPhone/.test(u) ? 'iPhone' : /iPad/.test(u) ? 'iPad' : /Android/.test(u) ? 'Android' : /Macintosh|Mac OS X/.test(u) ? 'Mac' : /Windows/.test(u) ? 'Windows' : /Linux/.test(u) ? 'Linux' : t('device');
+    const br = /Edg\//.test(u) ? 'Edge' : /CriOS|Chrome\//.test(u) ? 'Chrome' : /FxiOS|Firefox\//.test(u) ? 'Firefox' : /Safari\//.test(u) ? 'Safari' : '';
+    return br ? `${dev} · ${br}` : dev;
+  }
+  function ago(ms) {
+    const m = Math.round((Date.now() - ms) / 60000);
+    if (m < 2) return t('now');
+    if (m < 60) return t('ago', { n: m });
+    const h = Math.round(m / 60);
+    if (h < 48) return t('agoH', { n: h });
+    return new Date(ms).toLocaleDateString(LANG);
+  }
+  const settingRow = (key, icon, title, desc, chev = true) => `<div class="row" data-s="${key}">${ic(icon)}<div class="r-main"><div class="r-title">${title}</div>${desc ? `<div class="r-sub">${desc}</div>` : ''}</div>${chev ? `<span class="chev">${ic('chev')}</span>` : ''}</div>`;
+
   async function renderSettings() {
     const me = state.me;
+    const admin = me.role === 'admin';
     app.innerHTML = `
       <header class="top"><button class="icon-btn" data-a="back" aria-label="${t('back')}">${ic('back')}</button><h1>${t('settings')}</h1></header>
       <main>
+        <div class="profile card"><div class="avatar">${esc(me.user.slice(0, 1).toUpperCase())}</div><div><div class="p-name">${esc(me.user)}</div><div class="p-role">${t('role_' + me.role)} · ${esc(me.name)}</div></div></div>
+
         <div class="section-title">${t('notifications')}</div>
-        <div class="list"><div class="setting">${ic('bell')}<div class="s-text"><div class="s-title">${t('notifications')}</div><div class="s-desc n-desc">${t('notifyDesc')}</div></div></div>
-          <div class="setting"><div class="s-text n-actions"></div></div></div>
-        <div class="section-title">${t('account')}</div>
+        <div class="card notify"><div class="n-head">${ic('bell')}<div><div class="r-title">${t('notifications')}</div><div class="r-sub">${t('notifyDesc')}</div></div></div><div class="n-actions"></div></div>
+
+        <div class="section-title">${t('security')}</div>
         <div class="list">
-          <div class="setting">${ic('user')}<div class="s-text"><div class="s-title">${esc(me.user)}</div><div class="s-desc">${t('role_' + me.role)}</div></div></div>
-          <div class="setting">${ic('shield')}<div class="s-text"><div class="s-title">${esc(me.name)}</div><div class="s-desc">${t('version')} ${esc(me.version)}${me.demo ? ' · ' + t('demo') : ''}</div></div></div>
+          ${settingRow('password', 'key', t('changePassword'), t('changePasswordDesc'))}
+          ${settingRow('totp', 'phone', t('newPhone'), t('newPhoneDesc'))}
+          ${settingRow('devices', 'shield', t('devicesTitle'), t('devicesDesc'))}
         </div>
-        <div class="section-title"></div>
-        <button class="btn danger block" data-a="logout">${ic('logout')}${t('logout')}</button>
+
+        ${admin ? `<div class="section-title">${t('admin')}</div>
+        <div class="list">
+          ${settingRow('users', 'users', t('users'), t('usersDesc'))}
+          ${settingRow('alerts', 'sliders', t('alertsTitle'), t('alertsDesc'))}
+          ${settingRow('audit', 'list', t('audit'), t('auditDesc'))}
+        </div>` : ''}
+
+        <div class="section-title">${t('about')}</div>
+        <div class="list">${settingRow('about', 'info', 'S3cure Agent', `${t('version')} ${esc(me.version)}${me.demo ? ' · ' + t('demo') : ''}`, false)}</div>
+
+        <button class="btn danger block logout" data-a="logout">${ic('logout')}${t('logout')}</button>
       </main>`;
     $('[data-a=back]', app).addEventListener('click', () => (history.length > 1 ? history.back() : go('#/')));
     $('[data-a=logout]', app).addEventListener('click', async () => {
@@ -540,19 +784,184 @@
       await api('POST', '/api/logout').catch(() => {});
       state.me = null; go('#/login');
     });
+    const on = (k, fn) => $(`[data-s=${k}]`, app)?.addEventListener('click', fn);
+    on('password', passwordSheet);
+    on('totp', totpSheet);
+    on('devices', devicesSheet);
+    on('users', () => go('#/users'));
+    on('alerts', alertsSheet);
+    on('audit', () => go('#/s/local/more'));
+
     const box = $('.n-actions', app);
     const paint = async () => {
       if (!pushSupported()) { box.innerHTML = `<p class="hint">${esc(isIos() && !standalone() ? t('notifyNeedsInstall') : t('notifyUnavailable'))}</p>`; return; }
       if (Notification.permission === 'denied') { box.innerHTML = `<p class="hint">${esc(t('notifyDenied'))}</p>`; return; }
       const sub = await currentSub();
       box.innerHTML = sub
-        ? `<p class="hint">✓ ${t('notifyActive')}</p><div class="s-btns"><button class="btn block" data-n="test">${t('notifyTest')}</button><button class="btn block" data-n="off">${t('notifyOff')}</button></div>`
-        : `<button class="btn primary block" data-n="on">${ic('bell')}${t('notifyOn')}</button>`;
+        ? `<div class="n-state ok">${ic('bell')}<span>${t('notifyActive')}</span></div><div class="s-btns"><button class="btn block" data-n="test">${t('notifyTest')}</button><button class="btn block subtle" data-n="off">${t('notifyOff')}</button></div>`
+        : `<div class="s-btns"><button class="btn primary block" data-n="on">${ic('bell')}${t('notifyOn')}</button></div>`;
       box.querySelector('[data-n=on]')?.addEventListener('click', async () => { if (await enablePush()) paint(); });
       box.querySelector('[data-n=test]')?.addEventListener('click', async () => { try { const r = await api('POST', '/api/push/test'); toast(t('sentTo', { n: r.sent })); } catch (e) { toast(e.message, true); } });
       box.querySelector('[data-n=off]')?.addEventListener('click', async () => { const s = await currentSub(); if (s) { await api('POST', '/api/push/unsubscribe', { subscription: s.toJSON() }).catch(() => {}); await s.unsubscribe(); } paint(); });
     };
     paint();
+  }
+
+  // Kleines Formular im Blatt: Felder + Fehlerzeile + Knöpfe; onSubmit bekommt das Formular
+  function formSheet({ title, sub = '', fields, submit, onSubmit, danger = false }) {
+    const sh = openSheet(`
+      <h2>${esc(title)}</h2>${sub ? `<div class="s-sub">${esc(sub)}</div>` : ''}
+      <form class="sheet-form" autocomplete="on">
+        ${fields.map(f => f.html || `<label>${esc(f.label)}<input name="${f.name}" type="${f.type || 'text'}" ${f.attrs || ''}></label>`).join('')}
+        <div class="err" hidden></div>
+        <div class="s-btns"><button class="btn ${danger ? 'danger' : 'primary'} block" type="submit">${esc(submit)}</button><button class="btn block" type="button" data-x="cancel">${t('cancel')}</button></div>
+      </form>`);
+    const form = sh.querySelector('form'), err = sh.querySelector('.err'), btn = sh.querySelector('[type=submit]');
+    for (const c of form.querySelectorAll('input.code')) c.addEventListener('input', () => { c.value = c.value.replace(/\D/g, '').slice(0, 6); });
+    sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+    form.addEventListener('submit', async e => {
+      e.preventDefault(); err.hidden = true; btn.disabled = true;
+      try { await onSubmit(form); } catch (ex) { err.textContent = ex.message; err.hidden = false; } finally { btn.disabled = false; }
+    });
+    setTimeout(() => form.querySelector('input')?.focus(), 300);
+    return sh;
+  }
+  const codeField = (name = 'code') => ({ html: `<label>${t('code')}<input name="${name}" class="code" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" placeholder="000000"></label>` });
+
+  function passwordSheet() {
+    formSheet({
+      title: t('changePassword'), sub: t('changePasswordSub'), submit: t('changePassword'),
+      fields: [
+        { name: 'current', label: t('currentPassword'), type: 'password', attrs: 'autocomplete="current-password" required' },
+        { name: 'next', label: t('newPassword'), type: 'password', attrs: 'autocomplete="new-password" minlength="10" required' },
+        { name: 'repeat', label: t('repeatPassword'), type: 'password', attrs: 'autocomplete="new-password" minlength="10" required' },
+        codeField(),
+      ],
+      onSubmit: async f => {
+        if (f.next.value !== f.repeat.value) throw new Error(t('passwordsDiffer'));
+        await api('POST', '/api/me/password', { current: f.current.value, next: f.next.value, code: f.code.value });
+        closeSheet(); toast(t('passwordChanged'));
+      },
+    });
+  }
+
+  // QR-Code (SVG vom eigenen Server) + Schlüssel zum Abtippen
+  const qrBlock = r => `<div class="qr">${String(r.qr || '').startsWith('<svg') ? r.qr : ''}</div><div class="secret"><span>${esc(r.secret.replace(/(.{4})/g, '$1 ').trim())}</span><button class="mini" type="button" data-x="copy" aria-label="${t('copy')}">${ic('copy')}</button></div>`;
+  const wireCopy = (sh, secret) => sh.querySelector('[data-x=copy]')?.addEventListener('click', () => navigator.clipboard.writeText(secret).then(() => toast(t('copied'))).catch(() => {}));
+
+  async function totpSheet() {
+    let r;
+    try { r = await api('POST', '/api/me/totp/start'); } catch (e) { toast(e.message, true); return; }
+    const sh = formSheet({
+      title: t('newPhone'), sub: t('newPhoneSub'), submit: t('confirm'),
+      fields: [{ html: qrBlock(r) }, codeField()],
+      onSubmit: async f => { await api('POST', '/api/me/totp/confirm', { code: f.code.value }); closeSheet(); toast(t('totpChanged')); },
+    });
+    wireCopy(sh, r.secret);
+  }
+
+  async function devicesSheet() {
+    let list;
+    try { list = await api('GET', '/api/me/sessions'); } catch (e) { toast(e.message, true); return; }
+    const paint = () => {
+      const sh = openSheet(`
+        <h2>${t('devicesTitle')}</h2><div class="s-sub">${t('devicesSub')}</div>
+        <div class="list">${list.map(d => `<div class="row" data-id="${esc(d.id)}">${ic(/iPhone|Android/.test(deviceName(d.ua)) ? 'phone' : 'server')}<div class="r-main"><div class="r-title">${esc(deviceName(d.ua))}${d.current ? ` <span class="pill ok">${t('thisDevice')}</span>` : ''}</div><div class="r-sub">${esc(d.ip || '')} · ${ago(d.seen)}</div></div>${d.current ? '' : `<button class="mini danger" data-x="revoke" aria-label="${t('logout')}">${ic('logout')}</button>`}</div>`).join('')}</div>
+        <div class="s-btns">${list.length > 1 ? `<button class="btn danger block" data-x="others">${t('logoutOthers')}</button>` : ''}<button class="btn block" data-x="close">${t('close')}</button></div>`);
+      sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+      const revoke = async id => { try { list = await api('POST', '/api/me/sessions/revoke', { id }); toast(t('done')); paint(); } catch (e) { toast(e.message, true); } };
+      for (const b of sh.querySelectorAll('[data-x=revoke]')) b.addEventListener('click', () => revoke(b.closest('[data-id]').dataset.id));
+      sh.querySelector('[data-x=others]')?.addEventListener('click', () => revoke('others'));
+    };
+    paint();
+  }
+
+  async function alertsSheet() {
+    let st;
+    try { st = await api('GET', '/api/settings'); } catch (e) { toast(e.message, true); return; }
+    const num = (name, label, v, min, max, unit) => ({ html: `<label>${esc(label)}<div class="num"><input name="${name}" type="number" inputmode="numeric" min="${min}" max="${max}" step="1" value="${v}"><span>${unit}</span></div></label>` });
+    formSheet({
+      title: t('alertsTitle'), sub: t('alertsSub'), submit: t('save'),
+      fields: [
+        { name: 'name', label: t('serverName'), attrs: `value="${esc(st.name)}" maxlength="40" required` },
+        num('disk', t('alertDisk'), st.alerts.disk, 50, 99, '%'),
+        num('mem', t('alertMem'), st.alerts.mem, 50, 99, '%'),
+        num('load', t('alertLoad'), st.alerts.loadPerCpu, 1, 20, '× ' + t('perCore')),
+        { html: `<label class="check"><input name="svc" type="checkbox" ${st.alerts.serviceFailed ? 'checked' : ''}><span>${t('alertSvc')}</span></label>` },
+      ],
+      onSubmit: async f => {
+        await api('POST', '/api/settings', { name: f.name.value, alerts: { disk: f.disk.value, mem: f.mem.value, loadPerCpu: f.load.value, serviceFailed: f.svc.checked } });
+        state.me = await api('GET', '/api/me');
+        closeSheet(); toast(t('saved'));
+      },
+    });
+  }
+
+  // ---------- Benutzer (Admin) ----------
+  async function renderUsers() {
+    if (state.me.role !== 'admin') return go('#/settings');
+    app.innerHTML = `
+      <header class="top"><button class="icon-btn" data-a="back" aria-label="${t('back')}">${ic('back')}</button><h1>${t('users')}</h1>
+        <button class="icon-btn" data-a="add" aria-label="${t('addUser')}">${ic('plus')}</button></header>
+      <main><div class="list users"><div class="empty">…</div></div><p class="hint pad">${t('usersHint')}</p></main>`;
+    $('[data-a=back]', app).addEventListener('click', () => go('#/settings'));
+    $('[data-a=add]', app).addEventListener('click', () => addUserSheet(paint));
+    async function paint(list) {
+      try { list = list || await api('GET', '/api/users'); } catch (e) { toast(e.message, true); return; }
+      const box = $('.users', app);
+      if (!box) return;
+      box.innerHTML = list.map(u => `<div class="row" data-u="${esc(u.name)}"><div class="avatar sm">${esc(u.name.slice(0, 1).toUpperCase())}</div><div class="r-main"><div class="r-title">${esc(u.name)}${u.name === state.me.user ? ` <span class="pill">${t('you')}</span>` : ''}</div><div class="r-sub">${t('role_' + u.role)} · ${u.lastLogin ? t('lastLogin', { when: ago(u.lastLogin) }) : t('neverLoggedIn')}</div></div><span class="chev">${ic('chev')}</span></div>`).join('');
+      for (const r of box.querySelectorAll('[data-u]')) r.addEventListener('click', () => userSheet(list.find(u => u.name === r.dataset.u), paint));
+    }
+    paint();
+  }
+
+  function addUserSheet(done) {
+    formSheet({
+      title: t('addUser'), sub: t('addUserSub'), submit: t('addUser'),
+      fields: [
+        { name: 'name', label: t('user'), attrs: 'autocapitalize="none" autocorrect="off" spellcheck="false" required pattern="[a-zA-Z0-9][a-zA-Z0-9._-]{1,31}"' },
+        { html: `<label>${t('role')}<select name="role"><option value="viewer">${t('role_viewer')}</option><option value="admin">${t('role_admin')}</option></select></label>` },
+        { name: 'password', label: t('initialPassword'), type: 'password', attrs: 'autocomplete="new-password" minlength="10" required' },
+      ],
+      onSubmit: async f => { const r = await api('POST', '/api/users', { name: f.name.value.trim(), role: f.role.value, password: f.password.value }); showQr(r, t('userCreated', { name: r.name })); done(); },
+    });
+  }
+
+  function showQr(r, title) {
+    const sh = openSheet(`<h2>${esc(title)}</h2><div class="s-sub">${t('qrHandOver')}</div>${qrBlock(r)}<div class="s-btns"><button class="btn primary block" data-x="close">${t('done')}</button></div>`);
+    wireCopy(sh, r.secret);
+    sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+  }
+
+  function userSheet(u, done) {
+    const self = u.name === state.me.user;
+    const sh = openSheet(`
+      <h2>${esc(u.name)}</h2><div class="s-sub">${t('role_' + u.role)} · ${u.lastLogin ? t('lastLogin', { when: ago(u.lastLogin) }) : t('neverLoggedIn')}</div>
+      <div class="seg-big"><button data-role="viewer" class="${u.role === 'viewer' ? 'on' : ''}">${t('role_viewer')}</button><button data-role="admin" class="${u.role === 'admin' ? 'on' : ''}">${t('role_admin')}</button></div>
+      <div class="s-btns">
+        <button class="btn block" data-x="2fa">${ic('phone')}${t('reset2fa')}</button>
+        ${self ? '' : `<button class="btn danger block" data-x="del">${ic('trash')}${t('deleteUser')}</button>`}
+        <button class="btn block" data-x="close">${t('close')}</button>
+      </div>`);
+    sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+    for (const b of sh.querySelectorAll('[data-role]')) b.addEventListener('click', async () => {
+      if (b.dataset.role === u.role) return;
+      try { const list = await api('POST', `/api/users/${encodeURIComponent(u.name)}/role`, { role: b.dataset.role }); closeSheet(); toast(t('saved')); done(list); } catch (e) { toast(e.message, true); }
+    });
+    sh.querySelector('[data-x=2fa]').addEventListener('click', () => confirmSheet(t('reset2faTitle', { name: u.name }), t('reset2faMsg'), t('reset2fa'), async () => {
+      const r = await api('POST', `/api/users/${encodeURIComponent(u.name)}/reset-2fa`); showQr(r, t('newQrFor', { name: u.name }));
+    }));
+    sh.querySelector('[data-x=del]')?.addEventListener('click', () => confirmSheet(t('deleteUserTitle', { name: u.name }), t('deleteUserMsg'), t('deleteUser'), async () => {
+      const list = await api('POST', `/api/users/${encodeURIComponent(u.name)}/delete`); closeSheet(); toast(t('done')); done(list);
+    }, true));
+  }
+
+  function confirmSheet(title, msg, okLabel, fn, danger = false) {
+    const sh = openSheet(`<h2>${esc(title)}</h2><p class="s-msg muted">${esc(msg)}</p><div class="err" hidden></div><div class="s-btns"><button class="btn ${danger ? 'danger' : 'primary'} block" data-x="go">${esc(okLabel)}</button><button class="btn block" data-x="cancel">${t('cancel')}</button></div>`);
+    sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+    const btn = sh.querySelector('[data-x=go]'), err = sh.querySelector('.err');
+    btn.addEventListener('click', async () => { btn.disabled = true; try { await fn(); } catch (e) { err.textContent = e.message; err.hidden = false; btn.disabled = false; } });
   }
 
   // ---------- Start ----------

@@ -9,7 +9,9 @@ Der S3cure Agent läuft auf deinem Server und bringt dir eine **App fürs iPhone
 - **Docker:** Container starten / stoppen / neu starten, Logs
 - **Server neu starten:** nur mit frischem 2FA-Code
 - **Mitteilungen:** sofort, wenn ein Dienst ausfällt, die Platte voll wird oder ein Server nicht erreichbar ist
-- **Mehrere Server**, **mehrere Benutzer** (Admin oder „nur ansehen“), **Protokoll** aller Aktionen
+- **Prozesse und Laufwerke**, Lieblingsdienste **anheften** (Neustart mit einem Tipp)
+- **Konto:** Passwort ändern, 2FA auf ein neues Handy umziehen, angemeldete Geräte abmelden
+- **Mehrere Server**, **mehrere Benutzer** (Admin oder „nur ansehen“) – direkt in der App verwalten, **Protokoll** aller Aktionen
 
 ## Einrichten (einmal, ca. 5 Minuten)
 

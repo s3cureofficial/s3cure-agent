@@ -1,5 +1,25 @@
 # Changelog – S3cure Agent
 
+## 1.1.0 – 2026-11-05
+
+### Neu
+- **Status neu gestaltet:** Ring-Anzeigen für CPU, RAM und Platte, Laufzeit und Netzwerk, **Top-Prozesse** (nach CPU oder RAM) und **alle Laufwerke** mit Füllstand.
+- **Dienste und Container anheften:** Im Aktionsfenster „Anheften“ – angeheftete erscheinen auf der Status-Seite und lassen sich mit einem Tipp neu starten.
+- **Passwort ändern** in der App (mit aktuellem Passwort und 2FA-Code; andere Geräte werden abgemeldet).
+- **Neues Handy für 2FA:** Zwei-Faktor-Code auf ein anderes Gerät umziehen – umgestellt wird erst nach einem Code vom neuen Gerät.
+- **Angemeldete Geräte** ansehen und einzeln oder alle anderen abmelden.
+- **Benutzer verwalten** (Admin): anlegen mit QR-Code, Rolle ändern, 2FA zurücksetzen, löschen. Der letzte Admin ist geschützt.
+- **Warnungen einstellen** (Admin): Grenzen für Platte, Arbeitsspeicher und Last, Mitteilung bei ausgefallenen Diensten, Name des Servers.
+- **Logs teilen oder kopieren.**
+
+### Behoben
+- Knöpfe bei „Mitteilungen“ in den Einstellungen überlappten sich.
+- Die Schrift in der Kopfleiste wirkte auf dem iPhone unscharf.
+- Nach einem Update zeigte die App bis zu einer Stunde noch das alte Aussehen.
+
+### English
+- Redesigned status (rings, top processes, all disks), pin services/containers for one-tap restart, change password, move 2FA to a new phone, signed-in devices, user management for admins, alert limits, share logs. Fixed overlapping buttons, blurry header text on iPhone and stale app files after updates.
+
 ## 1.0.1 – 2026-11-05
 
 ### Verbessert

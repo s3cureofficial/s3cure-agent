@@ -144,3 +144,54 @@ test('API: Anmeldung, Rechte, Aktionen, Schutz', async () => {
   const sneaky = await fetch(base + '/..%2fpackage.json');
   assert.ok(!(await sneaky.text()).includes('"dependencies"'));
 });
+
+test('API 1.1: Passwort, Geräte, 2FA-Umzug, Benutzer, Warnungen, Prozesse, Laufwerke', async () => {
+  const H = { 'Content-Type': 'application/json', 'X-S3cure': '1' };
+  const call = async (method, p, { body, cookie } = {}) => {
+    const r = await fetch(base + p, { method, headers: { ...H, ...(cookie ? { Cookie: cookie } : {}) }, body: body ? JSON.stringify(body) : undefined });
+    return { status: r.status, data: await r.json().catch(() => null), cookie: (r.headers.get('set-cookie') || '').split(';')[0] };
+  };
+  let step = totp.step() + 5; // eigene Zeitfenster, damit sich Codes nicht mit dem Test davor überschneiden
+  const info = await agent.auth.addUser('boss', 'boss-passwort-123', 'admin');
+  const loginCode = () => totp.hotp(info.secret, totp.step());
+  const c1 = (await call('POST', '/api/login', { body: { user: 'boss', password: 'boss-passwort-123', code: totp.hotp(info.secret, totp.step() - 1) } })).cookie;
+  const c2 = (await call('POST', '/api/login', { body: { user: 'boss', password: 'boss-passwort-123', code: loginCode() } })).cookie;
+  assert.ok(c1 && c2);
+  // Geräte: zwei Sitzungen, eine ist „dieses Gerät“
+  const sess = (await call('GET', '/api/me/sessions', { cookie: c1 })).data;
+  assert.equal(sess.length, 2);
+  assert.equal(sess.filter(x => x.current).length, 1);
+  // Passwort ändern: falsches altes Passwort / falscher Code abgelehnt, richtig -> anderes Gerät abgemeldet
+  assert.equal((await call('POST', '/api/me/password', { cookie: c1, body: { current: 'falsch-falsch', next: 'neues-passwort-99', code: '000000' } })).status, 403);
+  assert.equal((await call('POST', '/api/me/password', { cookie: c1, body: { current: 'boss-passwort-123', next: 'kurz', code: '000000' } })).status, 400);
+  void step;
+  const pw = await call('POST', '/api/me/password', { cookie: c1, body: { current: 'boss-passwort-123', next: 'neues-passwort-99', code: totp.hotp(info.secret, totp.step() + 1) } });
+  assert.equal(pw.status, 200, JSON.stringify(pw.data));
+  assert.equal((await call('GET', '/api/me', { cookie: c1 })).status, 200, 'eigenes Gerät bleibt angemeldet');
+  assert.equal((await call('GET', '/api/me', { cookie: c2 })).status, 401, 'anderes Gerät abgemeldet');
+  // 2FA umziehen: erst mit Code aus dem NEUEN Schlüssel
+  const start = (await call('POST', '/api/me/totp/start', { cookie: c1 })).data;
+  assert.match(start.qr, /^<svg/);
+  assert.equal((await call('POST', '/api/me/totp/confirm', { cookie: c1, body: { code: '123456' } })).status, 403);
+  assert.equal((await call('POST', '/api/me/totp/confirm', { cookie: c1, body: { code: totp.hotp(start.secret, totp.step()) } })).status, 200);
+  // Benutzer verwalten
+  const added = await call('POST', '/api/users', { cookie: c1, body: { name: 'helfer', role: 'viewer', password: 'helfer-passwort-1' } });
+  assert.equal(added.status, 200);
+  assert.match(added.data.qr, /^<svg/);
+  assert.equal((await call('POST', '/api/users', { cookie: c1, body: { name: 'helfer', role: 'viewer', password: 'helfer-passwort-1' } })).status, 400, 'doppelt');
+  assert.equal((await call('POST', '/api/users/helfer/role', { cookie: c1, body: { role: 'admin' } })).status, 200);
+  assert.equal((await call('POST', '/api/users/boss/delete', { cookie: c1 })).status, 400, 'sich selbst nicht');
+  assert.equal((await call('POST', '/api/users/helfer/delete', { cookie: c1 })).status, 200);
+  // Letzter Admin? (chef + boss sind Admins) – boss herabstufen geht, chef danach nicht mehr
+  assert.equal((await call('POST', '/api/users/gast/role', { cookie: c1, body: { role: 'superuser' } })).status, 400);
+  // Warnungen
+  assert.equal((await call('POST', '/api/settings', { cookie: c1, body: { alerts: { disk: 120 } } })).status, 400);
+  const st = await call('POST', '/api/settings', { cookie: c1, body: { name: 'Mein Server', alerts: { disk: 85, serviceFailed: false } } });
+  assert.equal(st.data.name, 'Mein Server');
+  assert.equal(st.data.alerts.disk, 85);
+  assert.equal(st.data.alerts.serviceFailed, false);
+  // Prozesse und Laufwerke (Demo)
+  assert.ok((await call('GET', '/api/s/local/processes?sort=mem', { cookie: c1 })).data.length > 3);
+  assert.ok((await call('GET', '/api/s/local/disks', { cookie: c1 })).data.some(d => d.mount === '/'));
+});
+

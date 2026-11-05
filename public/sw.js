@@ -1,6 +1,6 @@
 // Service Worker: App-Gerüst offline verfügbar (startet sofort), Mitteilungen anzeigen und öffnen.
 // API-Aufrufe werden nie zwischengespeichert.
-const CACHE = 's3cure-v1';
+const CACHE = 's3cure-v2';
 const SHELL = ['/', '/app.css', '/app.js', '/manifest.webmanifest', '/icons/icon-180.png', '/icons/icon-192.png', '/icons/badge-96.png'];
 
 self.addEventListener('install', e => {
