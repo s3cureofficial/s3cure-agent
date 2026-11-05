@@ -314,3 +314,87 @@ select { appearance: none; -webkit-appearance: none; background-image: linear-gr
 .home-meta { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .home-meta span { display: inline-flex; align-items: center; gap: 5px; }
 .home-meta svg.i { width: 14px; height: 14px; }
+
+/* ---------- 1.2: Mehr-Kacheln ---------- */
+.tile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.tile-btn {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px; text-align: left; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); color: var(--text); min-height: 112px;
+}
+.tile-btn:active { transform: scale(.98); }
+.tile-btn svg.i { width: 26px; height: 26px; color: var(--accent); margin-bottom: 6px; }
+.tile-btn b { font-size: 15.5px; font-weight: 650; }
+.tile-btn span { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+.tile-btn .badge { position: absolute; top: 12px; right: 12px; min-width: 22px; height: 22px; padding: 0 7px; border-radius: 999px; background: var(--warn); color: #fff; font: 700 12px/22px inherit; font-style: normal; text-align: center; }
+.tile-btn .badge.sec { background: var(--accent); }
+
+/* ---------- Kleinteile ---------- */
+.sumrow { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.sumrow .muted { font-size: 13px; }
+.spacer { flex: 1; }
+.btn.small { height: 36px; padding: 0 12px; font-size: 14px; border-radius: 11px; gap: 6px; }
+.btn.small svg.i { width: 17px; height: 17px; }
+.pill.warn .dot { background: var(--warn); }
+.empty-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; padding: 28px 20px; }
+.empty-card svg.i { width: 34px; height: 34px; color: var(--accent); }
+.empty-card b { font-size: 16px; }
+.empty-card p { margin: 0 0 6px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.row.static { cursor: default; }
+.row.static:active { background: none; }
+.hint.small { font-size: 12px; margin: -6px 0 12px; }
+.sub-head { font-size: 13px; font-weight: 700; color: var(--text); margin: 6px 0 10px; text-transform: uppercase; letter-spacing: .4px; }
+.mono { font-family: var(--mono); }
+.warn-text { display: flex; align-items: center; gap: 5px; color: var(--warn); font-size: 13px; font-weight: 600; margin-top: 4px; }
+.warn-text svg.i { width: 15px; height: 15px; }
+
+/* Check-Verlauf: kleine Balken */
+.hbar { display: flex; gap: 2px; margin-top: 7px; height: 10px; }
+.hbar i { flex: 1; max-width: 7px; border-radius: 2px; background: var(--ok); opacity: .85; }
+.hbar i.bad { background: var(--accent); }
+.kv-card { background: var(--well); border-radius: 14px; padding: 12px 14px; margin-bottom: 14px; box-shadow: var(--inset); }
+.kv-card .hbar { height: 14px; margin-top: 12px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sheet-form textarea {
+  width: 100%; margin-top: 6px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text);
+  font: 14px/1.45 var(--mono); box-shadow: var(--inset); outline: none; resize: vertical;
+}
+.sheet-form textarea:focus { border-color: var(--accent); }
+.sheet-form .tf[hidden] { display: none; }
+
+/* Updates */
+.upd-head { display: flex; align-items: center; gap: 16px; }
+.upd-num { width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center; font-size: 24px; font-weight: 800; color: #fff; background: var(--ok); flex-shrink: 0; }
+.upd-num.warn { background: var(--warn); }
+.upd-num.bad { background: var(--accent); }
+.upd-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.upd-text b { font-size: 16px; }
+.upd-text span { font-size: 13px; color: var(--muted); }
+.btn-row + .section-title, .card + .btn-row { margin-top: 12px; }
+.job-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+.joblog, .code-pre {
+  margin: 0; max-height: 300px; overflow: auto; padding: 10px 12px; border-radius: 12px; background: var(--well); box-shadow: var(--inset);
+  font: 11.5px/1.5 var(--mono); white-space: pre-wrap; word-break: break-word; color: var(--text);
+}
+.code-pre { margin-bottom: 14px; max-height: 200px; }
+.runs .run { margin-bottom: 14px; }
+.pick .row { cursor: pointer; }
+.pick input { width: 22px; height: 22px; accent-color: var(--accent); flex-shrink: 0; }
+
+/* Inventar */
+.inv-item { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 2px; }
+.inv-item:last-child { border-bottom: none; }
+.inv-item b { font-size: 14.5px; display: flex; align-items: center; gap: 8px; }
+.inv-item > span { font-size: 12.5px; color: var(--muted); }
+.inv-sub { font-size: 12.5px; color: var(--muted); padding-left: 12px; }
+.sw-info { font-size: 12.5px; margin: 10px 2px; }
+.sw-row { display: flex; justify-content: space-between; gap: 10px; padding: 7px 2px; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+.sw-row span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sw-row .mono { font-size: 12px; flex-shrink: 0; }
+
+/* Startseite: Checks */
+.home-checks { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12.5px; color: var(--muted); justify-content: center; }
+.home-checks svg.i { width: 15px; height: 15px; }
+.home-checks .pill { height: 22px; }
+
+/* Tab-Leiste mit 5 Einträgen */
+.tabbar button span:not(.badge) { white-space: nowrap; }

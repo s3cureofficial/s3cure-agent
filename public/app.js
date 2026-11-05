@@ -109,6 +109,135 @@
       'act_user-2fa': '2FA zurückgesetzt',
       'act_user-delete': 'Benutzer gelöscht',
       'act_settings': 'Einstellungen geändert',
+      'checks': 'Checks',
+      'updates': 'Updates',
+      'updatesTile': 'Anzeigen und installieren',
+      'scripts': 'Skripte',
+      'scriptsTile': 'Bibliothek, auf Servern ausführen',
+      'inventory': 'Inventar',
+      'inventoryTile': 'Hardware und Software',
+      'ctype_http': 'Webseite',
+      'ctype_ping': 'Ping',
+      'ctype_port': 'Port',
+      'ctype_cert': 'Zertifikat',
+      'ctype_service': 'Dienst',
+      'ctype_disk': 'Platte',
+      'ctype_script': 'Skript',
+      'cstate_ok': 'OK',
+      'cstate_fail': 'Fehler',
+      'cstate_warn': 'Unsicher',
+      'cstate_pending': 'Wird geprüft',
+      'cstate_paused': 'Pausiert',
+      'addCheck': 'Check',
+      'newCheck': 'Neuer Check',
+      'noChecks': 'Noch keine Checks',
+      'noChecksHint': 'Checks prüfen regelmäßig, ob deine Webseite, Ports, Zertifikate oder Dienste in Ordnung sind – und melden sich, wenn nicht.',
+      'lastResult': 'Ergebnis',
+      'lastCheck': 'Zuletzt',
+      'interval': 'Intervall',
+      'everyS': 'alle {n} s',
+      'checkNow': 'Jetzt prüfen',
+      'edit': 'Bearbeiten',
+      'delete': 'Löschen',
+      'deleteCheckTitle': '„{name}“ löschen?',
+      'deleteCheckMsg': 'Der Check wird nicht mehr ausgeführt.',
+      'editCheck': 'Check bearbeiten',
+      'checkFormSub': 'Bei Fehlern meldet sich S3cure per Push, Discord, Webhook oder E-Mail (Einstellungen → Warnungs-Wege).',
+      'checkType': 'Art',
+      'name': 'Name',
+      'optional': 'optional',
+      'keyword': 'Muss enthalten (Text)',
+      'hostLabel': 'Adresse',
+      'certDays': 'Warnen ab (Tage vor Ablauf)',
+      'serviceName': 'Dienst',
+      'pathLabel': 'Pfad',
+      'diskLimit': 'Warnen ab (%)',
+      'checkScript': 'Skript (Exit-Code 0 = OK)',
+      'failAfter': 'Warnen nach',
+      'updatesUnsupported': 'Updates gibt es hier nur für Debian/Ubuntu (apt).',
+      'updatesAvail': '{n} Updates verfügbar',
+      'updatesNone': 'Alles aktuell ✓',
+      'updatesSec': '{n} Sicherheits-Updates',
+      'checkedAt': 'gesucht {when}',
+      'rebootNeeded': 'Neustart nötig',
+      'searchUpdates': 'Neu suchen',
+      'installAll': 'Alle installieren',
+      'installSec': 'Nur Sicherheit',
+      'jobRunning': 'Läuft gerade',
+      'jobLast': 'Letzter Auftrag',
+      'failedExit': 'Fehler (Exit {n})',
+      'packages': 'Pakete',
+      'autoUpdates': 'Automatische Updates',
+      'autoUpdatesOn': 'Updates automatisch installieren',
+      'dayLabel': 'Tag',
+      'daily': 'Täglich',
+      'timeLabel': 'Uhrzeit',
+      'wd0': 'Sonntag',
+      'wd1': 'Montag',
+      'wd2': 'Dienstag',
+      'wd3': 'Mittwoch',
+      'wd4': 'Donnerstag',
+      'wd5': 'Freitag',
+      'wd6': 'Samstag',
+      'rebootRule': 'Danach neu starten',
+      'rebootNever': 'Nie (nur Hinweis)',
+      'rebootIfNeeded': 'Wenn nötig (z. B. neuer Kernel)',
+      'searching': 'Suche Updates …',
+      'installAllTitle': '{n} Updates installieren?',
+      'installMsg': 'Dienste können dabei kurz neu starten. Das läuft im Hintergrund weiter, auch wenn du die App schließt.',
+      'installing': 'Installation läuft …',
+      'installSecTitle': '{n} Sicherheits-Updates installieren?',
+      'scriptsHint': 'Laufen als root.',
+      'newScript': 'Neu',
+      'linesN': '{n} Zeilen',
+      'noScripts': 'Noch keine Skripte.',
+      'recentRuns': 'Letzte Ausführungen',
+      'runHere': 'Hier ausführen',
+      'runMany': 'Mehrere Server',
+      'runTitle': '„{name}“ ausführen?',
+      'runMsg': 'Läuft als root auf: {servers}',
+      'run': 'Ausführen',
+      'deleteScriptTitle': '„{name}“ löschen?',
+      'deleteScriptMsg': 'Das Skript wird aus der Bibliothek entfernt. Der Verlauf bleibt.',
+      'chooseServers': 'Auf welchen Servern?',
+      'editScript': 'Skript bearbeiten',
+      'scriptFormSub': 'Bash-Skript, läuft als root. Zum Speichern brauchst du einen 2FA-Code.',
+      'descriptionLabel': 'Beschreibung',
+      'scriptBody': 'Skript',
+      'timeoutLabel': 'Abbrechen nach',
+      'minN': '{n} min',
+      'output': 'Ausgabe',
+      'machine': 'Gerät',
+      'vendor': 'Hersteller',
+      'model': 'Modell',
+      'serial': 'Seriennummer',
+      'virt': 'Virtualisierung',
+      'timezone': 'Zeitzone',
+      'booted': 'Gestartet',
+      'software': 'Software',
+      'searchPackages': 'Paket suchen',
+      'packagesN': '{n} Pakete ({m})',
+      'hits': '{n} Treffer',
+      'channels': 'Warnungs-Wege',
+      'channelsDesc': 'Discord, Webhook, E-Mail',
+      'channelsSub': 'Warnungen kommen immer als Push aufs Handy – hier kannst du zusätzlich Discord, eigene Webhooks und E-Mail einrichten.',
+      'discordHooks': 'Discord-Webhooks (eine pro Zeile)',
+      'discordHint': 'Discord: Kanal-Einstellungen → Integrationen → Webhooks → Neuer Webhook → URL kopieren.',
+      'webhooks': 'Eigene Webhooks (JSON, eine pro Zeile)',
+      'emailHead': 'E-Mail',
+      'emailTo': 'An',
+      'smtpHost': 'SMTP-Server',
+      'smtpSecure': 'SSL/TLS (meist Port 465)',
+      'sendTest': 'Test senden',
+      'noChannels': 'Keine Wege eingerichtet.',
+      'act_check-save': 'Check gespeichert',
+      'act_check-delete': 'Check gelöscht',
+      'act_updates-install': 'Updates installiert',
+      'act_updates-schedule': 'Update-Zeitplan geändert',
+      'act_script-save': 'Skript gespeichert',
+      'act_script-delete': 'Skript gelöscht',
+      'act_script-run': 'Skript ausgeführt',
+      'act_notify-save': 'Warnungs-Wege geändert',
     },
     en: {
       tagline: 'Your servers – always with you', user: 'User', password: 'Password', code: '2FA code', login: 'Sign in', loggingIn: 'Signing in…',
@@ -212,6 +341,135 @@
       'act_user-2fa': '2FA reset',
       'act_user-delete': 'user deleted',
       'act_settings': 'settings changed',
+      'checks': 'Checks',
+      'updates': 'Updates',
+      'updatesTile': 'View and install',
+      'scripts': 'Scripts',
+      'scriptsTile': 'Library, run on servers',
+      'inventory': 'Inventory',
+      'inventoryTile': 'Hardware and software',
+      'ctype_http': 'Website',
+      'ctype_ping': 'Ping',
+      'ctype_port': 'Port',
+      'ctype_cert': 'Certificate',
+      'ctype_service': 'Service',
+      'ctype_disk': 'Disk',
+      'ctype_script': 'Script',
+      'cstate_ok': 'OK',
+      'cstate_fail': 'Failed',
+      'cstate_warn': 'Unsure',
+      'cstate_pending': 'Checking',
+      'cstate_paused': 'Paused',
+      'addCheck': 'Check',
+      'newCheck': 'New check',
+      'noChecks': 'No checks yet',
+      'noChecksHint': 'Checks regularly test whether your website, ports, certificates or services are fine – and tell you when they are not.',
+      'lastResult': 'Result',
+      'lastCheck': 'Last',
+      'interval': 'Interval',
+      'everyS': 'every {n} s',
+      'checkNow': 'Check now',
+      'edit': 'Edit',
+      'delete': 'Delete',
+      'deleteCheckTitle': 'Delete “{name}”?',
+      'deleteCheckMsg': 'The check will no longer run.',
+      'editCheck': 'Edit check',
+      'checkFormSub': 'On failure S3cure notifies via push, Discord, webhook or email (Settings → Alert channels).',
+      'checkType': 'Type',
+      'name': 'Name',
+      'optional': 'optional',
+      'keyword': 'Must contain (text)',
+      'hostLabel': 'Address',
+      'certDays': 'Warn from (days before expiry)',
+      'serviceName': 'Service',
+      'pathLabel': 'Path',
+      'diskLimit': 'Warn from (%)',
+      'checkScript': 'Script (exit code 0 = OK)',
+      'failAfter': 'Warn after',
+      'updatesUnsupported': 'Updates are only available for Debian/Ubuntu (apt).',
+      'updatesAvail': '{n} updates available',
+      'updatesNone': 'All up to date ✓',
+      'updatesSec': '{n} security updates',
+      'checkedAt': 'checked {when}',
+      'rebootNeeded': 'Restart needed',
+      'searchUpdates': 'Check again',
+      'installAll': 'Install all',
+      'installSec': 'Security only',
+      'jobRunning': 'Running now',
+      'jobLast': 'Last job',
+      'failedExit': 'Failed (exit {n})',
+      'packages': 'Packages',
+      'autoUpdates': 'Automatic updates',
+      'autoUpdatesOn': 'Install updates automatically',
+      'dayLabel': 'Day',
+      'daily': 'Daily',
+      'timeLabel': 'Time',
+      'wd0': 'Sunday',
+      'wd1': 'Monday',
+      'wd2': 'Tuesday',
+      'wd3': 'Wednesday',
+      'wd4': 'Thursday',
+      'wd5': 'Friday',
+      'wd6': 'Saturday',
+      'rebootRule': 'Restart afterwards',
+      'rebootNever': 'Never (hint only)',
+      'rebootIfNeeded': 'If needed (e.g. new kernel)',
+      'searching': 'Checking for updates…',
+      'installAllTitle': 'Install {n} updates?',
+      'installMsg': 'Services may restart briefly. It keeps running in the background even if you close the app.',
+      'installing': 'Installing…',
+      'installSecTitle': 'Install {n} security updates?',
+      'scriptsHint': 'Run as root.',
+      'newScript': 'New',
+      'linesN': '{n} lines',
+      'noScripts': 'No scripts yet.',
+      'recentRuns': 'Recent runs',
+      'runHere': 'Run here',
+      'runMany': 'Several servers',
+      'runTitle': 'Run “{name}”?',
+      'runMsg': 'Runs as root on: {servers}',
+      'run': 'Run',
+      'deleteScriptTitle': 'Delete “{name}”?',
+      'deleteScriptMsg': 'The script is removed from the library. The history stays.',
+      'chooseServers': 'On which servers?',
+      'editScript': 'Edit script',
+      'scriptFormSub': 'Bash script, runs as root. Saving needs a 2FA code.',
+      'descriptionLabel': 'Description',
+      'scriptBody': 'Script',
+      'timeoutLabel': 'Cancel after',
+      'minN': '{n} min',
+      'output': 'Output',
+      'machine': 'Machine',
+      'vendor': 'Vendor',
+      'model': 'Model',
+      'serial': 'Serial number',
+      'virt': 'Virtualization',
+      'timezone': 'Time zone',
+      'booted': 'Booted',
+      'software': 'Software',
+      'searchPackages': 'Search package',
+      'packagesN': '{n} packages ({m})',
+      'hits': '{n} matches',
+      'channels': 'Alert channels',
+      'channelsDesc': 'Discord, webhook, email',
+      'channelsSub': 'Alerts always arrive as push on your phone – here you can add Discord, your own webhooks and email.',
+      'discordHooks': 'Discord webhooks (one per line)',
+      'discordHint': 'Discord: channel settings → Integrations → Webhooks → New webhook → copy URL.',
+      'webhooks': 'Own webhooks (JSON, one per line)',
+      'emailHead': 'Email',
+      'emailTo': 'To',
+      'smtpHost': 'SMTP server',
+      'smtpSecure': 'SSL/TLS (usually port 465)',
+      'sendTest': 'Send test',
+      'noChannels': 'No channels set up.',
+      'act_check-save': 'check saved',
+      'act_check-delete': 'check deleted',
+      'act_updates-install': 'updates installed',
+      'act_updates-schedule': 'update schedule changed',
+      'act_script-save': 'script saved',
+      'act_script-delete': 'script deleted',
+      'act_script-run': 'script run',
+      'act_notify-save': 'alert channels changed',
     },
   };
   const t = (k, p = {}) => String(DICT[LANG][k] ?? DICT.de[k] ?? k).replace(/\{(\w+)\}/g, (_, x) => (p[x] ?? ''));
@@ -225,6 +483,7 @@
     power: 'M18.4 6.6a9 9 0 1 1-12.8 0 M12 2v10', bell: 'M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z M10 20.5a2 2 0 0 0 4 0', search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z M20 20l-3.5-3.5',
     share: 'M12 3v12 M8 7l4-4 4 4 M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7', close: 'M6 6l12 12 M18 6L6 18', list: 'M4 6h16 M4 12h16 M4 18h10', user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0',
     shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',
+    download: 'M12 3v12 M7 10l5 5 5-5 M5 21h14', code: 'M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16', edit: 'M4 20h4L19 9l-4-4L4 16z M14 6l4 4',
     star: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z', key: 'M15 7a4 4 0 1 1-3.8 5.2L4 19.4V21h3v-2h2v-2h2l1.2-1.2A4 4 0 0 1 15 7z M16 9h.01',
     phone: 'M8 2.5h8A1.5 1.5 0 0 1 17.5 4v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5z M11 18.5h2', users: 'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M22 21a7 7 0 0 0-4.5-6.5',
     sliders: 'M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M16 4v4 M10 10v4 M18 16v4', copy: 'M9 9h10v12H9z M5 15V3h10', info: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z M12 16v-5 M12 8h.01', plus: 'M12 5v14 M5 12h14', trash: 'M4 7h16 M10 11v6 M14 11v6 M6 7l1 13h10l1-13 M9 7V4h6v3', logout: 'M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3 M10 17l5-5-5-5 M15 12H3',
@@ -346,6 +605,11 @@
       <div class="home-meta"><span>${ic('clock')}${esc(upt(m.uptime))}</span><span>${ic('gauge')}${(m.load || [0])[0].toFixed(2)}</span>${m.net ? `<span>↓ ${rate(m.net.rx)}</span>` : ''}</div>`;
   }
 
+  function homeChecks(c) {
+    if (!c || !Object.keys(c).length) return '';
+    return `<div class="home-checks">${ic('pulse')}<span>${t('checks')}</span><span class="pill ok"><span class="dot"></span>${c.ok || 0}</span>${c.fail ? `<span class="pill bad"><span class="dot"></span>${c.fail}</span>` : ''}${c.warn ? `<span class="pill warn"><span class="dot"></span>${c.warn}</span>` : ''}</div>`;
+  }
+
   function issuesHtml(s) {
     const list = s.ok ? (s.issues || []) : [{ text: s.error || t('offline'), level: 'bad' }];
     if (!list.length) return '';
@@ -372,7 +636,7 @@
         const [cls, txt] = srvState(s);
         return `<a class="card srv" href="#/s/${encodeURIComponent(s.id)}/status">
           <div class="srv-head"><span class="srv-name">${esc(s.name)}</span><span class="pill ${cls}"><span class="dot"></span>${esc(txt)}</span></div>
-          ${s.ok ? homeStats(s.metrics) : ''}${issuesHtml(s)}</a>`;
+          ${s.ok ? homeStats(s.metrics) + homeChecks(s.checks) : ''}${issuesHtml(s)}</a>`;
       }).join('');
       applyWidths(box);
     };
@@ -395,7 +659,10 @@
   // ---------- Ein Server ----------
   async function renderServer(id, tab) {
     const known = state.servers.find(s => s.id === id);
-    const multi = state.servers.length > 1;
+    const SUB = ['updates', 'scripts', 'inventory', 'audit'];
+    const sub = SUB.includes(tab);
+    const multi = state.servers.length > 1 || sub;
+    const navTab = sub ? 'more' : tab;
     app.innerHTML = `
       <header class="top">
         ${multi ? `<button class="icon-btn" data-a="back" aria-label="${t('back')}">${ic('back')}</button>` : '<img class="logo" src="/icons/icon-180.png" alt="">'}
@@ -405,22 +672,24 @@
       </header>
       <main class="page"><div class="skeleton"></div></main>
       <nav class="tabbar"><div class="tabs">
-        ${[['status', 'gauge'], ['services', 'server'], ['docker', 'box'], ['more', 'dots']].map(([k, i]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${ic(i)}<span>${t(k)}</span>${k === 'services' ? '<span class="badge" hidden></span>' : ''}</button>`).join('')}
+        ${[['status', 'gauge'], ['services', 'server'], ['docker', 'box'], ['checks', 'pulse'], ['more', 'dots']].map(([k, i]) => `<button data-t="${k}" class="${k === navTab ? 'on' : ''}">${ic(i)}<span>${t(k)}</span>${k === 'services' || k === 'checks' ? '<span class="badge" hidden></span>' : ''}</button>`).join('')}
       </div></nav>`;
-    $('[data-a=back]', app)?.addEventListener('click', () => go('#/'));
+    $('[data-a=back]', app)?.addEventListener('click', () => go(sub ? `#/s/${encodeURIComponent(id)}/more` : '#/'));
     $('[data-a=settings]', app).addEventListener('click', () => go('#/settings'));
     for (const b of app.querySelectorAll('.tabbar [data-t]')) b.addEventListener('click', () => go(`#/s/${encodeURIComponent(id)}/${b.dataset.t}`));
     if (!state.servers.length) api('GET', '/api/servers').then(l => { state.servers = l; const s = l.find(x => x.id === id); if (s) $('.top .nm', app).textContent = s.name; if (l.length > 1 && !$('[data-a=back]', app)) route(); }).catch(() => {});
     const main = $('main', app);
     const refreshBtn = $('[data-a=refresh]', app);
-    const view = { status: viewStatus, services: viewServices, docker: viewDocker, more: viewMore }[tab] || viewStatus;
+    const view = { status: viewStatus, services: viewServices, docker: viewDocker, checks: viewChecks, more: viewMore, updates: viewUpdates, scripts: viewScripts, inventory: viewInventory, audit: viewAudit }[tab] || viewStatus;
     const load = async spin => {
       if (spin) refreshBtn.classList.add('spin');
       try { await view(id, main); } catch (e) { toast(e.message, true); } finally { refreshBtn.classList.remove('spin'); }
     };
     refreshBtn.addEventListener('click', () => load(true));
+    // Fehlerzahl am Checks-Tab auch auf den anderen Seiten
+    if (tab !== 'checks') api('GET', `/api/s/${encodeURIComponent(id)}/checks`).then(l => { const b = $('.tabbar [data-t=checks] .badge', app); const n = l.filter(c => c.state.status === 'fail').length; if (b) { b.hidden = !n; b.textContent = n; } }).catch(() => {});
     await load();
-    if (tab === 'status' || tab === 'services' || tab === 'docker') every(tab === 'status' ? 10000 : 15000, () => view(id, main, true));
+    if (['status', 'services', 'docker', 'checks'].includes(tab)) every(tab === 'status' ? 10000 : 15000, () => view(id, main, true));
   }
 
   // ----- Status -----
@@ -623,19 +892,255 @@
   async function viewMore(id, main) {
     const admin = state.me.role === 'admin';
     const name = $('.top .nm', app).textContent || state.servers.find(s => s.id === id)?.name || '';
+    const enc = encodeURIComponent(id);
+    const tile = (k, icon, title, sub, cls = '') => `<button class="tile-btn ${cls}" data-go="${k}">${ic(icon)}<b>${title}</b><span>${sub}</span><i class="badge" hidden></i></button>`;
     main.innerHTML = `
-      ${admin ? `<div class="card"><button class="btn danger block" data-a="reboot">${ic('power')}${t('reboot')}</button></div>` : ''}
-      <div class="list"><div class="row" data-a="settings">${ic('gear')}<div class="r-main"><div class="r-title">${t('settings')}</div><div class="r-sub">${t('notifications')} · ${t('account')}</div></div><span class="chev">${ic('chev')}</span></div></div>
-      ${admin ? `<div class="section-title">${t('audit')}</div><div class="list audit"><div class="empty">…</div></div>` : ''}`;
+      <div class="tile-grid">
+        ${tile('updates', 'download', t('updates'), t('updatesTile'))}
+        ${tile('scripts', 'code', t('scripts'), t('scriptsTile'))}
+        ${tile('inventory', 'box', t('inventory'), t('inventoryTile'))}
+        ${admin ? tile('audit', 'list', t('audit'), t('auditDesc')) : ''}
+      </div>
+      <div class="list">
+        <div class="row" data-a="settings">${ic('gear')}<div class="r-main"><div class="r-title">${t('settings')}</div><div class="r-sub">${t('notifications')} · ${t('account')}</div></div><span class="chev">${ic('chev')}</span></div>
+      </div>
+      ${admin ? `<div class="section-title"></div><button class="btn danger block" data-a="reboot">${ic('power')}${t('reboot')}</button>` : ''}`;
+    for (const b of main.querySelectorAll('[data-go]')) b.addEventListener('click', () => go(`#/s/${enc}/${b.dataset.go}`));
     $('[data-a=settings]', main).addEventListener('click', () => go('#/settings'));
     $('[data-a=reboot]', main)?.addEventListener('click', () => rebootSheet(id, name));
-    if (admin) {
-      try {
-        const log = await api('GET', '/api/audit');
-        const box = $('.audit', main);
-        box.innerHTML = log.length ? log.slice(0, 60).map(e => `<div class="row"><span class="dot ${/failed|locked|reboot|stop|alert/.test(e.action) ? 'warn' : 'ok'}"></span><div class="r-main"><div class="r-title">${esc(word('act_', e.action))}${e.target ? ' · ' + esc(e.target) : ''}</div><div class="r-sub">${esc(e.user)} · ${new Date(e.at).toLocaleString(LANG)}${e.ip ? ' · ' + esc(e.ip) : ''}${e.detail ? ' · ' + esc(e.detail) : ''}</div></div></div>`).join('') : `<div class="empty">${t('auditEmpty')}</div>`;
-      } catch {}
+    // Anzahl offener Updates nachladen
+    api('GET', `/api/s/${enc}/updates`).then(u => {
+      const b = main.querySelector('[data-go=updates] .badge');
+      if (b && u.list && u.list.length) { b.hidden = false; b.textContent = u.list.length; b.classList.toggle('sec', u.list.some(p => p.security)); }
+    }).catch(() => {});
+  }
+
+  async function viewAudit(id, main) {
+    $('.top .nm', app).textContent = t('audit');
+    const log = await api('GET', '/api/audit');
+    main.innerHTML = `<div class="list audit">${log.length ? log.slice(0, 150).map(e => `<div class="row"><span class="dot ${/failed|locked|reboot|stop|alert|delete/.test(e.action) ? 'warn' : 'ok'}"></span><div class="r-main"><div class="r-title">${esc(word('act_', e.action))}${e.target ? ' · ' + esc(e.target) : ''}</div><div class="r-sub">${esc(e.user)} · ${new Date(e.at).toLocaleString(LANG)}${e.ip ? ' · ' + esc(e.ip) : ''}${e.detail ? ' · ' + esc(e.detail) : ''}</div></div></div>`).join('') : `<div class="empty">${t('auditEmpty')}</div>`}</div>`;
+  }
+
+  // ----- Checks -----
+  const CHECK_TYPES = ['http', 'ping', 'port', 'cert', 'service', 'disk', 'script'];
+  const checkDot = st => (st === 'ok' ? 'ok' : st === 'fail' ? 'bad' : st === 'warn' ? 'warn' : '');
+  const checkTarget = c => c.type === 'http' ? c.url : c.type === 'service' ? c.service : c.type === 'disk' ? `${c.path} < ${c.limit} %` : c.type === 'script' ? t('ctype_script') : c.port ? `${c.host}:${c.port}` : c.host;
+  const histBar = h => `<div class="hbar">${(h || []).slice(-30).map(x => `<i class="${x[1] ? 'ok' : 'bad'}"></i>`).join('')}</div>`;
+
+  async function viewChecks(id, main, quiet) {
+    const list = await api('GET', `/api/s/${encodeURIComponent(id)}/checks`);
+    const admin = state.me.role === 'admin';
+    const nf = list.filter(c => c.state.status === 'fail').length;
+    const badge = $('.tabbar [data-t=checks] .badge', app); if (badge) { badge.hidden = !nf; badge.textContent = nf; }
+    const sum = list.reduce((m, c) => (m[c.state.status] = (m[c.state.status] || 0) + 1, m), {});
+    main.innerHTML = `
+      ${list.length ? `<div class="sumrow"><span class="pill ok"><span class="dot"></span>${sum.ok || 0} OK</span>${sum.fail ? `<span class="pill bad"><span class="dot"></span>${sum.fail} ${t('failed')}</span>` : ''}${sum.warn ? `<span class="pill warn"><span class="dot"></span>${sum.warn}</span>` : ''}${admin ? `<span class="spacer"></span><button class="btn small" data-a="add">${ic('plus')}${t('addCheck')}</button>` : ''}</div>` : ''}
+      ${list.length ? `<div class="list">${list.sort((a, b) => (a.state.status === 'fail' ? 0 : 1) - (b.state.status === 'fail' ? 0 : 1) || a.name.localeCompare(b.name)).map(c => `<div class="row check" data-c="${esc(c.id)}"><span class="dot ${checkDot(c.state.status)}"></span><div class="r-main"><div class="r-title">${esc(c.name)}</div><div class="r-sub">${esc(word('ctype_', c.type))} · ${esc(c.state.msg || word('cstate_', c.state.status))}${c.state.ms != null ? ` · ${Math.round(c.state.ms)} ms` : ''}</div>${histBar(c.state.history)}</div><span class="chev">${ic('chev')}</span></div>`).join('')}</div>`
+        : `<div class="card empty-card">${ic('pulse')}<b>${t('noChecks')}</b><p>${t('noChecksHint')}</p>${admin ? `<button class="btn primary" data-a="add">${ic('plus')}${t('addCheck')}</button>` : ''}</div>`}`;
+    for (const b of main.querySelectorAll('[data-a=add]')) b.addEventListener('click', () => checkForm(id, null, main));
+    for (const r of main.querySelectorAll('[data-c]')) r.addEventListener('click', () => checkSheet(id, list.find(c => c.id === r.dataset.c), main));
+  }
+
+  function checkSheet(id, c, main) {
+    const admin = state.me.role === 'admin';
+    const sh = openSheet(`
+      <h2>${esc(c.name)}</h2><div class="s-sub">${esc(word('ctype_', c.type))} · ${esc(checkTarget(c))}</div>
+      <div class="kv-card"><dl class="kv"><dt>${t('status')}</dt><dd><span class="pill ${checkDot(c.state.status)}"><span class="dot"></span>${esc(word('cstate_', c.state.status))}</span></dd>
+        <dt>${t('lastResult')}</dt><dd>${esc(c.state.msg || '–')}</dd><dt>${t('lastCheck')}</dt><dd>${c.state.last ? ago(c.state.last) : '–'}</dd>
+        <dt>${t('interval')}</dt><dd>${t('everyS', { n: c.interval })}</dd></dl>${histBar(c.state.history)}</div>
+      <div class="btn-row"><button class="btn" data-x="run">${ic('refresh')}${t('checkNow')}</button>${admin ? `<button class="btn" data-x="edit">${ic('edit')}${t('edit')}</button>` : ''}</div>
+      <div class="s-btns">${admin ? `<button class="btn danger block" data-x="del">${ic('trash')}${t('delete')}</button>` : ''}<button class="btn block" data-x="close">${t('close')}</button></div>`);
+    sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+    sh.querySelector('[data-x=run]').addEventListener('click', async () => { try { await api('POST', `/api/s/${encodeURIComponent(id)}/checks/${c.id}/run`); closeSheet(); viewChecks(id, main); } catch (e) { toast(e.message, true); } });
+    sh.querySelector('[data-x=edit]')?.addEventListener('click', () => checkForm(id, c, main));
+    sh.querySelector('[data-x=del]')?.addEventListener('click', () => confirmSheet(t('deleteCheckTitle', { name: c.name }), t('deleteCheckMsg'), t('delete'), async () => { await api('POST', `/api/s/${encodeURIComponent(id)}/checks/${c.id}/delete`); closeSheet(); viewChecks(id, main); }, true));
+  }
+
+  function checkForm(id, c, main) {
+    const type0 = c ? c.type : 'http';
+    const sh = openSheet(`
+      <h2>${c ? t('editCheck') : t('newCheck')}</h2><div class="s-sub">${t('checkFormSub')}</div>
+      <form class="sheet-form">
+        <label>${t('checkType')}<select name="type" ${c ? 'disabled' : ''}>${CHECK_TYPES.map(k => `<option value="${k}" ${k === type0 ? 'selected' : ''}>${esc(word('ctype_', k))}</option>`).join('')}</select></label>
+        <label>${t('name')}<input name="name" value="${esc(c?.name || '')}" placeholder="${t('optional')}" maxlength="60"></label>
+        <div class="tf" data-for="http"><label>URL<input name="url" value="${esc(c?.url || 'https://')}" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="url"></label><label>${t('keyword')}<input name="keyword" value="${esc(c?.keyword || '')}" placeholder="${t('optional')}"></label></div>
+        <div class="tf" data-for="ping port cert"><label>${t('hostLabel')}<input name="host" value="${esc(c?.host || '')}" placeholder="example.com" autocapitalize="none" autocorrect="off" spellcheck="false"></label></div>
+        <div class="tf" data-for="port cert"><label>Port<input name="port" type="number" inputmode="numeric" value="${esc(c?.port || '')}" placeholder="443"></label></div>
+        <div class="tf" data-for="cert"><label>${t('certDays')}<input name="days" type="number" inputmode="numeric" value="${esc(c?.days || 14)}"></label></div>
+        <div class="tf" data-for="service"><label>${t('serviceName')}<input name="service" value="${esc(c?.service || '')}" placeholder="nginx" autocapitalize="none" autocorrect="off" spellcheck="false"></label></div>
+        <div class="tf" data-for="disk"><label>${t('pathLabel')}<input name="path" value="${esc(c?.path || '/')}" autocapitalize="none" spellcheck="false"></label><label>${t('diskLimit')}<input name="limit" type="number" inputmode="numeric" value="${esc(c?.limit || 90)}"></label></div>
+        <div class="tf" data-for="script"><label>${t('checkScript')}<textarea name="body" rows="5" spellcheck="false" autocapitalize="none" placeholder="test -f /var/run/app.pid">${esc(c?.body || '')}</textarea></label></div>
+        <div class="grid2"><label>${t('interval')}<select name="interval">${[30, 60, 300, 900, 3600].map(n => `<option value="${n}" ${(c?.interval || 60) === n ? 'selected' : ''}>${t('everyS', { n })}</option>`).join('')}</select></label>
+          <label>${t('failAfter')}<select name="failAfter">${[1, 2, 3, 5].map(n => `<option value="${n}" ${(c?.failAfter || 2) === n ? 'selected' : ''}>${n}×</option>`).join('')}</select></label></div>
+        <div class="err" hidden></div>
+        <div class="s-btns"><button class="btn primary block" type="submit">${t('save')}</button><button class="btn block" type="button" data-x="cancel">${t('cancel')}</button></div>
+      </form>`);
+    const f = sh.querySelector('form'), err = sh.querySelector('.err');
+    const sync = () => { const tp = f.type.value; for (const d of f.querySelectorAll('.tf')) d.hidden = !d.dataset.for.split(' ').includes(tp); };
+    f.type.addEventListener('change', sync); sync();
+    sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+    f.addEventListener('submit', async e => {
+      e.preventDefault(); err.hidden = true;
+      const v = Object.fromEntries(new FormData(f)); v.type = f.type.value;
+      try { await api('POST', `/api/s/${encodeURIComponent(id)}/checks`, { ...v, id: c?.id }); closeSheet(); toast(t('saved')); viewChecks(id, main); }
+      catch (ex) { err.textContent = ex.message; err.hidden = false; }
+    });
+  }
+
+  // ----- Updates -----
+  async function viewUpdates(id, main, quiet) {
+    $('.top .nm', app).textContent = t('updates');
+    const enc = encodeURIComponent(id);
+    const u = await api('GET', `/api/s/${enc}/updates`);
+    const admin = state.me.role === 'admin';
+    if (!u.supported) { main.innerHTML = `<div class="card empty-card">${ic('download')}<b>${t('updatesUnsupported')}</b></div>`; return; }
+    const sec = u.list.filter(p => p.security).length;
+    const running = u.job && !u.job.finished;
+    const sch = u.schedule || { auto: false, day: -1, hour: 4, reboot: 'never' };
+    main.innerHTML = `
+      <div class="card upd-head">
+        <div class="upd-num ${sec ? 'bad' : u.list.length ? 'warn' : 'ok'}">${u.list.length}</div>
+        <div class="upd-text"><b>${u.list.length ? t('updatesAvail', { n: u.list.length }) : t('updatesNone')}</b><span>${sec ? t('updatesSec', { n: sec }) + ' · ' : ''}${u.refreshed ? t('checkedAt', { when: ago(u.refreshed) }) : ''}</span>
+          ${u.rebootRequired ? `<span class="warn-text">${ic('alert')}${t('rebootNeeded')}</span>` : ''}</div>
+      </div>
+      ${admin ? `<div class="btn-row">
+        <button class="btn" data-a="refresh-apt" ${running ? 'disabled' : ''}>${ic('refresh')}${t('searchUpdates')}</button>
+        <button class="btn primary" data-a="install" ${running || !u.list.length ? 'disabled' : ''}>${ic('download')}${t('installAll')}</button>
+        ${sec ? `<button class="btn" data-a="install-sec" ${running ? 'disabled' : ''}>${ic('shield')}${t('installSec')}</button>` : ''}
+      </div>` : ''}
+      ${u.job ? `<div class="section-title">${running ? t('jobRunning') : t('jobLast')}</div><div class="card job"><div class="job-head"><span class="pill ${running ? 'warn' : u.job.code === 0 ? 'ok' : 'bad'}"><span class="dot"></span>${running ? t('running') : u.job.code === 0 ? t('done') : t('failedExit', { n: u.job.code })}</span><span class="muted">${ago(u.job.started)} · ${esc(u.job.by || '')}</span></div><pre class="joblog"></pre></div>` : ''}
+      ${u.list.length ? `<div class="section-title">${t('packages')}</div><div class="list">${u.list.map(p => `<div class="row static"><span class="dot ${p.security ? 'bad' : 'warn'}"></span><div class="r-main"><div class="r-title">${esc(p.name)}${p.security ? ` <span class="pill bad">${t('security')}</span>` : ''}</div><div class="r-sub">${esc(p.from)} → ${esc(p.version)}</div></div></div>`).join('')}</div>` : ''}
+      ${admin ? `<div class="section-title">${t('autoUpdates')}</div>
+      <form class="card sheet-form auto-form">
+        <label class="check"><input type="checkbox" name="auto" ${sch.auto ? 'checked' : ''}><span>${t('autoUpdatesOn')}</span></label>
+        <div class="grid2"><label>${t('dayLabel')}<select name="day"><option value="-1">${t('daily')}</option>${[1, 2, 3, 4, 5, 6, 0].map(d => `<option value="${d}" ${sch.day === d ? 'selected' : ''}>${t('wd' + d)}</option>`).join('')}</select></label>
+          <label>${t('timeLabel')}<select name="hour">${Array.from({ length: 24 }, (_, h) => `<option value="${h}" ${sch.hour === h ? 'selected' : ''}>${String(h).padStart(2, '0')}:00</option>`).join('')}</select></label></div>
+        <label>${t('rebootRule')}<select name="reboot"><option value="never" ${sch.reboot !== 'if-needed' ? 'selected' : ''}>${t('rebootNever')}</option><option value="if-needed" ${sch.reboot === 'if-needed' ? 'selected' : ''}>${t('rebootIfNeeded')}</option></select></label>
+        <button class="btn block" type="submit">${t('save')}</button>
+      </form>` : ''}`;
+    const log = main.querySelector('.joblog');
+    if (log) { log.textContent = u.job.log || ''; log.scrollTop = log.scrollHeight; }
+    const days = main.querySelector('select[name=day]'); if (days && sch.day === -1) days.value = '-1';
+    const start = async (path, body, msg) => { try { await api('POST', `/api/s/${enc}/updates/${path}`, body); toast(msg); viewUpdates(id, main); } catch (e) { toast(e.message, true); } };
+    main.querySelector('[data-a=refresh-apt]')?.addEventListener('click', () => start('refresh', {}, t('searching')));
+    main.querySelector('[data-a=install]')?.addEventListener('click', () => confirmSheet(t('installAllTitle', { n: u.list.length }), t('installMsg'), t('installAll'), async () => { closeSheet(); await start('install', {}, t('installing')); }));
+    main.querySelector('[data-a=install-sec]')?.addEventListener('click', () => confirmSheet(t('installSecTitle', { n: sec }), t('installMsg'), t('installSec'), async () => { closeSheet(); await start('install', { packages: u.list.filter(p => p.security).map(p => p.name) }, t('installing')); }));
+    main.querySelector('.auto-form')?.addEventListener('submit', async e => {
+      e.preventDefault(); const f = e.currentTarget;
+      try { await api('POST', `/api/s/${enc}/updates/schedule`, { auto: f.auto.checked, day: Number(f.day.value), hour: Number(f.hour.value), reboot: f.reboot.value }); toast(t('saved')); } catch (ex) { toast(ex.message, true); }
+    });
+    // Läuft ein Auftrag: alle 2 Sekunden Protokoll nachladen
+    if (running) {
+      const tm = setInterval(async () => {
+        if (!document.body.contains(main) || !location.hash.endsWith('/updates')) { clearInterval(tm); return; }
+        try {
+          const j = await api('GET', `/api/s/${enc}/updates/job`);
+          const l = main.querySelector('.joblog'); if (l && j.job) { l.textContent = j.job.log; l.scrollTop = l.scrollHeight; }
+          if (j.job && j.job.finished) { clearInterval(tm); viewUpdates(id, main); }
+        } catch { clearInterval(tm); }
+      }, 2000);
+      state.timers.push(tm);
     }
+  }
+
+  // ----- Skripte -----
+  async function viewScripts(id, main) {
+    $('.top .nm', app).textContent = t('scripts');
+    const [list, runs] = await Promise.all([api('GET', '/api/scripts'), api('GET', '/api/scripts/runs')]);
+    const admin = state.me.role === 'admin';
+    main.innerHTML = `
+      ${admin ? `<div class="sumrow"><span class="muted">${t('scriptsHint')}</span><span class="spacer"></span><button class="btn small" data-a="add">${ic('plus')}${t('newScript')}</button></div>` : ''}
+      <div class="list">${list.map(sc => `<div class="row" data-sc="${esc(sc.id)}">${ic('code')}<div class="r-main"><div class="r-title">${esc(sc.name)}</div><div class="r-sub">${esc(sc.description || t('linesN', { n: sc.lines }))}</div></div><span class="chev">${ic('chev')}</span></div>`).join('') || `<div class="empty">${t('noScripts')}</div>`}</div>
+      ${runs.length ? `<div class="section-title">${t('recentRuns')}</div><div class="list">${runs.slice(0, 15).map(r => `<div class="row" data-run="${esc(r.id)}"><span class="dot ${r.status === 'running' ? 'warn' : r.code === 0 ? 'ok' : 'bad'}"></span><div class="r-main"><div class="r-title">${esc(r.scriptName)} · ${esc(r.serverName)}</div><div class="r-sub">${r.status === 'running' ? t('running') : `Exit ${r.code} · ${((r.ms || 0) / 1000).toFixed(1)} s`} · ${ago(r.started)} · ${esc(r.by)}</div></div><span class="chev">${ic('chev')}</span></div>`).join('')}</div>` : ''}`;
+    main.querySelector('[data-a=add]')?.addEventListener('click', () => scriptForm(null, () => viewScripts(id, main)));
+    for (const r of main.querySelectorAll('[data-sc]')) r.addEventListener('click', () => scriptSheet(id, list.find(x => x.id === r.dataset.sc), main));
+    for (const r of main.querySelectorAll('[data-run]')) r.addEventListener('click', () => runSheet([r.dataset.run], () => viewScripts(id, main)));
+  }
+
+  async function scriptSheet(id, sc, main) {
+    const admin = state.me.role === 'admin';
+    let full = null;
+    if (admin) { try { full = await api('GET', `/api/scripts/${sc.id}`); } catch {} }
+    const others = state.servers.filter(s => s.ok);
+    const sh = openSheet(`
+      <h2>${esc(sc.name)}</h2><div class="s-sub">${esc(sc.description || '')}</div>
+      ${full ? `<pre class="code-pre"></pre>` : ''}
+      ${admin ? `<div class="btn-row"><button class="btn primary" data-x="run">${ic('play')}${t('runHere')}</button>${others.length > 1 ? `<button class="btn" data-x="multi">${ic('server')}${t('runMany')}</button>` : `<button class="btn" data-x="edit">${ic('edit')}${t('edit')}</button>`}</div>` : `<p class="hint">${t('viewerHint')}</p>`}
+      <div class="s-btns">${admin && others.length > 1 ? `<button class="btn block" data-x="edit">${ic('edit')}${t('edit')}</button>` : ''}${admin ? `<button class="btn danger block" data-x="del">${ic('trash')}${t('delete')}</button>` : ''}<button class="btn block" data-x="close">${t('close')}</button></div>`);
+    if (full) sh.querySelector('.code-pre').textContent = full.body;
+    sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
+    const runOn = servers => confirmSheet(t('runTitle', { name: sc.name }), t('runMsg', { servers: servers.map(x => state.servers.find(s => s.id === x)?.name || x).join(', ') }), t('run'), async () => {
+      const runs = await api('POST', `/api/scripts/${sc.id}/run`, { servers });
+      runSheet(runs.map(r => r.id), () => viewScripts(id, main));
+    });
+    sh.querySelector('[data-x=run]')?.addEventListener('click', () => runOn([id]));
+    sh.querySelector('[data-x=multi]')?.addEventListener('click', () => pickServers(id, runOn));
+    sh.querySelector('[data-x=edit]')?.addEventListener('click', () => scriptForm(full, () => viewScripts(id, main)));
+    sh.querySelector('[data-x=del]')?.addEventListener('click', () => confirmSheet(t('deleteScriptTitle', { name: sc.name }), t('deleteScriptMsg'), t('delete'), async () => { await api('POST', `/api/scripts/${sc.id}/delete`); closeSheet(); viewScripts(id, main); }, true));
+  }
+
+  function pickServers(current, done) {
+    const sh = openSheet(`<h2>${t('chooseServers')}</h2><div class="list pick">${state.servers.map(s => `<label class="row"><input type="checkbox" value="${esc(s.id)}" ${s.id === current ? 'checked' : ''} ${s.ok ? '' : 'disabled'}><div class="r-main"><div class="r-title">${esc(s.name)}</div><div class="r-sub">${s.ok ? t('ok') : t('offline')}</div></div></label>`).join('')}</div>
+      <div class="s-btns"><button class="btn primary block" data-x="go">${ic('play')}${t('run')}</button><button class="btn block" data-x="cancel">${t('cancel')}</button></div>`);
+    sh.querySelector('[data-x=cancel]').addEventListener('click', closeSheet);
+    sh.querySelector('[data-x=go]').addEventListener('click', () => { const ids = [...sh.querySelectorAll('input:checked')].map(i => i.value); if (ids.length) done(ids); });
+  }
+
+  function scriptForm(sc, after) {
+    const sh = formSheet({
+      title: sc ? t('editScript') : t('newScript'), sub: t('scriptFormSub'), submit: t('save'),
+      fields: [
+        { name: 'name', label: t('name'), attrs: `value="${esc(sc?.name || '')}" maxlength="60" required` },
+        { name: 'description', label: t('descriptionLabel'), attrs: `value="${esc(sc?.description || '')}" maxlength="300" placeholder="${t('optional')}"` },
+        { html: `<label>${t('scriptBody')}<textarea name="body" rows="9" spellcheck="false" autocapitalize="none" autocorrect="off" class="code-input" placeholder="#!/bin/bash"></textarea></label>` },
+        { html: `<label>${t('timeoutLabel')}<select name="timeout">${[60, 300, 900, 1800, 3600].map(n => `<option value="${n}" ${(sc?.timeout || 300) === n ? 'selected' : ''}>${n < 3600 ? t('minN', { n: n / 60 }) : '60 min'}</option>`).join('')}</select></label>` },
+        codeField(),
+      ],
+      onSubmit: async f => { await api('POST', '/api/scripts', { id: sc?.id, name: f.name.value, description: f.description.value, body: f.body.value, timeout: Number(f.timeout.value), code: f.code.value }); closeSheet(); toast(t('saved')); after(); },
+    });
+    sh.querySelector('textarea[name=body]').value = sc?.body || '';
+  }
+
+  // Lauf(e) anzeigen und bis zum Ende nachladen
+  function runSheet(ids, after) {
+    const sh = openSheet(`<h2>${t('output')}</h2><div class="runs"></div><div class="s-btns"><button class="btn block" data-x="close">${t('close')}</button></div>`);
+    sh.querySelector('[data-x=close]').addEventListener('click', () => { closeSheet(); after && after(); });
+    const box = sh.querySelector('.runs');
+    let tm;
+    const paint = async () => {
+      if (sh.hidden) { clearInterval(tm); return; }
+      const runs = await Promise.all(ids.map(rid => api('GET', `/api/scripts/runs/${rid}`).catch(() => null)));
+      box.innerHTML = runs.filter(Boolean).map(r => `<div class="run"><div class="job-head"><b>${esc(r.serverName)}</b><span class="pill ${r.status === 'running' ? 'warn' : r.code === 0 ? 'ok' : 'bad'}"><span class="dot"></span>${r.status === 'running' ? t('running') : `Exit ${r.code} · ${((r.ms || 0) / 1000).toFixed(1)} s`}</span></div><pre class="joblog"></pre></div>`).join('');
+      runs.filter(Boolean).forEach((r, i) => { const pre = box.querySelectorAll('.joblog')[i]; pre.textContent = r.output || '…'; });
+      if (runs.every(r => !r || r.status !== 'running')) clearInterval(tm);
+    };
+    paint(); tm = setInterval(paint, 1500); state.timers.push(tm);
+  }
+
+  // ----- Inventar -----
+  async function viewInventory(id, main) {
+    $('.top .nm', app).textContent = t('inventory');
+    const enc = encodeURIComponent(id);
+    const h = await api('GET', `/api/s/${enc}/inventory/hardware`);
+    const kv = rows => `<dl class="kv">${rows.filter(r => r[1]).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+    main.innerHTML = `
+      <div class="card"><h3>${t('machine')}</h3>${kv([[t('vendor'), h.vendor], [t('model'), h.product], [t('serial'), h.serial], ['BIOS', h.bios], [t('virt'), h.virt], [t('hostname'), h.hostname], [t('timezone'), h.timezone], [t('booted'), h.booted ? new Date(h.booted).toLocaleString(LANG) : '']])}</div>
+      <div class="card"><h3>${t('system')}</h3>${kv([[t('os'), h.os], [t('kernel'), h.kernel], [t('cpu'), `${h.cpu.model} · ${t('coresShort', { n: h.cpu.cores })}`], [t('ram'), bytes(h.memory)]])}</div>
+      ${h.disks.length ? `<div class="card"><h3>${t('disks')}</h3>${h.disks.map(d => `<div class="inv-item"><b>${esc(d.name)}</b><span>${bytes(d.size)}${d.model ? ' · ' + esc(d.model) : ''}${d.rota ? ' · HDD' : ' · SSD'}</span>${d.parts.map(p => `<div class="inv-sub">${esc(p.name)} · ${bytes(p.size)}${p.fstype ? ' · ' + esc(p.fstype) : ''}${p.mount ? ' → ' + esc(p.mount) : ''}</div>`).join('')}</div>`).join('')}</div>` : ''}
+      ${h.network.length ? `<div class="card"><h3>${t('network')}</h3>${h.network.map(n => `<div class="inv-item"><b>${esc(n.name)} <span class="pill ${n.up ? 'ok' : ''}">${n.up ? 'UP' : 'DOWN'}</span></b><span>${esc(n.mac)}</span>${n.addresses.map(a => `<div class="inv-sub mono">${esc(a)}</div>`).join('')}</div>`).join('')}</div>` : ''}
+      <div class="section-title">${t('software')}</div>
+      <div class="card"><div class="search">${ic('search')}<input type="search" placeholder="${t('searchPackages')}" autocapitalize="none" autocorrect="off" spellcheck="false"></div><div class="sw-info muted">…</div><div class="sw-list"></div></div>`;
+    let sw = null;
+    const inp = main.querySelector('.search input'), info = main.querySelector('.sw-info'), out = main.querySelector('.sw-list');
+    const paint = () => {
+      if (!sw) return;
+      const q = inp.value.trim().toLowerCase();
+      const hits = sw.list.filter(p => !q || p.name.toLowerCase().includes(q));
+      info.textContent = t('packagesN', { n: sw.list.length, m: sw.manager || '–' }) + (q ? ` · ${t('hits', { n: hits.length })}` : '');
+      out.innerHTML = hits.slice(0, 150).map(p => `<div class="sw-row"><span>${esc(p.name)}</span><span class="muted mono">${esc(p.version)}</span></div>`).join('');
+    };
+    inp.addEventListener('input', paint);
+    api('GET', `/api/s/${enc}/inventory/software`).then(r => { sw = r; paint(); }).catch(e => { info.textContent = e.message; });
   }
 
   function rebootSheet(id, name) {
@@ -777,6 +1282,7 @@
         ${admin ? `<div class="section-title">${t('admin')}</div>
         <div class="list">
           ${settingRow('users', 'users', t('users'), t('usersDesc'))}
+          ${settingRow('channels', 'bell', t('channels'), t('channelsDesc'))}
           ${settingRow('alerts', 'sliders', t('alertsTitle'), t('alertsDesc'))}
           ${settingRow('audit', 'list', t('audit'), t('auditDesc'))}
         </div>` : ''}
@@ -798,6 +1304,7 @@
     on('devices', devicesSheet);
     on('users', () => go('#/users'));
     on('alerts', alertsSheet);
+    on('channels', channelsSheet);
     on('audit', () => go('#/s/local/more'));
 
     const box = $('.n-actions', app);
@@ -902,6 +1409,40 @@
         state.me = await api('GET', '/api/me');
         closeSheet(); toast(t('saved'));
       },
+    });
+  }
+
+  // Warnungen zusätzlich an Discord, eigene Webhooks und per E-Mail
+  async function channelsSheet() {
+    let n;
+    try { n = await api('GET', '/api/notify'); } catch (e) { toast(e.message, true); return; }
+    const e = n.email || {};
+    const sh = formSheet({
+      title: t('channels'), sub: t('channelsSub'), submit: t('save'),
+      fields: [
+        { html: `<label>${t('discordHooks')}<textarea name="discord" rows="2" spellcheck="false" autocapitalize="none" autocorrect="off" placeholder="https://discord.com/api/webhooks/…"></textarea></label><p class="hint small">${t('discordHint')}</p>` },
+        { html: `<label>${t('webhooks')}<textarea name="webhooks" rows="2" spellcheck="false" autocapitalize="none" autocorrect="off" placeholder="https://…"></textarea></label>` },
+        { html: `<div class="sub-head">${t('emailHead')}</div>` },
+        { name: 'to', label: t('emailTo'), type: 'email', attrs: `value="${esc(e.to || '')}" placeholder="${t('optional')}" autocapitalize="none"` },
+        { html: `<div class="grid2"><label>${t('smtpHost')}<input name="host" value="${esc(e.host || '')}" placeholder="smtp.example.com" autocapitalize="none" autocorrect="off"></label><label>Port<input name="port" type="number" inputmode="numeric" value="${esc(e.port || 587)}"></label></div>` },
+        { html: `<div class="grid2"><label>${t('user')}<input name="user" value="${esc(e.user || '')}" autocapitalize="none" autocorrect="off"></label><label>${t('password')}<input name="pass" type="password" value="${esc(e.pass || '')}" autocomplete="new-password"></label></div>` },
+        { html: `<label class="check"><input name="secure" type="checkbox" ${e.secure ? 'checked' : ''}><span>${t('smtpSecure')}</span></label><button class="btn block" type="button" data-x="test">${ic('bell')}${t('sendTest')}</button>` },
+      ],
+      onSubmit: async f => {
+        await api('POST', '/api/notify', {
+          discord: f.discord.value.split(/\s+/).filter(Boolean), webhooks: f.webhooks.value.split(/\s+/).filter(Boolean),
+          email: f.host.value.trim() ? { host: f.host.value.trim(), port: Number(f.port.value) || 587, secure: f.secure.checked, user: f.user.value, pass: f.pass.value, from: f.user.value, to: f.to.value } : null,
+        });
+        closeSheet(); toast(t('saved'));
+      },
+    });
+    sh.querySelector('textarea[name=discord]').value = (n.discord || []).join('\n');
+    sh.querySelector('textarea[name=webhooks]').value = (n.webhooks || []).join('\n');
+    sh.querySelector('[data-x=test]').addEventListener('click', async () => {
+      try {
+        const r = await api('POST', '/api/notify/test', {});
+        toast(r.length ? r.map(x => `${x.channel}: ${x.ok ? '✓' : '✕ ' + (x.error || '')}`).join(' · ') : t('noChannels'), r.some(x => !x.ok));
+      } catch (ex) { toast(ex.message, true); }
     });
   }
 

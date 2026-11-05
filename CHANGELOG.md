@@ -1,5 +1,18 @@
 # Changelog – S3cure Agent
 
+## 1.2.0 – 2026-11-05
+
+### Neu
+- **Checks:** Webseite (HTTP, optional mit Text), Ping, Port, Zertifikat (warnt vor Ablauf), Dienst läuft, Platte, eigenes Skript. Mit Verlauf als Balken, Warnung nach einstellbar vielen Fehlschlägen und Entwarnung, wenn es wieder geht. Eigener Tab „Checks“.
+- **Warnungs-Wege:** Zusätzlich zur Push-Mitteilung an **Discord-Webhooks**, eigene **Webhooks** (JSON) und per **E-Mail** (SMTP) – mit Test-Knopf.
+- **Skripte:** Bibliothek mit Vorlagen (Speicher aufräumen, Docker aufräumen, offene Ports, letzte Anmeldungen, größte Ordner, fehlgeschlagene Dienste). Auf einem oder mehreren Servern ausführen, Ausgabe live, Verlauf. Anlegen/Ändern nur mit 2FA-Code.
+- **Updates:** verfügbare Updates (Sicherheits-Updates markiert), alle oder nur Sicherheit installieren – läuft im Hintergrund mit Live-Protokoll. Automatischer Zeitplan (Tag, Uhrzeit, Neustart wenn nötig).
+- **Inventar:** Hersteller, Modell, Seriennummer, BIOS, CPU, RAM, Platten mit Partitionen, Netzwerk mit Adressen, alle installierten Pakete mit Suche.
+- „Mehr“ als übersichtliche Kacheln (Updates mit Anzahl, Skripte, Inventar, Protokoll).
+
+### English
+- Checks (HTTP, ping, port, certificate, service, disk, script) with history and alerts; alert channels Discord, webhooks and email; script library with templates, run on one or several servers with live output; updates with security marking, background install and schedule; hardware/software inventory.
+
 ## 1.1.3 – 2026-11-05
 
 ### Verbessert
