@@ -164,6 +164,9 @@ test('API 1.1: Passwort, Geräte, 2FA-Umzug, Benutzer, Warnungen, Prozesse, Lauf
     return { status: r.status, data: await r.json().catch(() => null), cookie: (r.headers.get('set-cookie') || '').split(';')[0] };
   };
   let step = totp.step() + 5; // eigene Zeitfenster, damit sich Codes nicht mit dem Test davor überschneiden
+  // Nicht kurz vor einem 30-Sekunden-Wechsel starten (sonst passt ein Code nicht mehr)
+  const left = 30000 - (Date.now() % 30000);
+  if (left < 4000) await new Promise(r => setTimeout(r, left + 200));
   const info = await agent.auth.addUser('boss', 'boss-passwort-123', 'admin');
   const loginCode = () => totp.hotp(info.secret, totp.step());
   const c1 = (await call('POST', '/api/login', { body: { user: 'boss', password: 'boss-passwort-123', code: totp.hotp(info.secret, totp.step() - 1) } })).cookie;
