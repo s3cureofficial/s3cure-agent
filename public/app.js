@@ -219,7 +219,7 @@
   // ---------- Symbole ----------
   const PATHS = {
     back: 'M15 18l-6-6 6-6', chev: 'M9 18l6-6-6-6', refresh: 'M20 12a8 8 0 1 1-2.34-5.66 M20 4v5h-5', gear: 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z',
-    gauge: 'M12 14l4-4 M3.3 15a9 9 0 1 1 17.4 0', server: 'M5.5 4h13A2.5 2.5 0 0 1 21 6.5v2A2.5 2.5 0 0 1 18.5 11h-13A2.5 2.5 0 0 1 3 8.5v-2A2.5 2.5 0 0 1 5.5 4z M5.5 13h13a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-2A2.5 2.5 0 0 1 5.5 13z M7 7.5h.01 M7 16.5h.01',
+    gauge: 'M12 14l4-4 M3.3 15a9 9 0 1 1 17.4 0', clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 2', server: 'M5.5 4h13A2.5 2.5 0 0 1 21 6.5v2A2.5 2.5 0 0 1 18.5 11h-13A2.5 2.5 0 0 1 3 8.5v-2A2.5 2.5 0 0 1 5.5 4z M5.5 13h13a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-2A2.5 2.5 0 0 1 5.5 13z M7 7.5h.01 M7 16.5h.01',
     box: 'M21 8l-9-5-9 5v8l9 5 9-5z M3 8l9 5 9-5 M12 13v8', dots: 'M5 12h.01 M12 12h.01 M19 12h.01', alert: 'M10.3 4.3L2.8 17.5a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0z M12 9.5v4 M12 17h.01',
     restart: 'M3 12a9 9 0 1 0 3-6.7 M3 4v5h5', play: 'M7 4.5v15l12-7.5z', stop: 'M7 7h10v10H7z', logs: 'M8 6h13 M8 12h13 M8 18h13 M3 6h.01 M3 12h.01 M3 18h.01',
     power: 'M18.4 6.6a9 9 0 1 1-12.8 0 M12 2v10', bell: 'M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z M10 20.5a2 2 0 0 0 4 0', search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z M20 20l-3.5-3.5',
@@ -338,6 +338,14 @@
     return `<div class="srv-bars">${b(t('cpu'), cpu)}${b(t('ram'), ram)}${b(t('disk'), disk)}</div>`;
   }
 
+  // Startseite: kleine Ringe + Laufzeit/Last/Netz
+  function homeStats(m) {
+    if (!m) return '';
+    const ram = pct(m.mem?.used, m.mem?.total), disk = m.disk ? pct(m.disk.total - m.disk.free, m.disk.total) : null;
+    return `<div class="home-rings">${ring(m.cpu ?? null, t('cpu'), '')}${ring(ram, t('ram'), '')}${ring(disk, t('disk'), '')}</div>
+      <div class="home-meta"><span>${ic('clock')}${esc(upt(m.uptime))}</span><span>${ic('gauge')}${(m.load || [0])[0].toFixed(2)}</span>${m.net ? `<span>↓ ${rate(m.net.rx)}</span>` : ''}</div>`;
+  }
+
   function issuesHtml(s) {
     const list = s.ok ? (s.issues || []) : [{ text: s.error || t('offline'), level: 'bad' }];
     if (!list.length) return '';
@@ -364,7 +372,7 @@
         const [cls, txt] = srvState(s);
         return `<a class="card srv" href="#/s/${encodeURIComponent(s.id)}/status">
           <div class="srv-head"><span class="srv-name">${esc(s.name)}</span><span class="pill ${cls}"><span class="dot"></span>${esc(txt)}</span></div>
-          ${s.ok ? bars(s.metrics) : ''}${issuesHtml(s)}</a>`;
+          ${s.ok ? homeStats(s.metrics) : ''}${issuesHtml(s)}</a>`;
       }).join('');
       applyWidths(box);
     };
@@ -457,7 +465,7 @@
     const pinRow = p => {
       const running = p.kind === 'service' ? p.it.active === 'active' : p.it.state === 'running';
       const dot = p.kind === 'service' ? svcState(p.it) : ctrState(p.it);
-      return `<div class="row" data-pin="${esc(p.kind + ':' + p.name)}"><span class="dot ${dot}"></span><div class="r-main"><div class="r-title">${esc(p.kind === 'service' ? shortName(p.name) : p.name)}</div><div class="r-sub">${esc(p.kind === 'service' ? word('state_', p.it.active) : p.it.status)}</div></div>${admin ? `<button class="mini" data-q="${running ? 'restart' : 'start'}" aria-label="${t(running ? 'restart' : 'start')}">${ic(running ? 'restart' : 'play')}</button>` : ''}<span class="chev">${ic('chev')}</span></div>`;
+      return `<div class="row" data-pin="${esc(p.kind + ':' + p.name)}"><span class="dot ${dot}"></span><div class="r-main"><div class="r-title">${esc(p.kind === 'service' ? shortName(p.name) : p.name)}</div><div class="r-sub">${esc(p.kind === 'service' ? word('state_', p.it.active) : p.it.status)}</div></div>${admin ? `<button class="qbtn" data-q="${running ? 'restart' : 'start'}" aria-label="${t(running ? 'restart' : 'start')}">${ic(running ? 'restart' : 'play')}</button>` : ''}<span class="chev">${ic('chev')}</span></div>`;
     };
 
     main.innerHTML = `
@@ -846,7 +854,7 @@
   }
 
   // QR-Code (SVG vom eigenen Server) + Schlüssel zum Abtippen
-  const qrBlock = r => `<div class="qr">${String(r.qr || '').startsWith('<svg') ? r.qr : ''}</div><div class="secret"><span>${esc(r.secret.replace(/(.{4})/g, '$1 ').trim())}</span><button class="mini" type="button" data-x="copy" aria-label="${t('copy')}">${ic('copy')}</button></div>`;
+  const qrBlock = r => `<div class="qr">${String(r.qr || '').startsWith('<svg') ? r.qr : ''}</div><div class="secret"><span>${esc(r.secret.replace(/(.{4})/g, '$1 ').trim())}</span><button class="qbtn" type="button" data-x="copy" aria-label="${t('copy')}">${ic('copy')}</button></div>`;
   const wireCopy = (sh, secret) => sh.querySelector('[data-x=copy]')?.addEventListener('click', () => navigator.clipboard.writeText(secret).then(() => toast(t('copied'))).catch(() => {}));
 
   async function totpSheet() {
@@ -866,7 +874,7 @@
     const paint = () => {
       const sh = openSheet(`
         <h2>${t('devicesTitle')}</h2><div class="s-sub">${t('devicesSub')}</div>
-        <div class="list">${list.map(d => `<div class="row" data-id="${esc(d.id)}">${ic(/iPhone|Android/.test(deviceName(d.ua)) ? 'phone' : 'server')}<div class="r-main"><div class="r-title">${esc(deviceName(d.ua))}${d.current ? ` <span class="pill ok">${t('thisDevice')}</span>` : ''}</div><div class="r-sub">${esc(d.ip || '')} · ${ago(d.seen)}</div></div>${d.current ? '' : `<button class="mini danger" data-x="revoke" aria-label="${t('logout')}">${ic('logout')}</button>`}</div>`).join('')}</div>
+        <div class="list">${list.map(d => `<div class="row" data-id="${esc(d.id)}">${ic(/iPhone|Android/.test(deviceName(d.ua)) ? 'phone' : 'server')}<div class="r-main"><div class="r-title">${esc(deviceName(d.ua))}${d.current ? ` <span class="pill ok">${t('thisDevice')}</span>` : ''}</div><div class="r-sub">${esc(d.ip || '')} · ${ago(d.seen)}</div></div>${d.current ? '' : `<button class="qbtn danger" data-x="revoke" aria-label="${t('logout')}">${ic('logout')}</button>`}</div>`).join('')}</div>
         <div class="s-btns">${list.length > 1 ? `<button class="btn danger block" data-x="others">${t('logoutOthers')}</button>` : ''}<button class="btn block" data-x="close">${t('close')}</button></div>`);
       sh.querySelector('[data-x=close]').addEventListener('click', closeSheet);
       const revoke = async id => { try { list = await api('POST', '/api/me/sessions/revoke', { id }); toast(t('done')); paint(); } catch (e) { toast(e.message, true); } };

@@ -1,5 +1,18 @@
 # Changelog – S3cure Agent
 
+## 1.1.3 – 2026-11-05
+
+### Verbessert
+- **Startseite:** Die Server-Karte zeigt Ring-Anzeigen für CPU, RAM und Platte sowie Laufzeit, Last und Netzwerk.
+- **Aktionsfenster:** Neu starten, Stoppen, Logs und Anheften als übersichtliches 2×2-Raster.
+
+### Behoben
+- Die kleinen Balken auf der Startseite waren zerschossen (ein neuer Knopf-Stil hat sie überschrieben).
+- Die Kopfleiste ist jetzt deckend statt weichgezeichnet – Name und Symbol sind auf dem iPhone wieder gestochen scharf.
+
+### English
+- Home card with rings, uptime, load and network; 2×2 action buttons. Fixed broken bars on the home screen and blurry header text on iPhone.
+
 ## 1.1.2 – 2026-11-05
 
 ### Behoben

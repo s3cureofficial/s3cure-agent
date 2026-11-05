@@ -32,11 +32,8 @@ svg.i { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-widt
   position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 10px; isolation: isolate;
   padding: calc(var(--safe-top) + 10px) 16px 10px; border-bottom: 1px solid transparent;
 }
-/* Weichzeichner auf eigener Ebene hinter dem Inhalt – sonst wird auf dem iPhone die Schrift mit unscharf */
-.top::before {
-  content: ''; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--bg) 86%, transparent);
-  -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px);
-}
+/* Deckender Hintergrund statt Weichzeichner – mit backdrop-filter wird die Schrift auf dem iPhone unscharf */
+.top::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--bg); }
 .top.scrolled { border-bottom-color: var(--border); }
 .top h1 { flex: 1; margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -.3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .top .sub { display: block; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
@@ -125,8 +122,7 @@ input:focus { border-color: var(--accent); box-shadow: var(--inset), 0 0 0 3px v
 /* ---------- Unten: Tabs ---------- */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: center;
-  padding: 8px 10px calc(var(--safe-bottom) + 6px); background: color-mix(in srgb, var(--surface) 86%, transparent);
-  -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); border-top: 1px solid var(--border);
+  padding: 8px 10px calc(var(--safe-bottom) + 6px); background: var(--surface); border-top: 1px solid var(--border);
 }
 .tabbar .tabs { display: flex; width: 100%; max-width: 520px; }
 .tabbar button { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; border: none; background: none; color: var(--faint); font-size: 10.5px; font-weight: 600; padding: 4px 0; cursor: pointer; position: relative; }
@@ -144,8 +140,8 @@ input:focus { border-color: var(--accent); box-shadow: var(--inset), 0 0 0 3px v
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 6px 18px var(--accent-ring); }
 .btn.danger { color: var(--accent); }
 .btn.block { width: 100%; }
-.btn-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); gap: 8px; }
-.btn-row .btn { flex-direction: column; height: 70px; gap: 4px; font-size: 13px; }
+.btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.btn-row .btn { height: 52px; gap: 8px; font-size: 14.5px; justify-content: flex-start; padding: 0 14px; }
 .btn-row .btn svg.i { width: 22px; height: 22px; }
 
 /* ---------- Anmelden ---------- */
@@ -231,10 +227,10 @@ input:focus { border-color: var(--accent); box-shadow: var(--inset), 0 0 0 3px v
 .s-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
 .btn.subtle { color: var(--muted); }
 .btn.on { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
-.mini { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; flex-shrink: 0; }
-.mini:active { transform: scale(.94); }
-.mini.danger { color: var(--accent); }
-.mini svg.i { width: 18px; height: 18px; }
+.qbtn { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; flex-shrink: 0; }
+.qbtn:active { transform: scale(.94); }
+.qbtn.danger { color: var(--accent); }
+.qbtn svg.i { width: 18px; height: 18px; }
 .row > svg.i { color: var(--muted); }
 .r-title .pill { height: 20px; font-size: 11px; padding: 0 8px; margin-left: 6px; vertical-align: 2px; }
 .hint.pad { padding: 12px 4px; }
@@ -307,3 +303,14 @@ select { appearance: none; -webkit-appearance: none; background-image: linear-gr
 .seg-big button { border: none; background: transparent; height: 40px; border-radius: 10px; font-weight: 600; color: var(--muted); cursor: pointer; }
 .seg-big button.on { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
 #sheet .list { box-shadow: none; }
+
+/* Startseite: kleine Ringe */
+.home-rings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 14px; }
+.home-rings .r-gfx { width: 66px; height: 66px; }
+.home-rings .r-val { font-size: 16px; }
+.home-rings .r-val small { font-size: 10px; }
+.home-rings .r-lbl { margin-top: 6px; font-size: 12px; color: var(--muted); font-weight: 600; }
+.home-rings .r-sub { display: none; }
+.home-meta { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.home-meta span { display: inline-flex; align-items: center; gap: 5px; }
+.home-meta svg.i { width: 14px; height: 14px; }
